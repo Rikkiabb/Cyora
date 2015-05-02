@@ -1,0 +1,168 @@
+fileFormatVersion: 2
+guid: b259acb822c3747b6b31dce9ebd243e3
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: MoonKnightHead
+    21300002: MoonKnightArmRight
+    21300004: MoonKnightChest
+    21300006: MoonKnightArmLeft
+    21300008: MoonKnightShield
+    21300010: MoonKnightPelvis
+    21300012: MoonKnightLegLeft
+    21300014: MoonKnightSword
+    21300016: MoonKnightFootRight
+    21300018: MoonKnightFootLeft
+    21300020: MoonKnightLegRight
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -2
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: MoonKnightHead
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 425
+        width: 198
+        height: 174
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MoonKnightArmRight
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 243
+        width: 127
+        height: 168
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MoonKnightChest
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 258
+        width: 159
+        height: 122
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MoonKnightArmLeft
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 252
+        width: 135
+        height: 165
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MoonKnightShield
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 52
+        width: 119
+        height: 126
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MoonKnightPelvis
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 177
+        width: 99
+        height: 73
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MoonKnightLegLeft
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 153
+        width: 57
+        height: 26
+      alignment: 1
+      pivot: {x: 0, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MoonKnightSword
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 50
+        width: 103
+        height: 180
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MoonKnightFootRight
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 111
+        width: 36
+        height: 35
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MoonKnightFootLeft
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 111
+        width: 36
+        height: 35
+      alignment: 2
+      pivot: {x: .5, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: MoonKnightLegRight
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 153
+        width: 56
+        height: 25
+      alignment: 3
+      pivot: {x: 1, y: 1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
