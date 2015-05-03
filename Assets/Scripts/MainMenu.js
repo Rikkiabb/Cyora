@@ -9,3 +9,7 @@ function Quit(){
 function NewGame(){
 	Application.LoadLevel("First");
 }
+
+function Instructions(){
+	Application.LoadLevel("Instructions");
+}
