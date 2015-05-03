@@ -4,6 +4,7 @@ using System.Collections;
 public class PlayerScript : MonoBehaviour {
 
 	public int maxHealth = 3;
+	CircleCollider2D collide;
 
 	// Create a new player stat class which handles his health and weapons
 	[System.Serializable]
@@ -14,7 +15,7 @@ public class PlayerScript : MonoBehaviour {
 	// instantiate
 	public PlayerStats playerStats = new PlayerStats();
 	// Deal a damage to this player
-	public int fallBoundary = -5;
+	public int fallBoundary = -20;
 
 
 
@@ -34,6 +35,7 @@ public class PlayerScript : MonoBehaviour {
 
 	void Start () {
 		anim = GetComponent<Animator> ();
+		collide = GetComponent<CircleCollider2D>();
 	}
 
 	void Update(){
@@ -88,8 +90,8 @@ public class PlayerScript : MonoBehaviour {
 		// So if our player empties his health he dies
 		if(playerStats.Health <= 0){
 			Debug.Log("Kill Player!!");
-			GameMasterCS.KillPlayer(this);
-			
+			Destroy (collide);
+
 		}
 	}
 
