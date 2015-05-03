@@ -15,6 +15,7 @@ public class PlayerScript : MonoBehaviour {
 	public int fallBoundary = -5;
 
 
+
 	// For left and right movement
 	public float maxSpeed = 10f;
 	Animator anim;
@@ -50,7 +51,20 @@ public class PlayerScript : MonoBehaviour {
 
 	
 	public void DamagePlayer (int damage){
+		// Remove one of his lives
 		playerStats.Health -= damage;
+		// Remove damage many hearts from the canvas
+		// for loop that runs through the hearts and removes them until damage is done
+		for(int i = damage; i > 0;i--){
+			Debug.Log ("Damage:" + damage);
+			string number = (playerStats.Health).ToString();
+			string image = "Life" + number;
+			Debug.Log (image);
+			GameObject heart = GameObject.FindGameObjectWithTag(image);
+			Destroy(heart);
+
+		}
+
 		anim.SetTrigger("Hurt");
 		// So if our player empties his health he dies
 		if(playerStats.Health <= 0){

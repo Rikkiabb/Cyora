@@ -12,4 +12,5 @@ var sizeY : int = 40;
 
 function OnGUI () {
 	GUI.Box(new Rect (offsetX, offsetY, sizeX, sizeY), "Keys\n" + numbKeys );
+	
 }
