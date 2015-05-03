@@ -74,6 +74,8 @@ public class Enemy : MonoBehaviour {
 					rb.AddForce(Vector2.right * -bounceAmount, ForceMode2D.Impulse);
 				}
 
+
+
 			}
 		
 		}

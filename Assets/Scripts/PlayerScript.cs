@@ -51,6 +51,7 @@ public class PlayerScript : MonoBehaviour {
 	
 	public void DamagePlayer (int damage){
 		playerStats.Health -= damage;
+		anim.SetTrigger("Hurt");
 		// So if our player empties his health he dies
 		if(playerStats.Health <= 0){
 			Debug.Log("Kill Player!!");
