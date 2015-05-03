@@ -3,6 +3,8 @@ using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
 
+	public int maxHealth = 3;
+
 	// Create a new player stat class which handles his health and weapons
 	[System.Serializable]
 	public class PlayerStats {
@@ -45,14 +47,31 @@ public class PlayerScript : MonoBehaviour {
 
 		if (transform.position.y <= fallBoundary){
 			Debug.Log ("Player fell to his death");
-			DamagePlayer(9999);
+			DamagePlayer(maxHealth);
 		}
 	}
 
 	
 	public void DamagePlayer (int damage){
+
+		if (damage == maxHealth) {
+			GameObject heart1 = GameObject.FindGameObjectWithTag("Life0");
+			GameObject heart2 = GameObject.FindGameObjectWithTag("Life1");
+			GameObject heart3 = GameObject.FindGameObjectWithTag("Life2");
+
+			Destroy(heart1);
+			Destroy(heart2);
+			Destroy(heart3);
+
+			Debug.Log("Kill Player!!");
+			GameMasterCS.KillPlayer(this);
+
+			return;
+		}
 		// Remove one of his lives
 		playerStats.Health -= damage;
+	
+
 		// Remove damage many hearts from the canvas
 		// for loop that runs through the hearts and removes them until damage is done
 		for(int i = damage; i > 0;i--){
