@@ -13,3 +13,7 @@ function NewGame(){
 function Instructions(){
 	Application.LoadLevel("Instructions");
 }
+
+function MainMenu(){
+	Application.LoadLevel("MainMenu");
+}
