@@ -42,7 +42,8 @@ public class Enemy : MonoBehaviour {
 				Vector2 pointOfContact = coll.contacts[0].normal; //Grab the normal of the contact point we touched
 				Debug.Log(pointOfContact);
 				// Store an instance of the player thad collided with the enemy
-				Player player = coll.gameObject.GetComponent<Player>();
+
+				PlayerScript player = coll.gameObject.GetComponent<PlayerScript>();
 				// Deal appropriate damage to him 
 				player.DamagePlayer(stats.attackHit);
 				lastHitTime = Time.time;
@@ -58,39 +59,21 @@ public class Enemy : MonoBehaviour {
 				// So what the normal does is gives us a two dimensional representation of the direction which the player 
 				// is approaching from
 				// A vector(-1,0) means we are coming from the right side when we impact
-				Debug.Log (pointOfContact);
-				if (pointOfContact == new Vector2(-1,0)){
-					Debug.Log("We touched the right side of the enemy!");
-					// Bounce to the right
-					v.y = bounceAmount;
-					rb.velocity = v;
-					rb.AddForce(Vector2.right * 5000, ForceMode2D.Impulse);
-				}
-				// A vector(1,0) means we are coming from the left side when we impact
-				if (pointOfContact == new Vector2(1,0)){
-					Debug.Log("We touched the left side of the enemy!");
+				if(player.facingRight){
 					// Bounce to the left
+					Debug.Log("We touched the left side of the enemy!");
 					v.y = bounceAmount;
 					rb.velocity = v;
-					rb.AddForce(Vector2.right * -5000, ForceMode2D.Impulse);
-
+					rb.AddForce(Vector2.right * bounceAmount, ForceMode2D.Impulse);
 				}
-				// A vector(1,0) means we are coming from the top in the downwards y direction
-				if (pointOfContact == new Vector2(0,-1)){
-					Debug.Log("We touched the enemy's top!");
-					// Bounce up
+				else{
+					// Bounce to the right
+					Debug.Log("We touched the right side of the enemy!");
 					v.y = bounceAmount;
 					rb.velocity = v;
+					rb.AddForce(Vector2.right * -bounceAmount, ForceMode2D.Impulse);
 				}
-				// A vector(1,0) means we are coming from the botton in an upwards y direction
-				if (pointOfContact == new Vector2(0,1)){
-					//We never use this but it's good to have it in here if we want to use this in the boss battle
-					Debug.Log("We touched the enemy's bottom!");
-					// Bounce down
-					v.y = -bounceAmount;
-					rb.velocity = v;
 
-				}
 			}
 		
 		}

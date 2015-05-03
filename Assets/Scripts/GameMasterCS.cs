@@ -7,7 +7,7 @@ public class GameMasterCS : MonoBehaviour {
 
 	// This function destroys the main player
 	// This is a static function because we want to be able to kill from everywhere
-	public static void KillPlayer(Player player){
+	public static void KillPlayer(PlayerScript player){
 		Destroy(player.gameObject);
 	}
 

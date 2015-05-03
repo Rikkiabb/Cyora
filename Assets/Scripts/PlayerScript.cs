@@ -3,12 +3,24 @@ using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
 
+	// Create a new player stat class which handles his health and weapons
+	[System.Serializable]
+	public class PlayerStats {
+		public int Health = 3;
+	}
+
+	// instantiate
+	public PlayerStats playerStats = new PlayerStats();
+	// Deal a damage to this player
+	public int fallBoundary = -5;
+
+
 	// For left and right movement
 	public float maxSpeed = 10f;
 	Animator anim;
 
 	// Players running to right(true) or left(false)
-	bool facingRight = true;
+	public bool facingRight = true;
 
 	// Jump variables
 	bool grounded = false;
@@ -28,6 +40,22 @@ public class PlayerScript : MonoBehaviour {
 
 			anim.SetBool("Ground", false);
 			GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+		}
+
+		if (transform.position.y <= fallBoundary){
+			Debug.Log ("Player fell to his death");
+			DamagePlayer(9999);
+		}
+	}
+
+	
+	public void DamagePlayer (int damage){
+		playerStats.Health -= damage;
+		// So if our player empties his health he dies
+		if(playerStats.Health <= 0){
+			Debug.Log("Kill Player!!");
+			GameMasterCS.KillPlayer(this);
+			
 		}
 	}
 
