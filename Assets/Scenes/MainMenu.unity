@@ -351,7 +351,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ba97089061614c6699a882907aa550b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerStats:
+    Health: 3
+  fallBoundary: -5
   maxSpeed: 10
+  facingRight: 1
   groundCheck: {fileID: 481424771}
   whatIsGround:
     serializedVersion: 2
