@@ -14,7 +14,7 @@ public class PlayerScript : MonoBehaviour {
 	// instantiate
 	public PlayerStats playerStats = new PlayerStats();
 	// Deal a damage to this player
-	public int fallBoundary = -5;
+	public int fallBoundary = -20;
 
 
 
@@ -35,8 +35,19 @@ public class PlayerScript : MonoBehaviour {
 	void Start () {
 		anim = GetComponent<Animator> ();
 	}
-
+	private float lastHitTime;
+	public float repeatSwing = 0f;
 	void Update(){
+
+		if (Input.GetButtonDown ("Fire1") && !anim.GetBool("isKnight3Attacking")) {
+
+			anim.SetBool("isKnight3Attacking", true);
+			lastHitTime = Time.time;
+
+			Debug.Log("TRUE");
+		}
+
+
 
 		// If player is on ground and space(jump) is pushed then we can jump
 		if (grounded && Input.GetButtonDown ("Jump")) {
@@ -49,6 +60,13 @@ public class PlayerScript : MonoBehaviour {
 			Debug.Log ("Player fell to his death");
 			DamagePlayer(maxHealth);
 		}
+
+		if (Time.time + 0.34f < lastHitTime + repeatSwing) {
+			return;
+		}
+
+		anim.SetBool("isKnight3Attacking", false);
+		
 	}
 
 	

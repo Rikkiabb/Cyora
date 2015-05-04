@@ -20,7 +20,7 @@ public class CanvasController : MonoBehaviour {
 		}
 
 		if (hasExited) {
-			if(Input.GetButtonDown ("Fire1")){ // R
+			if(Input.GetButtonDown ("Mouse X")){ // R
 				Application.LoadLevel(Application.loadedLevel);
 			}
 			if(Input.GetButtonDown ("Fire2")){ // M

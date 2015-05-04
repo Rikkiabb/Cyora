@@ -7,6 +7,8 @@ TagManager:
   - Life0
   - Life1
   - Life2
+  - Enemy
+  - Sword
   layers:
   - Default
   - TransparentFX
