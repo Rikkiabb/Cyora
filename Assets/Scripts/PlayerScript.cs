@@ -8,8 +8,9 @@ public class PlayerScript : MonoBehaviour {
 	Rigidbody2D freefall;
 
 	public static bool finished = false; 
+	bool animPlay = false;
 
-	public bool isMoving = true;
+	public static bool isMoving = true;
 
 	// Create a new player stat class which handles his health and weapons
 	[System.Serializable]
@@ -45,6 +46,7 @@ public class PlayerScript : MonoBehaviour {
 	}
 	private float lastHitTime;
 	public float repeatSwing = 0f;
+
 	void Update(){
 
 		if (isMoving) {
@@ -76,6 +78,10 @@ public class PlayerScript : MonoBehaviour {
 		}
 
 		anim.SetBool("isKnight3Attacking", false);
+		if (finished && !animPlay) {
+			anim.SetTrigger("Finished");
+			animPlay = true; 
+		}
 		
 	}
 

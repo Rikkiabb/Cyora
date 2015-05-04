@@ -12,6 +12,9 @@ public class Finish : MonoBehaviour {
 			//TODO: Disable controll script
 			CameraPosition.target = transform;
 			//TODO: PLay animation
+			PlayerScript.finished = true;
+			PlayerScript.isMoving = false;
+			CanvasController.clearedLevel = true;
 			
 //			
 	}
