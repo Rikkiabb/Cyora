@@ -6,6 +6,7 @@ public class CanvasController : MonoBehaviour {
 	public Transform target;
 	Animator anim;
 	bool hasExited = false;
+	static public bool clearedLevel = false;
 
 	void Start () {
 		anim = GetComponent<Animator> ();
@@ -17,6 +18,11 @@ public class CanvasController : MonoBehaviour {
 			// target.position is the position of the player, we add 0 to the x-axis, nothing to the y-axis and the z-axis is a constant
 			anim.SetTrigger("GameOver");
 			hasExited = true;
+		}
+
+		if (target != null && clearedLevel) {
+			anim.SetTrigger("ClearLevel");
+			clearedLevel = false;
 		}
 
 		if (hasExited) {

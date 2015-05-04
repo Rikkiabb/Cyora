@@ -9,6 +9,7 @@ TagManager:
   - Life2
   - Enemy
   - Sword
+  - KeyEffect
   layers:
   - Default
   - TransparentFX

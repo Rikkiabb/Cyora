@@ -10,6 +10,7 @@ function OnTriggerEnter2D (obj : Collider2D){
 		//TODO: Disable controll script
 		CameraPosition.target = transform;
 		//TODO: PLay animation
+
 	
 	}
 

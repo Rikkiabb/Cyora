@@ -351,9 +351,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ba97089061614c6699a882907aa550b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 3
+  isMoving: 1
   playerStats:
     Health: 3
-  fallBoundary: -5
+  fallBoundary: -20
   maxSpeed: 10
   facingRight: 1
   groundCheck: {fileID: 481424771}
@@ -361,6 +363,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967039
   jumpForce: 700
+  repeatSwing: 0
 --- !u!50 &277126556
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -545,8 +548,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 512435920}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.5799999, y: -4.69999981, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -20.6599998, y: -.889999986, z: 0}
+  m_LocalScale: {x: 1, y: 4.11249542, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -721,7 +724,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d7321049882249948c1f52510a050d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1435507098}
+  realTarget: {fileID: 0}
 --- !u!114 &576061952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -730,7 +733,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 576061945}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b8672f69564247f29cd02ee6521d135, type: 3}
+  m_Script: {fileID: 11500000, guid: 697f6cd7991cc4aa0a382efbd306d4a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &946974173
@@ -1330,8 +1333,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1986903849}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.1000004, y: -3.61999989, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 12.1000004, y: .189999998, z: 0}
+  m_LocalScale: {x: 1, y: 3.53750372, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
