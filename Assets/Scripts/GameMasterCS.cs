@@ -4,7 +4,6 @@ using System.Collections;
 public class GameMasterCS : MonoBehaviour {
 
 	public static int numbKeys = 0;
-	public int test = 0;
 	
 	public int offsetY = 40;
 	public int offsetX = 40;

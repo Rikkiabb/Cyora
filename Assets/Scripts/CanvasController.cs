@@ -29,10 +29,12 @@ public class CanvasController : MonoBehaviour {
 		if (hasExited) {
 			if(Input.GetButtonDown ("Mouse X")){ // R
 				PlayerScript.isMoving = true;
+				GameMasterCS.numbKeys = 0;
 				Application.LoadLevel(Application.loadedLevel);
 			}
 			if(Input.GetButtonDown ("Fire2")){ // M
 				PlayerScript.isMoving = true;
+				GameMasterCS.numbKeys = 0;
 				Application.LoadLevel("MainMenu");
 			}
 			if(Input.GetButtonDown ("Fire3")){ // Q
