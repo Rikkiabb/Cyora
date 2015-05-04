@@ -42,11 +42,9 @@ public class PlayerScript : MonoBehaviour {
 		if (Input.GetButtonDown ("Fire1") && !anim.GetBool("isKnight3Attacking")) {
 
 			anim.SetBool("isKnight3Attacking", true);
+			StartCoroutine (waitAttack ());
 			lastHitTime = Time.time;
-
-			Debug.Log("TRUE");
 		}
-
 
 
 		// If player is on ground and space(jump) is pushed then we can jump
@@ -61,13 +59,21 @@ public class PlayerScript : MonoBehaviour {
 			DamagePlayer(maxHealth);
 		}
 
-		if (Time.time + 0.34f < lastHitTime + repeatSwing) {
-			return;
+	}
+
+	IEnumerator waitAttack()
+	{
+		// one
+
+		if (anim.GetFloat ("Speed") > 0) {
+			yield return new WaitForSeconds (.8f);
+		} else {
+			yield return new WaitForSeconds (0.6f);
 		}
 
 		anim.SetBool("isKnight3Attacking", false);
-		
 	}
+
 
 	
 	public void DamagePlayer (int damage){
