@@ -4,6 +4,10 @@ using System.Collections;
 public class PlayerScript : MonoBehaviour {
 
 	public int maxHealth = 3;
+	CircleCollider2D collide;
+	Rigidbody2D freefall;
+
+	public bool isMoving = true;
 
 	// Create a new player stat class which handles his health and weapons
 	[System.Serializable]
@@ -34,26 +38,30 @@ public class PlayerScript : MonoBehaviour {
 
 	void Start () {
 		anim = GetComponent<Animator> ();
+		collide = GetComponent<CircleCollider2D> ();
+		freefall = GetComponent<Rigidbody2D> ();
 	}
 	private float lastHitTime;
 	public float repeatSwing = 0f;
 	void Update(){
 
-		if (Input.GetButtonDown ("Fire1") && !anim.GetBool("isKnight3Attacking")) {
+		if (isMoving) {
+			if (Input.GetButtonDown ("Fire1") && !anim.GetBool ("isKnight3Attacking")) {
 
-			anim.SetBool("isKnight3Attacking", true);
-			lastHitTime = Time.time;
+				anim.SetBool ("isKnight3Attacking", true);
+				lastHitTime = Time.time;
 
-			Debug.Log("TRUE");
-		}
+				Debug.Log ("TRUE");
+			}
 
 
 
-		// If player is on ground and space(jump) is pushed then we can jump
-		if (grounded && Input.GetButtonDown ("Jump")) {
+			// If player is on ground and space(jump) is pushed then we can jump
+			if (grounded && Input.GetButtonDown ("Jump")) {
 
-			anim.SetBool("Ground", false);
-			GetComponent<Rigidbody2D>().AddForce(new Vector2(0, jumpForce));
+				anim.SetBool ("Ground", false);
+				GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, jumpForce));
+			}
 		}
 
 		if (transform.position.y <= fallBoundary){
@@ -102,32 +110,39 @@ public class PlayerScript : MonoBehaviour {
 
 		}
 
-		anim.SetTrigger("Hurt");
+		if (isMoving) {
+			anim.SetTrigger ("Hurt");
+		}
 		// So if our player empties his health he dies
 		if(playerStats.Health <= 0){
 			Debug.Log("Kill Player!!");
-			GameMasterCS.KillPlayer(this);
-			
+			freefall.mass = 2000;
+			Destroy (collide);
+			GameObject Sword = GameObject.FindGameObjectWithTag("Sword");
+			Destroy(Sword);
+			isMoving = false;
 		}
 	}
 
 	void FixedUpdate () {
 
-		// Check if we are on the ground
-		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
-		anim.SetBool ("Ground", grounded);
+		if (isMoving) {
+			// Check if we are on the ground
+			grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
+			anim.SetBool ("Ground", grounded);
 
-		// Left and right movement
-		float move = Input.GetAxis ("Horizontal");
-		anim.SetFloat ("Speed", Mathf.Abs (move));
-		GetComponent<Rigidbody2D>().velocity = new Vector2 (move * maxSpeed, GetComponent<Rigidbody2D>().velocity.y);
+			// Left and right movement
+			float move = Input.GetAxis ("Horizontal");
+			anim.SetFloat ("Speed", Mathf.Abs (move));
+			GetComponent<Rigidbody2D> ().velocity = new Vector2 (move * maxSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 			
-		// If player is moving(in a positive axis) and not facing right then we flip
-		if (move > 0 && !facingRight)
-			Flip ();
+			// If player is moving(in a positive axis) and not facing right then we flip
+			if (move > 0 && !facingRight)
+				Flip ();
 		// If player is moving(in a negative axis) and not facing left then we flip
 		else if (move < 0 && facingRight)
-			Flip ();
+				Flip ();
+		}
 	}
 
 	void Flip(){
