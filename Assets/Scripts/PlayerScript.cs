@@ -7,6 +7,8 @@ public class PlayerScript : MonoBehaviour {
 	CircleCollider2D collide;
 	Rigidbody2D freefall;
 
+	public static bool finished = false; 
+
 	public bool isMoving = true;
 
 	// Create a new player stat class which handles his health and weapons
