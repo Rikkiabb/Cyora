@@ -18,6 +18,7 @@ public class CanvasController : MonoBehaviour {
 			// target.position is the position of the player, we add 0 to the x-axis, nothing to the y-axis and the z-axis is a constant
 			anim.SetTrigger("GameOver");
 			hasExited = true;
+
 		}
 
 		if (target != null && clearedLevel) {
@@ -27,9 +28,11 @@ public class CanvasController : MonoBehaviour {
 
 		if (hasExited) {
 			if(Input.GetButtonDown ("Mouse X")){ // R
+				PlayerScript.isMoving = true;
 				Application.LoadLevel(Application.loadedLevel);
 			}
 			if(Input.GetButtonDown ("Fire2")){ // M
+				PlayerScript.isMoving = true;
 				Application.LoadLevel("MainMenu");
 			}
 			if(Input.GetButtonDown ("Fire3")){ // Q

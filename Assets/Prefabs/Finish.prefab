@@ -9,8 +9,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 424854}
   - 61: {fileID: 6146556}
-  - 114: {fileID: 11438366}
   - 212: {fileID: 21207408}
+  - 114: {fileID: 11480668}
   m_Layer: 0
   m_Name: Finish
   m_TagString: Untagged
@@ -43,7 +43,7 @@ BoxCollider2D:
   m_Offset: {x: .0299999993, y: .370000005}
   serializedVersion: 2
   m_Size: {x: .0900000036, y: 1.03999996}
---- !u!114 &11438366
+--- !u!114 &11480668
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -51,7 +51,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 141640}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 18d9fb5e4f84b4ab5b551cae53bdb832, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e346111a617f4eda84d389cbddef411, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &21207408
