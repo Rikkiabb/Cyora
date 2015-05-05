@@ -6,7 +6,7 @@ public class PlayerScript : MonoBehaviour {
 	public int maxHealth = 3;
 	CircleCollider2D collide;
 	Rigidbody2D freefall;
-
+		
 	public static bool finished = false; 
 	bool animPlay = false;
 
@@ -44,6 +44,7 @@ public class PlayerScript : MonoBehaviour {
 		collide = GetComponent<CircleCollider2D> ();
 		freefall = GetComponent<Rigidbody2D> ();
 	}
+
 	private float lastHitTime;
 	public float repeatSwing = 0f;
 
@@ -164,4 +165,5 @@ public class PlayerScript : MonoBehaviour {
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
+	
 }
