@@ -21,7 +21,7 @@ public class PlayerScript : MonoBehaviour {
 	// instantiate
 	public PlayerStats playerStats = new PlayerStats();
 	// Deal a damage to this player
-	public int fallBoundary = -20;
+	public int fallBoundary = -30;
 
 
 
@@ -37,7 +37,7 @@ public class PlayerScript : MonoBehaviour {
 	public Transform groundCheck;
 	float groundRadius = 0.2f;
 	public LayerMask whatIsGround;
-	public float jumpForce = 700f;
+	public float jumpForce = 950f;
 
 	void Start () {
 		anim = GetComponent<Animator> ();
