@@ -15,7 +15,9 @@ public class Sword : MonoBehaviour {
 
 		if (obj.gameObject.tag == "Enemy" && anim.GetBool("isKnight3Attacking")) {
 			Debug.Log("WE HIT!");
-			Destroy(obj.transform.parent.gameObject);
+			Enemy enemy = obj.gameObject.GetComponent<Enemy>();
+			enemy.DamageEnemy(1);
+			//Destroy(obj.transform.parent.gameObject);
 //			Destroy(obj.gameObject.pa);
 		}
 	}
