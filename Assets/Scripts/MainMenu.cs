@@ -20,4 +20,8 @@ public class MainMenu : MonoBehaviour {
 	public void MainMenus(){
 		Application.LoadLevel("MainMenu");
 	}
+
+	public void Tutor(){
+		Application.LoadLevel("TutorLevel");
+	}
 }

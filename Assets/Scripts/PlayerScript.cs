@@ -37,7 +37,7 @@ public class PlayerScript : MonoBehaviour {
 	public Transform groundCheck;
 	float groundRadius = 0.2f;
 	public LayerMask whatIsGround;
-	public float jumpForce = 950f;
+	public float jumpForce = 1100f;
 
 	void Start () {
 		anim = GetComponent<Animator> ();
