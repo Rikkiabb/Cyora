@@ -10,6 +10,7 @@ TagManager:
   - Enemy
   - Sword
   - KeyEffect
+  - Explode
   layers:
   - Default
   - TransparentFX

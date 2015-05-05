@@ -4,7 +4,7 @@ using System.Collections;
 public class MovingPlatform : MonoBehaviour {
 	
 	public bool forward = false;
-	public float speed = 3f;
+	public float speed = 5f;
 	public bool leftToRight = true;
 	int timer = 0;
 	public int maxTimer = 10;
@@ -45,5 +45,40 @@ public class MovingPlatform : MonoBehaviour {
 		}
 		
 		
+	}
+
+	void OnCollisionStay2D(Collision2D coll){
+		
+		if (coll.gameObject.tag == "Player") {
+
+			PlayerScript player = coll.gameObject.GetComponent<PlayerScript> ();
+
+			if (forward) {
+				
+				//			if (leftToRight) {
+				//GetComponent<Rigidbody2D> ().velocity.x = speed;
+				Debug.Log ("Forward!");
+				player.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (speed * player.maxSpeed * 5f, 0));
+				
+				//			rig.velocity.x = speed;
+				
+				//			} else {
+				//				//GetComponent<Rigidbody2D> ().velocity.y = speed;
+				//				GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, speed));
+				//			}
+			} else {
+				
+				//			if (leftToRight) {
+				//GetComponent<Rigidbody2D> ().velocity.x = -speed;
+				player.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (-speed * player.maxSpeed * 5f, 0));
+				//			} else {
+				//				//GetComponent<Rigidbody2D> ().velocity.y = -speed;
+				//				GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, -speed));
+				//			}
+			}
+
+				
+		} 
+
 	}
 }
