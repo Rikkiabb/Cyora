@@ -53,26 +53,17 @@ public class MovingPlatform : MonoBehaviour {
 
 			if (forward) {
 				
-				//			if (leftToRight) {
-				//GetComponent<Rigidbody2D> ().velocity.x = speed;
-				Debug.Log ("Forward!");
-				player.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (speed * player.maxSpeed * 5f, 0));
-				
-				//			rig.velocity.x = speed;
-				
-				//			} else {
-				//				//GetComponent<Rigidbody2D> ().velocity.y = speed;
-				//				GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, speed));
-				//			}
+				if (leftToRight) {
+
+					player.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (speed * player.maxSpeed * 5f, 0));
+
+				}
 			} else {
 				
-				//			if (leftToRight) {
-				//GetComponent<Rigidbody2D> ().velocity.x = -speed;
-				player.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (-speed * player.maxSpeed * 5f, 0));
-				//			} else {
-				//				//GetComponent<Rigidbody2D> ().velocity.y = -speed;
-				//				GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, -speed));
-				//			}
+				if (leftToRight) {
+
+					player.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (-speed * player.maxSpeed * 5f, 0));
+				}
 			}
 
 				
