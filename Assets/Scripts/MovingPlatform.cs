@@ -16,25 +16,23 @@ public class MovingPlatform : MonoBehaviour {
 		
 		if (forward) {
 			
-			//			if (leftToRight) {
-			//GetComponent<Rigidbody2D> ().velocity.x = speed;
-			GetComponent<Rigidbody2D> ().velocity = new Vector2 (speed, 0) ;
+			if (leftToRight) {
+		
+				GetComponent<Rigidbody2D> ().velocity = new Vector2 (speed, 0) ;
 			
-			//			rig.velocity.x = speed;
-			
-			//			} else {
-			//				//GetComponent<Rigidbody2D> ().velocity.y = speed;
-			//				GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, speed));
-			//			}
+			} else {
+				GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, speed) ;
+			}
+
 		} else {
 			
-			//			if (leftToRight) {
-			//GetComponent<Rigidbody2D> ().velocity.x = -speed;
-			GetComponent<Rigidbody2D> ().velocity = new Vector2 (-speed, 0) ;
-			//			} else {
-			//				//GetComponent<Rigidbody2D> ().velocity.y = -speed;
-			//				GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, -speed));
-			//			}
+			if (leftToRight) {
+				
+				GetComponent<Rigidbody2D> ().velocity = new Vector2 (-speed, 0) ;
+				
+			} else {
+				GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, -speed) ;
+			}			
 		}
 		
 		
