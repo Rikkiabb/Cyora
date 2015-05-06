@@ -17,6 +17,8 @@ public class Enemy : MonoBehaviour {
 		public float speed = 5f;
 		public bool leftToRight = true;
 		public int maxTimer = 10;
+		public bool wait = false;
+		public float waitTime = 2f;
 	}
 
 	//For enemy movement.
@@ -25,23 +27,21 @@ public class Enemy : MonoBehaviour {
 	// instantiate
 	public EnemyStats stats = new EnemyStats();
 	public EnemyMovement movement = new EnemyMovement();
-	// Deal a damage to this player
-	public int fallBoundary = -5;
 
 	// how much a player will bounce of enemy on contact
 	public float bounceAmount = 15f;
 	// this update isn't really neccessary for our enemy class but could be useful later on TODO refactor
 	void Update(){
-		if (transform.position.y <= fallBoundary){
-			//This shouldn't be a issue because enemies don't fall down
-			Debug.Log ("Enemy fell to his death");
-			DamageEnemy(9999);
-		}
 
 		Move ();
 	}
 
 	void Move(){
+
+		//only happens if enemy waits a while before tunring around
+		if (timer >= movement.maxTimer) {
+			return;
+		}
 
 		if (movement.forward) {
 			
@@ -67,8 +67,17 @@ public class Enemy : MonoBehaviour {
 		
 		timer++;
 		if (timer == movement.maxTimer) {
-			timer = 0;
+
+			if(movement.wait && movement.forward){
+				Debug.Log ("WAIT!");
+				StartCoroutine(Wait (movement.waitTime));
+			}
+			else{
+				timer = 0;
+			}
+
 			movement.forward = !movement.forward;
+
 		}
 
 	}
@@ -138,5 +147,12 @@ public class Enemy : MonoBehaviour {
 			//GameMasterCS.KillEnemy(this);
 			
 		}
+	}
+
+	IEnumerator Wait(float time){
+
+		GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, 0) ;
+		yield return new WaitForSeconds (2f);
+		timer = 0;
 	}
 }

@@ -166,13 +166,5 @@ public class PlayerScript : MonoBehaviour {
 		transform.localScale = theScale;
 	}
 
-	//For exploding cloud
-	void OnTriggerEnter2D (Collider2D obj){
-		
-		if(obj.name == "Player"){
-			GameObject explode = GameObject.FindGameObjectWithTag("Explode");	
-			Destroy(explode);
-		}
-	}
 	
 }
