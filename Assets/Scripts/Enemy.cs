@@ -8,9 +8,23 @@ public class Enemy : MonoBehaviour {
 		public int Health = 3;
 		public int attackHit = 1;
 	}
-	
+
+	//Handles enemy movement.
+	[System.Serializable]
+	public class EnemyMovement{
+		//Variables to be able to move the enemy
+		public bool forward = false;
+		public float speed = 5f;
+		public bool leftToRight = true;
+		public int maxTimer = 10;
+	}
+
+	//For enemy movement.
+	int timer = 0;
+
 	// instantiate
 	public EnemyStats stats = new EnemyStats();
+	public EnemyMovement movement = new EnemyMovement();
 	// Deal a damage to this player
 	public int fallBoundary = -5;
 
@@ -23,6 +37,40 @@ public class Enemy : MonoBehaviour {
 			Debug.Log ("Enemy fell to his death");
 			DamageEnemy(9999);
 		}
+
+		Move ();
+	}
+
+	void Move(){
+
+		if (movement.forward) {
+			
+			if (movement.leftToRight) {
+
+				GetComponent<Rigidbody2D> ().velocity = new Vector2 (movement.speed, 0) ;
+				
+			} else {
+				GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, movement.speed) ;
+			}
+			
+		} else {
+			
+			if (movement.leftToRight) {
+				
+				GetComponent<Rigidbody2D> ().velocity = new Vector2 (-movement.speed, 0) ;
+				
+			} else {
+				GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, -movement.speed) ;
+			}			
+		}
+		
+		
+		timer++;
+		if (timer == movement.maxTimer) {
+			timer = 0;
+			movement.forward = !movement.forward;
+		}
+
 	}
 
 	// How long before he can occur damage again
@@ -85,7 +133,7 @@ public class Enemy : MonoBehaviour {
 		stats.Health -= damage;
 		// So if our player empties his health he dies
 		if(stats.Health <= 0){
-			Debug.Log("Kill Player!!");
+			Debug.Log("Kill Enemy!!");
 			Destroy (transform.parent.gameObject);
 			//GameMasterCS.KillEnemy(this);
 			
