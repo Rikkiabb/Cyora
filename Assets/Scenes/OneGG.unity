@@ -24,15 +24,15 @@ RenderSettings:
   m_AmbientEquatorColor: {r: .114, g: .125, b: .133000001, a: 1}
   m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 3
-  m_SkyboxMaterial: {fileID: 0}
+  m_AmbientMode: 0
+  m_SkyboxMaterial: {fileID: 2100000, guid: e1f809f9000434f4d976f132684abbea, type: 2}
   m_HaloStrength: .5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
   m_HaloTexture: {fileID: 0}
   m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
   m_DefaultReflectionMode: 0
-  m_DefaultReflectionResolution: 128
+  m_DefaultReflectionResolution: 512
   m_ReflectionBounces: 1
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
@@ -1442,7 +1442,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: .300000012
+  near clip plane: 1.10000002
   far clip plane: 1000
   field of view: 60
   orthographic: 1
@@ -4248,6 +4248,18 @@ Prefab:
     - target: {fileID: 22491672, guid: 86a1b23c8d9ba41eb8841a0ca4e415c2, type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11486512, guid: 86a1b23c8d9ba41eb8841a0ca4e415c2, type: 2}
+      propertyPath: m_Color.r
+      value: .992156923
+      objectReference: {fileID: 0}
+    - target: {fileID: 11486512, guid: 86a1b23c8d9ba41eb8841a0ca4e415c2, type: 2}
+      propertyPath: m_Color.g
+      value: .811764777
+      objectReference: {fileID: 0}
+    - target: {fileID: 11486512, guid: 86a1b23c8d9ba41eb8841a0ca4e415c2, type: 2}
+      propertyPath: m_Color.b
+      value: .149019614
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 86a1b23c8d9ba41eb8841a0ca4e415c2, type: 2}
