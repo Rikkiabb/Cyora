@@ -20,7 +20,7 @@ public class Key : MonoBehaviour {
 			GameObject effect2 = GameObject.FindGameObjectWithTag("KeyEffect");
 			Destroy(effect2, 2);
 			Destroy(gameObject);
-			Debug.Log (gameObject.name);
+	
 
 			if(dissapear){
 				GameObject explode = GameObject.FindGameObjectWithTag("Explode");	
