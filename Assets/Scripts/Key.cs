@@ -9,7 +9,7 @@ public class Key : MonoBehaviour {
 		
 		if(obj.name == "Player"){
 
-			GameMasterCS.numbKeys++;
+			ScoreManager.numbKeys++;
 //			GameMaster.numbKeys++;
 			Object effect = Instantiate(keyEffect, transform.position, transform.rotation);
 			GameObject effect2 = GameObject.FindGameObjectWithTag("KeyEffect");
