@@ -3,15 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Life0
-  - Life1
-  - Life2
-  - Enemy
-  - Sword
-  - KeyEffect
-  - Explode
-  - Still
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -21,7 +13,7 @@ TagManager:
   - UI
   - 
   - 
-  - Player
+  - 
   - 
   - 
   - 
@@ -49,6 +41,43 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Character
-    uniqueID: 3530143405
-    locked: 0
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers: []
