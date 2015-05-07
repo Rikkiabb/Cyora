@@ -89,7 +89,9 @@ public class Enemy : MonoBehaviour {
 	// This function gets called whenever something collides with our thingy
 	void OnCollisionEnter2D(Collision2D coll){
 
-		if (coll.gameObject.tag == "Player" && coll.collider.tag != "Sword") {
+		PlayerScript player = coll.gameObject.GetComponent<PlayerScript> ();
+
+		if (coll.gameObject.tag == "Player" && (coll.collider.tag != "Sword" || (coll.collider.tag == "Sword" && !player.isAttacking()))) {
 
 			if (Time.time > lastHitTime + repeatDamagePeriod) {
 				// We need to get the incoming collider that was involved in the collision
@@ -99,7 +101,7 @@ public class Enemy : MonoBehaviour {
 				Debug.Log (pointOfContact);
 				// Store an instance of the player thad collided with the enemy
 
-				PlayerScript player = coll.gameObject.GetComponent<PlayerScript> ();
+
 				// Deal appropriate damage to him 
 				player.DamagePlayer (stats.attackHit);
 				lastHitTime = Time.time;

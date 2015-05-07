@@ -166,5 +166,10 @@ public class PlayerScript : MonoBehaviour {
 		transform.localScale = theScale;
 	}
 
+	public bool isAttacking(){
+
+		return anim.GetBool("isKnight3Attacking");
+	}
+
 	
 }
