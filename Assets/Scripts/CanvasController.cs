@@ -18,6 +18,7 @@ public class CanvasController : MonoBehaviour {
 			// target.position is the position of the player, we add 0 to the x-axis, nothing to the y-axis and the z-axis is a constant
 			anim.SetTrigger("GameOver");
 			hasExited = true;
+			Physics2D.gravity = new Vector2(0, -30);
 
 		}
 

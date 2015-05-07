@@ -11,6 +11,14 @@ TagManager:
   - Sword
   - KeyEffect
   - Explode
+  - KeyCounter
+  - Still
+  - Door1
+  - Door2
+  - Door3
+  - Door4
+  - Door5
+  - Explode2
   layers:
   - Default
   - TransparentFX
