@@ -26,6 +26,7 @@ public class CanvasController : MonoBehaviour {
 		if (target != null && clearedLevel) {
 			anim.SetTrigger("ClearLevel");
 			clearedLevel = false;
+			Physics2D.gravity = new Vector2(0, -30);
 		}
 
 		if (hasExited) {
