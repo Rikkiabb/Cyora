@@ -10,12 +10,15 @@ public class ScoreManager : MonoBehaviour {
 	public static string totalKeys;
 	// Use this for initialization
 
+	void Start(){
+		GameObject[] arr = GameObject.FindGameObjectsWithTag("Key");
+		totalKeys = arr.Length.ToString();
+	}
+
 
 	void Awake(){
 		scoreText = GetComponent<Text>(); // Get a reference to the counterText
 		numbKeys = 0; // initialize as zero
-		GameObject[] arr = GameObject.FindGameObjectsWithTag("Key");
- 		totalKeys = arr.Length.ToString();
 	}
 
 	
