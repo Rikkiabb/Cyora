@@ -9,6 +9,7 @@ public class PlayerScript : MonoBehaviour {
 		
 	public static bool finished = false; 
 	bool animPlay = false;
+	public bool revsereControls = false;
 
 	public static bool isMoving = true;
 
@@ -76,6 +77,19 @@ public class PlayerScript : MonoBehaviour {
 		}
 
 	}
+
+	public void setHealth(int health){
+		playerStats.Health = health;
+	}
+
+	public void setJumpForce(float jump){
+		jumpForce = jump;
+	}
+
+	public void setControls(bool control){
+		revsereControls = control;
+	}
+
 
 	IEnumerator waitAttack(){
 
@@ -146,14 +160,19 @@ public class PlayerScript : MonoBehaviour {
 
 			// Left and right movement
 			float move = Input.GetAxis ("Horizontal");
+
 			anim.SetFloat ("Speed", Mathf.Abs (move));
+			if(revsereControls){
+				move *= -1;
+			}
 			GetComponent<Rigidbody2D> ().velocity = new Vector2 (move * maxSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 			
 			// If player is moving(in a positive axis) and not facing right then we flip
+
 			if (move > 0 && !facingRight)
 				Flip ();
 		// If player is moving(in a negative axis) and not facing left then we flip
-		else if (move < 0 && facingRight)
+			else if (move < 0 && facingRight)
 				Flip ();
 		}
 	}

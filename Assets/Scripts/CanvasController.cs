@@ -27,6 +27,16 @@ public class CanvasController : MonoBehaviour {
 			anim.SetTrigger("ClearLevel");
 			clearedLevel = false;
 			Physics2D.gravity = new Vector2(0, -30);
+
+			PlayerScript player = target.gameObject.GetComponent<PlayerScript>();
+			player.setHealth(3);
+			player.setJumpForce(1100);
+
+
+			GameObject sword = GameObject.FindGameObjectWithTag("Sword");
+			sword.transform.localScale = new Vector3(1, 1, 1);
+//			GameObject playa = GameObject.FindGameObjectWithTag("Player");
+//			playa.
 		}
 
 		if (hasExited) {
