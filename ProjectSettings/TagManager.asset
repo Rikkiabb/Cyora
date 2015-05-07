@@ -11,6 +11,14 @@ TagManager:
   - Sword
   - KeyEffect
   - Explode
+  - KeyCounter
+  - Still
+  - WindCloud
+  - Stair
+  - MoveWindCloud
+  - Door
+  - SecondMoveWind
+  - SecondWind
   layers:
   - Default
   - TransparentFX

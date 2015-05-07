@@ -2437,7 +2437,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 10222098, guid: 507e66f63f70e44c88f5dd384ba73e31, type: 2}
       propertyPath: m_Text
-      value: "Now use the \nstairway to\nheaven to \nfinsh the \nlevel!"
+      value: "Now use the ladder\nto the kingdom to \nfinsh the \nlevel!"
       objectReference: {fileID: 0}
     - target: {fileID: 10222098, guid: 507e66f63f70e44c88f5dd384ba73e31, type: 2}
       propertyPath: m_Color.rgba
