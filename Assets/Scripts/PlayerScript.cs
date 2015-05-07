@@ -92,7 +92,7 @@ public class PlayerScript : MonoBehaviour {
 	
 	public void DamagePlayer (int damage){
 
-		if (damage == maxHealth) {
+		if (damage >= maxHealth) {
 			GameObject heart1 = GameObject.FindGameObjectWithTag("Life0");
 			GameObject heart2 = GameObject.FindGameObjectWithTag("Life1");
 			GameObject heart3 = GameObject.FindGameObjectWithTag("Life2");
@@ -123,7 +123,8 @@ public class PlayerScript : MonoBehaviour {
 		}
 
 		if (isMoving) {
-			anim.SetTrigger ("Hurt");
+			anim.SetBool ("isKnight3Hurting", true);
+			StartCoroutine(WaitHurt());
 		}
 		// So if our player empties his health he dies
 		if(playerStats.Health <= 0){
@@ -169,6 +170,12 @@ public class PlayerScript : MonoBehaviour {
 	public bool isAttacking(){
 
 		return anim.GetBool("isKnight3Attacking");
+	}
+
+	IEnumerator WaitHurt(){
+		yield return new WaitForSeconds(1f);
+		anim.SetBool ("isKnight3Hurting", false);
+
 	}
 
 	

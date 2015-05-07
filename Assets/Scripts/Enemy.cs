@@ -2,6 +2,15 @@
 using System.Collections;
 
 public class Enemy : MonoBehaviour {
+
+	Animator anim;
+
+	void Start(){
+
+		anim = GetComponent<Animator> ();
+	}
+
+
 	// Create a new player stat class which handles his health and weapons
 	[System.Serializable]
 	public class EnemyStats {
@@ -40,6 +49,9 @@ public class Enemy : MonoBehaviour {
 
 		//only happens if enemy waits a while before tunring around
 		if (timer >= movement.maxTimer) {
+			if(movement.wait){
+				Debug.Log("Timer " + timer);
+			}
 			return;
 		}
 
@@ -142,6 +154,8 @@ public class Enemy : MonoBehaviour {
 
 	public void DamageEnemy (int damage){
 		stats.Health -= damage;
+		anim.SetBool ("IsHurt", true);
+		StartCoroutine (WaitHurt ());
 		// So if our player empties his health he dies
 		if(stats.Health <= 0){
 			Debug.Log("Kill Enemy!!");
@@ -156,5 +170,10 @@ public class Enemy : MonoBehaviour {
 		GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, 0) ;
 		yield return new WaitForSeconds (2f);
 		timer = 0;
+	}
+
+	IEnumerator WaitHurt(){
+		yield return new WaitForSeconds (0.4f);
+		anim.SetBool ("IsHurt", false);
 	}
 }
