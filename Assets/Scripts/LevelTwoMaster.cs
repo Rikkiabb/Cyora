@@ -31,23 +31,40 @@ public class LevelTwoMaster : MonoBehaviour {
 
 			if(!windOff && placement == 2){
 				windRight = true;
-				StartCoroutine (waitEffect ());
+				GameObject button = GameObject.FindGameObjectWithTag("Button");
+				Animator shrink = button.GetComponent<Animator>();
+				shrink.SetTrigger ("Pushed");
 				Physics2D.gravity = new Vector2(0, -30);
 				GameObject[] arr = GameObject.FindGameObjectsWithTag("Door");
 				for(int i = 0; i < arr.Length; i++){
-					Destroy (arr[i]);
+					Animator fade = arr[i].GetComponent<Animator>();
+					fade.SetTrigger("Fade");
 				}
+				StartCoroutine (waitFade ());
+//				GameObject[] arr = GameObject.FindGameObjectsWithTag("Door");
+//				for(int i = 0; i < arr.Length; i++){
+//					StartCoroutine (waitFade ());
+//					Animator fade = arr[i].GetComponent<Animator>();
+//					fade.SetTrigger("Fade");
+//					Destroy (arr[i]);
+//				}
 			}
 		
 		}
 	}
 
-	IEnumerator waitEffect(){
+	IEnumerator waitFade(){
+		GameObject[] arr = GameObject.FindGameObjectsWithTag("Door");
 
-		yield return new WaitForSeconds (1);
+		yield return new WaitForSeconds (2);
+
+		for(int i = 0; i < arr.Length; i++){
+			Destroy (arr[i]);
+		}
 		placement++;
-
 	}
+
+
 
 	IEnumerator waitEffectFirstCloud(){
 		
