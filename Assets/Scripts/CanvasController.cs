@@ -14,6 +14,7 @@ public class CanvasController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		Debug.Log (target);
 		if(target == null && !hasExited){
 			// target.position is the position of the player, we add 0 to the x-axis, nothing to the y-axis and the z-axis is a constant
 			anim.SetTrigger("GameOver");
