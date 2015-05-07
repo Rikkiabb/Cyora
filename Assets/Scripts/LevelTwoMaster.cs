@@ -16,38 +16,27 @@ public class LevelTwoMaster : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D obj){
 		if (obj.name == "Player") {
-			Debug.Log(placement);
 		
 			if(!windLeft && placement == 0){
 				windLeft = true;
-				StartCoroutine (waitEffect ());
+				StartCoroutine (waitEffectFirstCloud ());
 				Physics2D.gravity = new Vector2(-115, -30);
-				GameObject explode = GameObject.FindGameObjectWithTag("Explode2");
-				Destroy(explode);
 			}
 
 			if(!windRight && placement == 1){
 				windRight = true;
-				StartCoroutine (waitEffect ());
+				StartCoroutine (waitEffectSecondCloud ());
 				Physics2D.gravity = new Vector2(115, -30);
-				GameObject explode = GameObject.FindGameObjectWithTag("Explode");
-				Destroy(explode);
 			}
 
 			if(!windOff && placement == 2){
 				windRight = true;
 				StartCoroutine (waitEffect ());
 				Physics2D.gravity = new Vector2(0, -30);
-				GameObject explode0 = GameObject.FindGameObjectWithTag("Door1");
-				Destroy(explode0);
-				GameObject explode1 = GameObject.FindGameObjectWithTag("Door2");
-				Destroy(explode1);
-				GameObject explode2 = GameObject.FindGameObjectWithTag("Door3");
-				Destroy(explode2);
-				GameObject explode3 = GameObject.FindGameObjectWithTag("Door4");
-				Destroy(explode3);
-				GameObject explode4 = GameObject.FindGameObjectWithTag("Door5");
-				Destroy(explode4);
+				GameObject[] arr = GameObject.FindGameObjectsWithTag("Door");
+				for(int i = 0; i < arr.Length; i++){
+					Destroy (arr[i]);
+				}
 			}
 		
 		}
@@ -55,8 +44,48 @@ public class LevelTwoMaster : MonoBehaviour {
 
 	IEnumerator waitEffect(){
 
-		yield return new WaitForSeconds (10);
+		yield return new WaitForSeconds (1);
 		placement++;
 
+	}
+
+	IEnumerator waitEffectFirstCloud(){
+		
+		yield return new WaitForSeconds (1);
+		GameObject[] arr0 = GameObject.FindGameObjectsWithTag("WindCloud");
+		for(int i = 0; i < arr0.Length; i++){
+			arr0[i].AddComponent<Rigidbody2D> ();
+		}
+		GameObject fly3 = GameObject.FindGameObjectWithTag("MoveWindCloud");
+		Rigidbody2D rb = fly3.GetComponent<Rigidbody2D> ();
+		rb.isKinematic = false;
+		rb.mass = 6;
+		rb.gravityScale = 25;
+		placement++;
+		GameObject[] arr = GameObject.FindGameObjectsWithTag("Stair");
+		for(int i = 0; i < arr.Length; i++){
+			arr[i].AddComponent<Rigidbody2D> ();
+			Rigidbody2D rb1 = arr[i].GetComponent<Rigidbody2D> ();
+			rb1.mass = 0;
+			rb1.gravityScale = 15;
+		}
+		
+	}
+
+	IEnumerator waitEffectSecondCloud(){
+		
+		yield return new WaitForSeconds (1);
+		GameObject fly = GameObject.FindGameObjectWithTag("SecondMoveWind");
+		Rigidbody2D rb = fly.GetComponent<Rigidbody2D> ();
+		rb.isKinematic = false;
+		rb.mass = 6;
+		rb.gravityScale = 25;
+		GameObject fly1 = GameObject.FindGameObjectWithTag("SecondWind");
+		fly1.AddComponent<Rigidbody2D> ();
+//		Rigidbody2D rb = fly1.GetComponent<Rigidbody2D> ();
+//		rb.mass = 3;
+//		rb.gravityScale = 50;
+		placement++;
+		
 	}
 }

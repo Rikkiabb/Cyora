@@ -13,12 +13,12 @@ TagManager:
   - Explode
   - KeyCounter
   - Still
-  - Door1
-  - Door2
-  - Door3
-  - Door4
-  - Door5
-  - Explode2
+  - WindCloud
+  - Stair
+  - MoveWindCloud
+  - Door
+  - SecondMoveWind
+  - SecondWind
   layers:
   - Default
   - TransparentFX
