@@ -31,7 +31,7 @@ public class KillBoxRainy : MonoBehaviour {
 	void StopEnemiesAndCamera(){
 
 		//Stop camera
-		GameObject camera = GameObject.Find("Main Camera");
+		GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
 		CameraRainy cr = camera.gameObject.GetComponent<CameraRainy>();
 		cr.enabled = false;
 
