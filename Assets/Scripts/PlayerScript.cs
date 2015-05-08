@@ -122,12 +122,14 @@ public class PlayerScript : MonoBehaviour {
 		// Remove damage many hearts from the canvas
 		// for loop that runs through the hearts and removes them until damage is done
 		for(int i = damage; i > 0;i--){
+			Animator animHeart;
 			Debug.Log ("Damage:" + damage);
 			string number = (playerStats.Health).ToString();
 			string image = "Life" + number;
 			Debug.Log (image);
 			GameObject heart = GameObject.FindGameObjectWithTag(image);
-			Destroy(heart);
+			animHeart = heart.GetComponent<Animator> ();
+			animHeart.SetTrigger("MissLife");
 
 		}
 
