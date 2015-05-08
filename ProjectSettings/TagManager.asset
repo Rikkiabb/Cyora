@@ -19,6 +19,8 @@ TagManager:
   - Door
   - SecondMoveWind
   - SecondWind
+  - Button
+  - Key
   layers:
   - Default
   - TransparentFX

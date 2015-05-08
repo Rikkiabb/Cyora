@@ -9,6 +9,7 @@ public class PlayerScript : MonoBehaviour {
 		
 	public static bool finished = false; 
 	bool animPlay = false;
+	public bool revsereControls = false;
 
 	public static bool isMoving = true;
 
@@ -77,6 +78,19 @@ public class PlayerScript : MonoBehaviour {
 
 	}
 
+	public void setHealth(int health){
+		playerStats.Health = health;
+	}
+
+	public void setJumpForce(float jump){
+		jumpForce = jump;
+	}
+
+	public void setControls(bool control){
+		revsereControls = control;
+	}
+
+
 	IEnumerator waitAttack(){
 
 		if (anim.GetFloat ("Speed") > 0) {
@@ -138,22 +152,31 @@ public class PlayerScript : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-
+		
 		if (isMoving) {
 			// Check if we are on the ground
 			grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 			anim.SetBool ("Ground", grounded);
-
+			
 			// Left and right movement
 			float move = Input.GetAxis ("Horizontal");
 			anim.SetFloat ("Speed", Mathf.Abs (move));
-			GetComponent<Rigidbody2D> ().velocity = new Vector2 (move * maxSpeed, GetComponent<Rigidbody2D> ().velocity.y);
+			// Fixes the friction stuff in icy level
+			
+			if(GameMasterCS.isIcy()){
+				GetComponent<Rigidbody2D>().AddForce(new Vector2(move * maxSpeed, 0));
+			}
+			else{
+				if(move != 0){
+					GetComponent<Rigidbody2D> ().velocity = new Vector2 (move * maxSpeed, GetComponent<Rigidbody2D> ().velocity.y);
+				}		
+			}
 			
 			// If player is moving(in a positive axis) and not facing right then we flip
 			if (move > 0 && !facingRight)
 				Flip ();
-		// If player is moving(in a negative axis) and not facing left then we flip
-		else if (move < 0 && facingRight)
+			// If player is moving(in a negative axis) and not facing left then we flip
+			else if (move < 0 && facingRight)
 				Flip ();
 		}
 	}

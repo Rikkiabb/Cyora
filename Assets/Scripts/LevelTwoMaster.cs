@@ -35,11 +35,19 @@ public class LevelTwoMaster : MonoBehaviour {
 				Animator shrink = button.GetComponent<Animator>();
 				shrink.SetTrigger ("Pushed");
 				Physics2D.gravity = new Vector2(0, -30);
+
 				GameObject[] arr = GameObject.FindGameObjectsWithTag("Door");
 				for(int i = 0; i < arr.Length; i++){
 					Animator fade = arr[i].GetComponent<Animator>();
 					fade.SetTrigger("Fade");
 				}
+
+				GameObject[] arr1 = GameObject.FindGameObjectsWithTag("Enemy");
+				for(int i = 0; i < arr1.Length; i++){
+					Animator fade = arr1[i].GetComponent<Animator>();
+					fade.SetTrigger("Fade");
+				}
+
 				StartCoroutine (waitFade ());
 //				GameObject[] arr = GameObject.FindGameObjectsWithTag("Door");
 //				for(int i = 0; i < arr.Length; i++){
@@ -55,13 +63,18 @@ public class LevelTwoMaster : MonoBehaviour {
 
 	IEnumerator waitFade(){
 		GameObject[] arr = GameObject.FindGameObjectsWithTag("Door");
+		GameObject[] arr1 = GameObject.FindGameObjectsWithTag("Enemy");
 
 		yield return new WaitForSeconds (2);
 
 		for(int i = 0; i < arr.Length; i++){
 			Destroy (arr[i]);
 		}
-		placement++;
+
+		for(int i = 0; i < arr1.Length; i++){
+			Destroy (arr1[i]);
+		}
+		placement++; 
 	}
 
 

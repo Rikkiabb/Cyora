@@ -7,7 +7,13 @@ public class ScoreManager : MonoBehaviour {
 
 	Text scoreText; // a text object
 	public static int numbKeys; // keys collected
+	public static string totalKeys;
 	// Use this for initialization
+
+	void Start(){
+		GameObject[] arr = GameObject.FindGameObjectsWithTag("Key");
+		totalKeys = arr.Length.ToString();
+	}
 
 
 	void Awake(){
@@ -18,6 +24,7 @@ public class ScoreManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		scoreText.text = numbKeys.ToString(); // update the score
+
+		scoreText.text = numbKeys.ToString() + " / " + totalKeys; // update the score
 	}
 }
