@@ -24,8 +24,8 @@ RenderSettings:
   m_AmbientEquatorColor: {r: .114, g: .125, b: .133000001, a: 1}
   m_AmbientGroundColor: {r: .0469999984, g: .0430000015, b: .0350000001, a: 1}
   m_AmbientIntensity: 1
-  m_AmbientMode: 3
-  m_SkyboxMaterial: {fileID: 0}
+  m_AmbientMode: 0
+  m_SkyboxMaterial: {fileID: 2100000, guid: e1f809f9000434f4d976f132684abbea, type: 2}
   m_HaloStrength: .5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -352,6 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  revsereControls: 0
   playerStats:
     Health: 3
   fallBoundary: -30
