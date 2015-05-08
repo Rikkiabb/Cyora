@@ -55,14 +55,14 @@ public class MovingPlatform : MonoBehaviour {
 				
 				if (leftToRight) {
 
-					player.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (speed * player.maxSpeed * 5f, 0));
+					player.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (speed * player.maxSpeed * 3f, 0));
 
 				}
 			} else {
 				
 				if (leftToRight) {
 
-					player.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (-speed * player.maxSpeed * 5f, 0));
+					player.GetComponent<Rigidbody2D> ().AddForce (new Vector2 (-speed * player.maxSpeed * 3f, 0));
 				}
 			}
 
