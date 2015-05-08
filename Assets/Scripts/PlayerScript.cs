@@ -167,9 +167,8 @@ public class PlayerScript : MonoBehaviour {
 				GetComponent<Rigidbody2D>().AddForce(new Vector2(move * maxSpeed, 0));
 			}
 			else{
-				if(move != 0){
-					GetComponent<Rigidbody2D> ().velocity = new Vector2 (move * maxSpeed, GetComponent<Rigidbody2D> ().velocity.y);
-				}		
+
+				GetComponent<Rigidbody2D> ().velocity = new Vector2 (move * maxSpeed, GetComponent<Rigidbody2D> ().velocity.y);
 			}
 			
 			// If player is moving(in a positive axis) and not facing right then we flip

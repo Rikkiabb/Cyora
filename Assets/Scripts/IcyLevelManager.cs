@@ -8,7 +8,7 @@ public class IcyLevelManager : MonoBehaviour {
 	// Use this for initialization
 
 	void Start(){
-		GameMasterCS.setIce(true);
+		GameMasterCS.setIce(false);
 	}
 	// Update is called once per frame
 	void Update () {
