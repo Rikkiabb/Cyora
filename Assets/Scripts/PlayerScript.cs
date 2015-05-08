@@ -152,26 +152,30 @@ public class PlayerScript : MonoBehaviour {
 	}
 
 	void FixedUpdate () {
-
+		
 		if (isMoving) {
 			// Check if we are on the ground
 			grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 			anim.SetBool ("Ground", grounded);
-
+			
 			// Left and right movement
 			float move = Input.GetAxis ("Horizontal");
-
 			anim.SetFloat ("Speed", Mathf.Abs (move));
-			if(revsereControls){
-				move *= -1;
+			// Fixes the friction stuff in icy level
+			
+			if(GameMasterCS.isIcy()){
+				GetComponent<Rigidbody2D>().AddForce(new Vector2(move * maxSpeed, 0));
 			}
-			GetComponent<Rigidbody2D> ().velocity = new Vector2 (move * maxSpeed, GetComponent<Rigidbody2D> ().velocity.y);
+			else{
+				if(move != 0){
+					GetComponent<Rigidbody2D> ().velocity = new Vector2 (move * maxSpeed, GetComponent<Rigidbody2D> ().velocity.y);
+				}		
+			}
 			
 			// If player is moving(in a positive axis) and not facing right then we flip
-
 			if (move > 0 && !facingRight)
 				Flip ();
-		// If player is moving(in a negative axis) and not facing left then we flip
+			// If player is moving(in a negative axis) and not facing left then we flip
 			else if (move < 0 && facingRight)
 				Flip ();
 		}
