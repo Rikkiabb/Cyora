@@ -6,15 +6,18 @@ public class CanvasController : MonoBehaviour {
 	public Transform target;
 	Animator anim;
 	bool hasExited = false;
-	static public bool clearedLevel = false;
+	static public bool clearedLevel;
 
+	void Awake(){
+		clearedLevel = false;
+	}
 	void Start () {
-		anim = GetComponent<Animator> ();
+		anim = GetComponent<Animator> ();clearedLevel = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log (target);
+
 		if(target == null && !hasExited){
 			// target.position is the position of the player, we add 0 to the x-axis, nothing to the y-axis and the z-axis is a constant
 			anim.SetTrigger("GameOver");
@@ -30,11 +33,12 @@ public class CanvasController : MonoBehaviour {
 
 			PlayerScript player = target.gameObject.GetComponent<PlayerScript>();
 			player.setHealth(3);
-			player.setJumpForce(1100);
+			player.setJumpForce(1410);
 
 
 			GameObject sword = GameObject.FindGameObjectWithTag("Sword");
 			sword.transform.localScale = new Vector3(1, 1, 1);
+
 //			GameObject playa = GameObject.FindGameObjectWithTag("Player");
 //			playa.
 		}
@@ -56,5 +60,7 @@ public class CanvasController : MonoBehaviour {
 		}
 	
 	}
+
+
 	
 }
