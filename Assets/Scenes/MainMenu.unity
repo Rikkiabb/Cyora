@@ -352,6 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  revsereControls: 0
   playerStats:
     Health: 3
   fallBoundary: -30
