@@ -38,9 +38,6 @@ public class CanvasController : MonoBehaviour {
 
 			GameObject sword = GameObject.FindGameObjectWithTag("Sword");
 			sword.transform.localScale = new Vector3(1, 1, 1);
-
-//			GameObject playa = GameObject.FindGameObjectWithTag("Player");
-//			playa.
 		}
 
 		if (hasExited) {

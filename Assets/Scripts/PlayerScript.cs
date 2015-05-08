@@ -9,7 +9,6 @@ public class PlayerScript : MonoBehaviour {
 		
 	public static bool finished = false; 
 	bool animPlay = false;
-	public bool revsereControls = false;
 
 	public static bool isMoving = true;
 
@@ -27,7 +26,7 @@ public class PlayerScript : MonoBehaviour {
 
 
 	// For left and right movement
-	public float maxSpeed = 10f;
+	public float maxSpeed = 16f;
 	Animator anim;
 
 	// Players running to right(true) or left(false)
@@ -38,7 +37,7 @@ public class PlayerScript : MonoBehaviour {
 	public Transform groundCheck;
 	float groundRadius = 0.2f;
 	public LayerMask whatIsGround;
-	public float jumpForce = 1100f;
+	public float jumpForce = 1400f;
 
 	void Start () {
 		anim = GetComponent<Animator> ();
@@ -59,7 +58,7 @@ public class PlayerScript : MonoBehaviour {
 			}
 		
 			// If player is on ground and space(jump) is pushed then we can jump
-			if (grounded && Input.GetButtonDown ("Jump")) {
+			if (grounded && Input.GetButtonDown ("Vertical")) {
 
 				anim.SetBool ("Ground", false);
 				GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, jumpForce));
@@ -84,10 +83,6 @@ public class PlayerScript : MonoBehaviour {
 
 	public void setJumpForce(float jump){
 		jumpForce = jump;
-	}
-
-	public void setControls(bool control){
-		revsereControls = control;
 	}
 
 
