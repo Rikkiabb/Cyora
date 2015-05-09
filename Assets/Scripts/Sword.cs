@@ -3,17 +3,18 @@ using System.Collections;
 
 public class Sword : MonoBehaviour {
 
-	Animator anim;
+	PlayerScript player;
 
 	void Start(){
-		anim = transform.parent.GetComponent<Animator> ();	
+		player = transform.parent.gameObject.GetComponent<PlayerScript> ();
 	}
 
-	void OnCollisionEnter2D(Collision2D obj){
+	void OnTriggerEnter2D(Collider2D obj){
 
 //		anim.SetTrigger("Swing");
 
-		if (obj.gameObject.tag == "Enemy" && anim.GetBool("isKnight3Attacking")) {
+
+		if (obj.gameObject.tag == "Enemy" && !player.allowAttack) {
 			Debug.Log("WE HIT!");
 			Enemy enemy = obj.gameObject.GetComponent<Enemy>();
 			enemy.DamageEnemy(1);
@@ -21,6 +22,21 @@ public class Sword : MonoBehaviour {
 //			Destroy(obj.gameObject.pa);
 		}
 	}
+
+	void OnCollisionEnter2D(Collision2D obj){
+		
+		//		anim.SetTrigger("Swing");
+		
+		
+		if (obj.gameObject.tag == "Enemy" && !player.allowAttack) {
+			Debug.Log("WE HIT!");
+			Enemy enemy = obj.gameObject.GetComponent<Enemy>();
+			enemy.DamageEnemy(1);
+			//Destroy(obj.transform.parent.gameObject);
+			//			Destroy(obj.gameObject.pa);
+		}
+	}
+
 
 
 }
