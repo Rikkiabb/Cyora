@@ -52,9 +52,6 @@ public class Enemy : MonoBehaviour {
 
 		//only happens if enemy waits a while before tunring around
 		if (timer >= movement.maxTimer) {
-			if(movement.wait){
-				Debug.Log("Timer " + timer);
-			}
 			return;
 		}
 

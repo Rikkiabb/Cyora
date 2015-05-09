@@ -20,7 +20,7 @@ public class HurtColl : MonoBehaviour {
 	private float lastHitTime;
 	// This function gets called whenever something collides with our thingy
 	void OnCollisionEnter2D(Collision2D coll){
-
+		Debug.Log ("HURT HIM!");
 		PlayerScript player = coll.gameObject.GetComponent<PlayerScript> ();
 
 		if (coll.gameObject.tag == "Player" && (coll.collider.tag != "Sword" || (coll.collider.tag == "Sword" && !player.isAttacking()))) {
