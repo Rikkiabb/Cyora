@@ -2,11 +2,14 @@
 using System.Collections;
 
 public class Enemy : MonoBehaviour {
-
+	EnemyHealth eh;
 	Animator anim;
-
+	private int startHealth;
 	void Start(){
-
+		// Get a reference to the enemy health script
+		eh = gameObject.GetComponentInChildren<EnemyHealth>();
+		// Get the initial health of the enemy
+		startHealth = stats.Health;
 		anim = GetComponent<Animator> ();
 	}
 
@@ -163,6 +166,13 @@ public class Enemy : MonoBehaviour {
 			//GameMasterCS.KillEnemy(this);
 			
 		}
+
+	//	Debug.Log ("His starting health was" + startHealth);
+	//	Debug.Log ("His current health is" + stats.Health);
+		
+		float damagePercent = (float)stats.Health / startHealth;
+	//	Debug.Log (damagePercent);
+		eh.UpdateHealthBar(damagePercent);
 	}
 
 	IEnumerator Wait(float time){
