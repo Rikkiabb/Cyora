@@ -3,9 +3,11 @@ using System.Collections;
 
 public class HurtColl : MonoBehaviour {
 
+	Enemy enemy;
+
 	// Use this for initialization
 	void Start () {
-	
+		enemy = transform.parent.gameObject.GetComponent<Enemy> ();
 	}
 	
 	// Update is called once per frame
@@ -23,7 +25,7 @@ public class HurtColl : MonoBehaviour {
 		Debug.Log ("HURT HIM!");
 		PlayerScript player = coll.gameObject.GetComponent<PlayerScript> ();
 
-		if (coll.gameObject.tag == "Player" && (coll.collider.tag != "Sword" || (coll.collider.tag == "Sword" && !player.isAttacking()))) {
+		if (coll.gameObject.tag == "Player" && (coll.collider.tag != "Sword" || (coll.collider.tag == "Sword" && !player.isAttacking())) && !enemy.isHurt) {
 
 			if (Time.time > lastHitTime + repeatDamagePeriod) {
 				// We need to get the incoming collider that was involved in the collision

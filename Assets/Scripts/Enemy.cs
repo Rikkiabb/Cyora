@@ -4,6 +4,7 @@ using System.Collections;
 public class Enemy : MonoBehaviour {
 	EnemyHealth eh;
 	Animator anim;
+	public bool isHurt = false;
 	private int startHealth;
 	void Start(){
 		// Get a reference to the enemy health script
@@ -153,9 +154,13 @@ public class Enemy : MonoBehaviour {
 //	}
 
 	public void DamageEnemy (int damage){
+		if (isHurt) {
+			return;
+		}
+		isHurt = true;
+		StartCoroutine (WaitHurt ());
 		stats.Health -= damage;
 		anim.SetBool ("IsHurt", true);
-		StartCoroutine (WaitHurt ());
 		// So if our player empties his health he dies
 		if(stats.Health <= 0){
 			Debug.Log("Kill Enemy!!");
@@ -180,7 +185,10 @@ public class Enemy : MonoBehaviour {
 	}
 
 	IEnumerator WaitHurt(){
-		yield return new WaitForSeconds (0.4f);
+
+		yield return new WaitForSeconds (1);
+		isHurt = false;
 		anim.SetBool ("IsHurt", false);
 	}
+
 }
