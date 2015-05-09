@@ -25,4 +25,14 @@ public class Heart : MonoBehaviour {
 			}
 		}
 	}
+
+	public static void DrawHeart(int hearts){
+		Animator animHeart;
+		for (int i = 0; i < hearts; i++) {
+			string image = "Life" + i;
+			GameObject heart = GameObject.FindGameObjectWithTag(image);
+			animHeart = heart.GetComponent<Animator> ();
+			animHeart.SetTrigger("GainLife");
+		}
+	}
 }
