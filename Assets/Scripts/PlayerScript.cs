@@ -38,6 +38,7 @@ public class PlayerScript : MonoBehaviour {
 	float groundRadius = 0.2f;
 	public LayerMask whatIsGround;
 	public float jumpForce = 1400f;
+	public bool allowAttack = true;
 
 	void Start () {
 		anim = GetComponent<Animator> ();
@@ -51,10 +52,12 @@ public class PlayerScript : MonoBehaviour {
 	void Update(){
 
 		if (isMoving) {
-			if (Input.GetButtonDown ("Fire1") && !anim.GetBool ("isKnight3Attacking")) {
+			if (Input.GetButtonDown ("Fire1") && allowAttack) {
 
 				anim.SetBool("isKnight3Attacking", true);
+				allowAttack = false;
 				StartCoroutine (waitAttack ());
+				StartCoroutine(stopSpamAttack());
 			}
 		
 			// If player is on ground and space(jump) is pushed then we can jump
@@ -88,11 +91,11 @@ public class PlayerScript : MonoBehaviour {
 
 	IEnumerator waitAttack(){
 
-		if (anim.GetFloat ("Speed") > 0) {
-			yield return new WaitForSeconds (.8f);
-		} else {
-			yield return new WaitForSeconds (0.6f);
-		}
+//		if (anim.GetFloat ("Speed") > 0) {
+//			yield return new WaitForSeconds (.19f);
+//		} else {
+			yield return new WaitForSeconds (0.34f);
+//		}
 
 		anim.SetBool("isKnight3Attacking", false);
 	}
@@ -192,6 +195,12 @@ public class PlayerScript : MonoBehaviour {
 	IEnumerator WaitHurt(){
 		yield return new WaitForSeconds(1f);
 		anim.SetBool ("isKnight3Hurting", false);
+
+	}
+
+	IEnumerator stopSpamAttack(){
+		yield return new WaitForSeconds (0.5f);
+		allowAttack = true;
 
 	}
 
