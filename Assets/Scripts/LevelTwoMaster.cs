@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 public class LevelTwoMaster : MonoBehaviour {
 
@@ -12,7 +15,6 @@ public class LevelTwoMaster : MonoBehaviour {
 		windOff = false;
 		placement = 0;
 	}
-
 
 	void OnTriggerEnter2D (Collider2D obj){
 		if (obj.name == "Player") {
@@ -118,4 +120,64 @@ public class LevelTwoMaster : MonoBehaviour {
 		placement++;
 		
 	}
+
+	void Update(){
+		if (CanvasController.clearedLevel) {
+			BinaryFormatter bf = new BinaryFormatter();
+			FileStream file = File.Create(Application.persistentDataPath + "/playerInfo.dat");
+			// reyna að ná aðgang að playerdata
+			PlayerData data = new PlayerData();
+
+			if(ScoreManager.numbKeys == 0){ // Nothing happens
+
+				// Setting variables, could use a constructor for a smaller code
+
+				data.heal = 3;
+				data.jf = 1410;
+				data.hdj = false;
+				data.swordSizeX = 1.3f;
+				data.swordSizeY = 1.3f;
+
+			} else if(ScoreManager.numbKeys == 1 || ScoreManager.numbKeys == 2){ // Double jump 
+
+				data.heal = 3;
+				data.jf = 1410;
+				data.hdj = true;
+				data.swordSizeX = 1.3f;
+				data.swordSizeY = 1.3f;
+
+			}  else if(ScoreManager.numbKeys == 3 || ScoreManager.numbKeys == 4){ // extra life
+
+				data.heal = 4;
+				data.jf = 1410;
+				data.hdj = false;
+				data.swordSizeX = 1.3f;
+				data.swordSizeY = 1.3f;
+				
+			}  else if(ScoreManager.numbKeys == 5){ // bigger sword
+
+				data.heal = 3;
+				data.jf = 1410;
+				data.hdj = false;
+				data.swordSizeX = 1.6f;
+				data.swordSizeY = 1.6f;
+				
+			}
+			bf.Serialize(file, data);
+			file.Close ();
+			CanvasController.clearedLevel = false;
+			Application.LoadLevel("Icy");
+		}
+	}
+	/* 		PLAYER TO NORMAL STATE	
+			PlayerScript playa = target.gameObject.GetComponent<PlayerScript>();
+			playa.setHealth(3);
+			playa.setJumpForce(1410);
+			playa.hasDoubleJump = false;
+
+
+			GameObject sword = GameObject.FindGameObjectWithTag("Sword");
+			sword.transform.localScale = new Vector3(1.3f, 1.3f, 1.3f);
+	 */
+
 }

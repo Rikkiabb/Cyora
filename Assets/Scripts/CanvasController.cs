@@ -12,7 +12,7 @@ public class CanvasController : MonoBehaviour {
 		clearedLevel = false;
 	}
 	void Start () {
-		anim = GetComponent<Animator> ();clearedLevel = false;
+		anim = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -23,23 +23,13 @@ public class CanvasController : MonoBehaviour {
 			anim.SetTrigger("GameOver");
 			hasExited = true;
 			Physics2D.gravity = new Vector2(0, -30);
-//			LevelOneMaster l1 = gameObject.GetComponent<LevelOneMaster>();
-//			l1.playerPos();
 
 		}
 
 		if (player.playerStats.Health > 0 && clearedLevel) {
-			anim.SetTrigger("ClearLevel");
-			clearedLevel = false;
+			// Þurfum að búa til scene hérna
 			Physics2D.gravity = new Vector2(0, -30);
 
-			PlayerScript playa = target.gameObject.GetComponent<PlayerScript>();
-			playa.setHealth(3);
-			playa.setJumpForce(1410);
-
-
-			GameObject sword = GameObject.FindGameObjectWithTag("Sword");
-			sword.transform.localScale = new Vector3(1.3f, 1.3f, 1.3f);
 		}
 
 		if (hasExited) {
