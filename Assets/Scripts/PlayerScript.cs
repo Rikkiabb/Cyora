@@ -84,6 +84,10 @@ public class PlayerScript : MonoBehaviour {
 		playerStats.Health = health;
 	}
 
+	public void setMove(bool move){
+		isMoving = move;
+	}
+
 	public void setJumpForce(float jump){
 		jumpForce = jump;
 	}
@@ -105,16 +109,17 @@ public class PlayerScript : MonoBehaviour {
 	public void DamagePlayer (int damage){
 
 		if (damage >= maxHealth) {
-			GameObject heart1 = GameObject.FindGameObjectWithTag("Life0");
-			GameObject heart2 = GameObject.FindGameObjectWithTag("Life1");
-			GameObject heart3 = GameObject.FindGameObjectWithTag("Life2");
-
-			Destroy(heart1);
-			Destroy(heart2);
-			Destroy(heart3);
+//			GameObject heart1 = GameObject.FindGameObjectWithTag("Life0");
+//			GameObject heart2 = GameObject.FindGameObjectWithTag("Life1");
+//			GameObject heart3 = GameObject.FindGameObjectWithTag("Life2");
+//
+//			Destroy(heart1);
+//			Destroy(heart2);
+//			Destroy(heart3);
 
 			Debug.Log("Kill Player!!");
-			GameMasterCS.KillPlayer(this);
+			playerStats.Health = 0;
+			//GameMasterCS.KillPlayer(this);
 
 			return;
 		}

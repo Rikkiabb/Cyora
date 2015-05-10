@@ -21,6 +21,7 @@ TagManager:
   - SecondWind
   - Button
   - Key
+  - KeyCenter
   layers:
   - Default
   - TransparentFX
