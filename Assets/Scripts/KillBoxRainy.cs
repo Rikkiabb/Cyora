@@ -38,14 +38,14 @@ public class KillBoxRainy : MonoBehaviour {
 
 		//Stop camera and water
 		GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
-		GameObject water = GameObject.Find("Water");
+		GameObject water = GameObject.FindGameObjectWithTag("Water");
 		CameraRainy cr = camera.gameObject.GetComponent<CameraRainy>();
 		cr.enabled = false;
 		cr = water.gameObject.GetComponent<CameraRainy>();
 		cr.enabled = false;
 
 		//Stop every enemy at the bottom.
-		GameObject[] arr = GameObject.FindGameObjectsWithTag("Enemy");
+		GameObject[] arr = GameObject.FindGameObjectsWithTag("WaterEnemy");
 
 		for(int i = 0; i < arr.Length; i++){
 

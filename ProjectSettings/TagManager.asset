@@ -22,6 +22,8 @@ TagManager:
   - Button
   - Key
   - KeyCenter
+  - Water
+  - WaterEnemy
   layers:
   - Default
   - TransparentFX
