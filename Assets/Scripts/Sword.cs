@@ -13,7 +13,6 @@ public class Sword : MonoBehaviour {
 
 //		anim.SetTrigger("Swing");
 
-
 		if (obj.gameObject.tag == "Enemy" && !player.allowAttack) {
 			Debug.Log("WE HIT!");
 			Enemy enemy = obj.gameObject.GetComponent<Enemy>();

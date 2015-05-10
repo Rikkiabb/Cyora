@@ -20,7 +20,7 @@ public class Finish : MonoBehaviour {
 			anim.SetTrigger("Finished");
 			
 //			
-	}
+		}
 		
 	}
 }

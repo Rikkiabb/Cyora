@@ -12,12 +12,18 @@ public class KillBoxRainy : MonoBehaviour {
 	void Update () {
 
 		//Move the killbox up
-		Vector3 temp = transform.position;
-		temp.y += 0.05f;
-		transform.position = temp;
+		if (PlayerScript.finished) {
+			StopEnemiesAndCamera();
+		} else {
+			Vector3 temp = transform.position;
+			temp.y += 0.05f;
+			transform.position = temp;
+		}
+
 	}
 
 	void OnTriggerEnter2D(Collider2D obj){
+
 
 		if (obj.name == "Player") {
 			PlayerScript player = obj.gameObject.GetComponent<PlayerScript>();
