@@ -12,7 +12,8 @@ public class CanvasController : MonoBehaviour {
 		clearedLevel = false;
 	}
 	void Start () {
-		anim = GetComponent<Animator> ();clearedLevel = false;
+		anim = GetComponent<Animator> ();
+		clearedLevel = false;
 	}
 	
 	// Update is called once per frame

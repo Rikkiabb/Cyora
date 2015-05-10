@@ -160,14 +160,16 @@ public class Enemy : MonoBehaviour {
 		isHurt = true;
 		StartCoroutine (WaitHurt ());
 		stats.Health -= damage;
-		anim.SetBool ("IsHurt", true);
+
 		// So if our player empties his health he dies
 		if(stats.Health <= 0){
 			Debug.Log("Kill Enemy!!");
 			Destroy (transform.parent.gameObject);
 			//GameMasterCS.KillEnemy(this);
-			
+			return;
 		}
+
+		anim.SetBool ("IsHurt", true);
 
 	//	Debug.Log ("His starting health was" + startHealth);
 	//	Debug.Log ("His current health is" + stats.Health);
