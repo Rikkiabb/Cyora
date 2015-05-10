@@ -1,11 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 public class PlayerScript : MonoBehaviour {
 
 	public int maxHealth = 3;
 	CircleCollider2D collide;
 	Rigidbody2D freefall;
+	public bool hasDoubleJump = false;
+	bool doubleJump = false;
 		
 	public static bool finished = false; 
 	bool animPlay = false;
@@ -40,7 +45,39 @@ public class PlayerScript : MonoBehaviour {
 	public float jumpForce = 1400f;
 	public bool allowAttack = true;
 
+	void Awake(){
+		// Þurfum að finna út úr því hvernig við eigum að stilla þetta þannig það er ekki lesið í main menu, instructions og tutorial og one
+//		if (Application.loadedLevel == 0) {
+//
+//			BinaryFormatter bf = new BinaryFormatter();
+//			FileStream file = File.Create(Application.persistentDataPath + "/playerInfo.dat");
+//			PlayerData data = new PlayerData();
+//			data.heal = 3;
+//			data.jf = 1410;
+//			data.hdj = false;
+//			data.swordSizeX = 1.3f;
+//			data.swordSizeY = 1.3f;
+//			bf.Serialize(file, data);
+//			file.Close ();
+//
+//		} else 
+		if (File.Exists (Application.persistentDataPath + "/playerInfo.dat")) {
+			BinaryFormatter bf = new BinaryFormatter ();
+			FileStream file = File.Open (Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
+			PlayerData data = ((PlayerData)bf.Deserialize (file));
+			file.Close ();
+			setHealth (data.heal);
+			setJumpForce (data.jf);
+			hasDoubleJump = data.hdj;
+			GameObject sword = GameObject.FindGameObjectWithTag ("Sword");
+			sword.transform.localScale = new Vector3(data.swordSizeX, data.swordSizeY, 1f);
+		}
+		isMoving = true;
+	
+	}
+
 	void Start () {
+		Debug.Log ("Borð" + Application.loadedLevel);
 		anim = GetComponent<Animator> ();
 		collide = GetComponent<CircleCollider2D> ();
 		freefall = GetComponent<Rigidbody2D> ();
@@ -62,9 +99,13 @@ public class PlayerScript : MonoBehaviour {
 		
 			// If player is on ground and space(jump) is pushed then we can jump
 			if (grounded && Input.GetButtonDown ("Vertical")) {
-
 				anim.SetBool ("Ground", false);
 				GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, jumpForce));
+			} else if(!doubleJump && Input.GetButtonDown ("Vertical")){
+				if(hasDoubleJump){
+					doubleJump = true;
+					GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, jumpForce));
+				}
 			}
 		}
 
@@ -83,11 +124,7 @@ public class PlayerScript : MonoBehaviour {
 	public void setHealth(int health){
 		playerStats.Health = health;
 	}
-
-	public void setMove(bool move){
-		isMoving = move;
-	}
-
+	
 	public void setJumpForce(float jump){
 		jumpForce = jump;
 	}
@@ -162,6 +199,11 @@ public class PlayerScript : MonoBehaviour {
 			// Check if we are on the ground
 			grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 			anim.SetBool ("Ground", grounded);
+
+			if(grounded){
+				doubleJump = false;
+			}
+
 			
 			// Left and right movement
 			float move = Input.GetAxis ("Horizontal");
@@ -212,4 +254,13 @@ public class PlayerScript : MonoBehaviour {
 	}
 
 	
+}
+
+[System.Serializable]
+class PlayerData{
+	public int heal;
+	public float jf;
+	public bool hdj;
+	public float swordSizeX;
+	public float swordSizeY;
 }

@@ -17,3 +17,5 @@ EditorBuildSettings:
     path: Assets/Scenes/TutorLevel.unity
   - enabled: 1
     path: Assets/Scenes/One.unity
+  - enabled: 1
+    path: Assets/Scenes/Icy.unity

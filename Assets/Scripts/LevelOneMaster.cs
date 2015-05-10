@@ -32,7 +32,6 @@ public class LevelOneMaster : MonoBehaviour {
 	IEnumerator waitToSpawn(){
 		yield return new WaitForSeconds (1);
 		player.transform.position = lastCheckPoint;
-		player.setMove (true);
 		player.playerStats.Health = checkHealth;
 		Heart.DrawHeart (checkHealth - 1);
 //		ScoreManager.numbKeys = currKeys;
