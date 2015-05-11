@@ -24,6 +24,7 @@ TagManager:
   - KeyCenter
   - Water
   - WaterEnemy
+  - Boss
   layers:
   - Default
   - TransparentFX

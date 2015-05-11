@@ -18,10 +18,16 @@ public class EnergyBall : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D obj){
-
+		PlayerScript player = obj.gameObject.GetComponent<PlayerScript> ();
+		if (obj.collider.tag == "Sword" && player.isAttacking()) {
+			anim.SetTrigger("Explode");
+			
+			Destroy (gameObject, 0.15f);
+			return;
+		}
 		if (obj.gameObject.tag == "Player") {
 
-			PlayerScript player = obj.gameObject.GetComponent<PlayerScript> ();
+
 			if(canHurt){
 				player.DamagePlayer(1);
 				canHurt = false;
