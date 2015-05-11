@@ -16,6 +16,7 @@ public class PlayerScript : MonoBehaviour {
 	bool animPlay = false;
 
 	public static bool isMoving = true;
+	public bool isHurt = false;
 
 	// Create a new player stat class which handles his health and weapons
 	[System.Serializable]
@@ -180,7 +181,7 @@ public class PlayerScript : MonoBehaviour {
 
 		if (isMoving) {
 			anim.SetBool ("isKnight3Hurting", true);
-			StartCoroutine(WaitHurt());
+			StartCoroutine(WaitAnimationHurt());
 		}
 		// So if our player empties his health he dies
 		if(playerStats.Health <= 0){
@@ -241,7 +242,7 @@ public class PlayerScript : MonoBehaviour {
 		return anim.GetBool("isKnight3Attacking");
 	}
 
-	IEnumerator WaitHurt(){
+	IEnumerator WaitAnimationHurt(){
 		yield return new WaitForSeconds(1f);
 		anim.SetBool ("isKnight3Hurting", false);
 
@@ -252,6 +253,8 @@ public class PlayerScript : MonoBehaviour {
 		allowAttack = true;
 
 	}
+	
+
 
 	
 }

@@ -27,13 +27,12 @@ public class EnergyBall : MonoBehaviour {
 		}
 		if (obj.gameObject.tag == "Player") {
 
-
 			if(canHurt){
 				player.DamagePlayer(1);
 				canHurt = false;
-				StartCoroutine(WaitForHurt());
+				StartCoroutine(WaitHurt());
 			}
-
+			Debug.Log (player.isHurt);
 			anim.SetTrigger("Explode");
 
 			Destroy (gameObject, 0.15f);
@@ -41,9 +40,9 @@ public class EnergyBall : MonoBehaviour {
 		}
 	}
 
-	IEnumerator WaitForHurt(){
-
+	IEnumerator WaitHurt(){
 		yield return new WaitForSeconds (2);
 		canHurt = true;
 	}
+
 }

@@ -21,6 +21,7 @@ public class BossAI : MonoBehaviour {
 	float followDistance = 20f;
 	float speed = 7f;
 	float ballSpeed = 17f;
+	public bool canHurt = true;
 	bool canShoot = true;
 	public bool isHurt = false;
 	int startHealth;
@@ -133,7 +134,7 @@ public class BossAI : MonoBehaviour {
 		canShoot = true;
 	}
 
-	IEnumerator WaitHurt(){
+	public IEnumerator WaitHurt(){
 		yield return new WaitForSeconds(2);
 		isHurt = false;
 		anim.SetBool ("IsHurt", false);
