@@ -48,7 +48,6 @@ public class LevelOneMaster : MonoBehaviour {
 
 	void Update(){
 		if (player.playerStats.Health < 1) {
-			// gera courentine til að hafa smá mismun
 			StartCoroutine(waitToSpawn());
 		}
 
