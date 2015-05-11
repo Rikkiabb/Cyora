@@ -24,6 +24,7 @@ TagManager:
   - KeyCenter
   - Water
   - WaterEnemy
+  - Heart
   layers:
   - Default
   - TransparentFX

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
@@ -46,21 +47,6 @@ public class PlayerScript : MonoBehaviour {
 	public bool allowAttack = true;
 
 	void Awake(){
-		// Þurfum að finna út úr því hvernig við eigum að stilla þetta þannig það er ekki lesið í main menu, instructions og tutorial og one
-//		if (Application.loadedLevel == 0) {
-//
-//			BinaryFormatter bf = new BinaryFormatter();
-//			FileStream file = File.Create(Application.persistentDataPath + "/playerInfo.dat");
-//			PlayerData data = new PlayerData();
-//			data.heal = 3;
-//			data.jf = 1410;
-//			data.hdj = false;
-//			data.swordSizeX = 1.3f;
-//			data.swordSizeY = 1.3f;
-//			bf.Serialize(file, data);
-//			file.Close ();
-//
-//		} else 
 		if (File.Exists (Application.persistentDataPath + "/playerInfo.dat")) {
 			BinaryFormatter bf = new BinaryFormatter ();
 			FileStream file = File.Open (Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
@@ -263,4 +249,19 @@ class PlayerData{
 	public bool hdj;
 	public float swordSizeX;
 	public float swordSizeY;
+}
+
+[System.Serializable]
+class CheckpointReached{
+	public float playPosX;
+	public float playPosY;
+	public float playPosZ;
+	public int health;
+	public int currKeys;
+	public List<float> keysX = new List<float> ();
+	public List<float> keysY = new List<float> ();
+	public List<float> keysZ = new List<float> ();
+	public List<float> heartX = new List<float> ();
+	public List<float> heartY = new List<float> ();
+	public List<float> heartZ = new List<float> ();
 }
