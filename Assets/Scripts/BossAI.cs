@@ -5,18 +5,22 @@ using System.Collections;
 public class BossAI : MonoBehaviour {
 
 	public Transform Player;
+	public Transform transformEnergyBall;
+	Rigidbody2D energyBall;
 	float distanceX;
 	float distanceY;
 	float lookAtDistance = 10f;
 	float followDistance = 20f;
-	float speed = 10f;
+	float speed = 7f;
+	float ballSpeed = 17f;
+	bool canShoot = true;
 
 
 
 
 	// Use this for initialization
 	void Start () {
-		
+		energyBall = transformEnergyBall.gameObject.GetComponent<Rigidbody2D> ();
 	}
 	
 	// Update is called once per frame
@@ -51,7 +55,6 @@ public class BossAI : MonoBehaviour {
 
 	void FollowX(){
 		if (Mathf.Abs (distanceX) < 1.1) {
-			Debug.Log (distanceY);
 			return;
 		}
 
@@ -62,6 +65,20 @@ public class BossAI : MonoBehaviour {
 	void FollowY(){
 
 		if (Mathf.Abs (distanceY) < 1.1) {
+
+			if(canShoot){
+				Rigidbody2D ball = Instantiate(energyBall, transform.position, Quaternion.Euler(new Vector3(0,0,180f))) as Rigidbody2D;
+				if(distanceX > 0){
+					ball.velocity = new Vector2(ballSpeed, 0);
+
+				} else{
+					ball.velocity = new Vector2(-ballSpeed, 0);
+
+				}
+				canShoot = false;
+				StartCoroutine(WaitEnergyBall());
+			}
+
 			return;
 		}
 
@@ -71,5 +88,10 @@ public class BossAI : MonoBehaviour {
 			transform.Translate(Vector3.down * speed * Time.deltaTime);
 		}
 		
+	}
+
+	IEnumerator WaitEnergyBall(){
+		yield return new WaitForSeconds(2);
+		canShoot = true;
 	}
 }

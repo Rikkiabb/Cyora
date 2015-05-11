@@ -1,0 +1,2431 @@
+fileFormatVersion: 2
+guid: dc971335e60564bd0a5ef03521109030
+timeCreated: 1431355183
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: energyBall_0
+    21300002: energyBall_1
+    21300004: energyBall_2
+    21300006: energyBall_3
+    21300008: energyBall_4
+    21300010: energyBall_5
+    21300012: energyBall_6
+    21300014: energyBall_7
+    21300016: energyBall_8
+    21300018: energyBall_9
+    21300020: energyBall_10
+    21300022: energyBall_11
+    21300024: energyBall_12
+    21300026: energyBall_13
+    21300028: energyBall_14
+    21300030: energyBall_15
+    21300032: energyBall_16
+    21300034: energyBall_17
+    21300036: energyBall_18
+    21300038: energyBall_19
+    21300040: energyBall_20
+    21300042: energyBall_21
+    21300044: energyBall_22
+    21300046: energyBall_23
+    21300048: energyBall_24
+    21300050: energyBall_25
+    21300052: energyBall_26
+    21300054: energyBall_27
+    21300056: energyBall_28
+    21300058: energyBall_29
+    21300060: energyBall_30
+    21300062: energyBall_31
+    21300064: energyBall_32
+    21300066: energyBall_33
+    21300068: energyBall_34
+    21300070: energyBall_35
+    21300072: energyBall_36
+    21300074: energyBall_37
+    21300076: energyBall_38
+    21300078: energyBall_39
+    21300080: energyBall_40
+    21300082: energyBall_41
+    21300084: energyBall_42
+    21300086: energyBall_43
+    21300088: energyBall_44
+    21300090: energyBall_45
+    21300092: energyBall_46
+    21300094: energyBall_47
+    21300096: energyBall_48
+    21300098: energyBall_49
+    21300100: energyBall_50
+    21300102: energyBall_51
+    21300104: energyBall_52
+    21300106: energyBall_53
+    21300108: energyBall_54
+    21300110: energyBall_55
+    21300112: energyBall_56
+    21300114: energyBall_57
+    21300116: energyBall_58
+    21300118: energyBall_59
+    21300120: energyBall_60
+    21300122: energyBall_61
+    21300124: energyBall_62
+    21300126: energyBall_63
+    21300128: energyBall_64
+    21300130: energyBall_65
+    21300132: energyBall_66
+    21300134: energyBall_67
+    21300136: energyBall_68
+    21300138: energyBall_69
+    21300140: energyBall_70
+    21300142: energyBall_71
+    21300144: energyBall_72
+    21300146: energyBall_73
+    21300148: energyBall_74
+    21300150: energyBall_75
+    21300152: energyBall_76
+    21300154: energyBall_77
+    21300156: energyBall_78
+    21300158: energyBall_79
+    21300160: energyBall_80
+    21300162: energyBall_81
+    21300164: energyBall_82
+    21300166: energyBall_83
+    21300168: energyBall_84
+    21300170: energyBall_85
+    21300172: energyBall_86
+    21300174: energyBall_87
+    21300176: energyBall_88
+    21300178: energyBall_89
+    21300180: energyBall_90
+    21300182: energyBall_91
+    21300184: energyBall_92
+    21300186: energyBall_93
+    21300188: energyBall_94
+    21300190: energyBall_95
+    21300192: energyBall_96
+    21300194: energyBall_97
+    21300196: energyBall_98
+    21300198: energyBall_99
+    21300200: energyBall_100
+    21300202: energyBall_101
+    21300204: energyBall_102
+    21300206: energyBall_103
+    21300208: energyBall_104
+    21300210: energyBall_105
+    21300212: energyBall_106
+    21300214: energyBall_107
+    21300216: energyBall_108
+    21300218: energyBall_109
+    21300220: energyBall_110
+    21300222: energyBall_111
+    21300224: energyBall_112
+    21300226: energyBall_113
+    21300228: energyBall_114
+    21300230: energyBall_115
+    21300232: energyBall_116
+    21300234: energyBall_117
+    21300236: energyBall_118
+    21300238: energyBall_119
+    21300240: energyBall_120
+    21300242: energyBall_121
+    21300244: energyBall_122
+    21300246: energyBall_123
+    21300248: energyBall_124
+    21300250: energyBall_125
+    21300252: energyBall_126
+    21300254: energyBall_127
+    21300256: energyBall_128
+    21300258: energyBall_129
+    21300260: energyBall_130
+    21300262: energyBall_131
+    21300264: energyBall_132
+    21300266: energyBall_133
+    21300268: energyBall_134
+    21300270: energyBall_135
+    21300272: energyBall_136
+    21300274: energyBall_137
+    21300276: energyBall_138
+    21300278: energyBall_139
+    21300280: energyBall_140
+    21300282: energyBall_141
+    21300284: energyBall_142
+    21300286: energyBall_143
+    21300288: energyBall_144
+    21300290: energyBall_145
+    21300292: energyBall_146
+    21300294: energyBall_147
+    21300296: energyBall_148
+    21300298: energyBall_149
+    21300300: energyBall_150
+    21300302: energyBall_151
+    21300304: energyBall_152
+    21300306: energyBall_153
+    21300308: energyBall_154
+    21300310: energyBall_155
+    21300312: energyBall_156
+    21300314: energyBall_157
+    21300316: energyBall_158
+    21300318: energyBall_159
+    21300320: energyBall_160
+    21300322: energyBall_161
+    21300324: energyBall_162
+    21300326: energyBall_163
+    21300328: energyBall_164
+    21300330: energyBall_165
+    21300332: energyBall_166
+    21300334: energyBall_167
+    21300336: energyBall_168
+    21300338: energyBall_169
+    21300340: energyBall_170
+    21300342: energyBall_171
+    21300344: energyBall_172
+    21300346: energyBall_173
+    21300348: energyBall_174
+    21300350: energyBall_175
+    21300352: energyBall_176
+    21300354: energyBall_177
+    21300356: energyBall_178
+    21300358: energyBall_179
+    21300360: energyBall_180
+    21300362: energyBall_181
+    21300364: energyBall_182
+    21300366: energyBall_183
+    21300368: energyBall_184
+    21300370: energyBall_185
+    21300372: energyBall_186
+    21300374: energyBall_187
+    21300376: energyBall_188
+    21300378: energyBall_189
+    21300380: energyBall_190
+    21300382: energyBall_191
+    21300384: energyBall_192
+    21300386: energyBall_193
+    21300388: energyBall_194
+    21300390: energyBall_195
+    21300392: energyBall_196
+    21300394: energyBall_197
+    21300396: energyBall_198
+    21300398: energyBall_199
+    21300400: energyBall_200
+    21300402: energyBall_201
+    21300404: energyBall_202
+    21300406: energyBall_203
+    21300408: energyBall_204
+    21300410: energyBall_205
+    21300412: energyBall_206
+    21300414: energyBall_207
+    21300416: energyBall_208
+    21300418: energyBall_209
+    21300420: energyBall_210
+    21300422: energyBall_211
+    21300424: energyBall_212
+    21300426: energyBall_213
+    21300428: energyBall_214
+    21300430: energyBall_215
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: energyBall_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2580
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_1
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 2026
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_2
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1973
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_3
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1959
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_4
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1914
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_5
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1850
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_6
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1767
+        width: 6
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_7
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 1757
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_8
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1680
+        width: 6
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_9
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1627
+        width: 6
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_10
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1231
+        width: 247
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_11
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 1223
+        width: 249
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_12
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1229
+        width: 218
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_13
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 1231
+        width: 247
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_14
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 1223
+        width: 249
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_15
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 1229
+        width: 218
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_16
+      rect:
+        serializedVersion: 2
+        x: 1955
+        y: 1231
+        width: 249
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_17
+      rect:
+        serializedVersion: 2
+        x: 2222
+        y: 1223
+        width: 247
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_18
+      rect:
+        serializedVersion: 2
+        x: 2499
+        y: 1217
+        width: 33
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_19
+      rect:
+        serializedVersion: 2
+        x: 2532
+        y: 1229
+        width: 216
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_20
+      rect:
+        serializedVersion: 2
+        x: 2950
+        y: 1231
+        width: 247
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_21
+      rect:
+        serializedVersion: 2
+        x: 3214
+        y: 1223
+        width: 248
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_22
+      rect:
+        serializedVersion: 2
+        x: 3491
+        y: 1217
+        width: 34
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_23
+      rect:
+        serializedVersion: 2
+        x: 3525
+        y: 1229
+        width: 216
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_24
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1057
+        width: 24
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_25
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 1077
+        width: 221
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_26
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 1144
+        width: 19
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_27
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 1065
+        width: 224
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_28
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 1065
+        width: 246
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_29
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 1057
+        width: 24
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_30
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 1077
+        width: 221
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_31
+      rect:
+        serializedVersion: 2
+        x: 1275
+        y: 1144
+        width: 19
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_32
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 1065
+        width: 224
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_33
+      rect:
+        serializedVersion: 2
+        x: 1543
+        y: 1065
+        width: 246
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_34
+      rect:
+        serializedVersion: 2
+        x: 1957
+        y: 1057
+        width: 21
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_35
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 1077
+        width: 220
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_36
+      rect:
+        serializedVersion: 2
+        x: 2253
+        y: 1130
+        width: 22
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_37
+      rect:
+        serializedVersion: 2
+        x: 2279
+        y: 1065
+        width: 222
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_38
+      rect:
+        serializedVersion: 2
+        x: 2524
+        y: 1065
+        width: 246
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_39
+      rect:
+        serializedVersion: 2
+        x: 2950
+        y: 1057
+        width: 23
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_40
+      rect:
+        serializedVersion: 2
+        x: 2977
+        y: 1077
+        width: 220
+        height: 105
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_41
+      rect:
+        serializedVersion: 2
+        x: 3246
+        y: 1130
+        width: 22
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_42
+      rect:
+        serializedVersion: 2
+        x: 3272
+        y: 1065
+        width: 223
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_43
+      rect:
+        serializedVersion: 2
+        x: 3517
+        y: 1065
+        width: 245
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_44
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 1130
+        width: 4
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_45
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 1130
+        width: 5
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_46
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 1051
+        width: 20
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_47
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 1051
+        width: 21
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_48
+      rect:
+        serializedVersion: 2
+        x: 2253
+        y: 1051
+        width: 22
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_49
+      rect:
+        serializedVersion: 2
+        x: 3246
+        y: 1051
+        width: 22
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_50
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 1030
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_51
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 1035
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_52
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 1030
+        width: 12
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_53
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 1035
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_54
+      rect:
+        serializedVersion: 2
+        x: 1961
+        y: 1029
+        width: 14
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_55
+      rect:
+        serializedVersion: 2
+        x: 1979
+        y: 1035
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_56
+      rect:
+        serializedVersion: 2
+        x: 2955
+        y: 1029
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_57
+      rect:
+        serializedVersion: 2
+        x: 2971
+        y: 1035
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_58
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 1004
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_59
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1022
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_60
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 1004
+        width: 10
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_61
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 1022
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_62
+      rect:
+        serializedVersion: 2
+        x: 1982
+        y: 1022
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_63
+      rect:
+        serializedVersion: 2
+        x: 2975
+        y: 1022
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_64
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 925
+        width: 18
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_65
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 948
+        width: 221
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_66
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 855
+        width: 131
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_67
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 859
+        width: 123
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_68
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 861
+        width: 122
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_69
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 859
+        width: 122
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_70
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 925
+        width: 18
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_71
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 948
+        width: 221
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_72
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 855
+        width: 131
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_73
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 859
+        width: 123
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_74
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 861
+        width: 122
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_75
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 859
+        width: 122
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_76
+      rect:
+        serializedVersion: 2
+        x: 1957
+        y: 925
+        width: 18
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_77
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 948
+        width: 220
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_78
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 856
+        width: 129
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_79
+      rect:
+        serializedVersion: 2
+        x: 2439
+        y: 859
+        width: 121
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_80
+      rect:
+        serializedVersion: 2
+        x: 2590
+        y: 861
+        width: 122
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_81
+      rect:
+        serializedVersion: 2
+        x: 2756
+        y: 859
+        width: 122
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_82
+      rect:
+        serializedVersion: 2
+        x: 2950
+        y: 925
+        width: 17
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_83
+      rect:
+        serializedVersion: 2
+        x: 2977
+        y: 948
+        width: 220
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_84
+      rect:
+        serializedVersion: 2
+        x: 3264
+        y: 855
+        width: 130
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_85
+      rect:
+        serializedVersion: 2
+        x: 3432
+        y: 859
+        width: 121
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_86
+      rect:
+        serializedVersion: 2
+        x: 3584
+        y: 861
+        width: 121
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_87
+      rect:
+        serializedVersion: 2
+        x: 3748
+        y: 859
+        width: 123
+        height: 121
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_88
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 929
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_89
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 929
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_90
+      rect:
+        serializedVersion: 2
+        x: 1979
+        y: 929
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_91
+      rect:
+        serializedVersion: 2
+        x: 2971
+        y: 929
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_92
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 808
+        width: 51
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_93
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 806
+        width: 51
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_94
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 812
+        width: 51
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_95
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 802
+        width: 52
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_96
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 741
+        width: 73
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_97
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 808
+        width: 51
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_98
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 806
+        width: 51
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_99
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 812
+        width: 51
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_100
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 802
+        width: 52
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_101
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 741
+        width: 73
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_102
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 808
+        width: 51
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_103
+      rect:
+        serializedVersion: 2
+        x: 2044
+        y: 806
+        width: 51
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_104
+      rect:
+        serializedVersion: 2
+        x: 2127
+        y: 812
+        width: 53
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_105
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 802
+        width: 51
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_106
+      rect:
+        serializedVersion: 2
+        x: 2285
+        y: 741
+        width: 75
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_107
+      rect:
+        serializedVersion: 2
+        x: 2961
+        y: 808
+        width: 50
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_108
+      rect:
+        serializedVersion: 2
+        x: 3038
+        y: 806
+        width: 50
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_109
+      rect:
+        serializedVersion: 2
+        x: 3122
+        y: 812
+        width: 51
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_110
+      rect:
+        serializedVersion: 2
+        x: 3195
+        y: 802
+        width: 51
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_111
+      rect:
+        serializedVersion: 2
+        x: 3278
+        y: 741
+        width: 75
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_112
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 741
+        width: 71
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_113
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 743
+        width: 71
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_114
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 741
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_115
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 741
+        width: 71
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_116
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 743
+        width: 71
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_117
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 741
+        width: 69
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_118
+      rect:
+        serializedVersion: 2
+        x: 2382
+        y: 741
+        width: 71
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_119
+      rect:
+        serializedVersion: 2
+        x: 2467
+        y: 743
+        width: 71
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_120
+      rect:
+        serializedVersion: 2
+        x: 2562
+        y: 741
+        width: 71
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_121
+      rect:
+        serializedVersion: 2
+        x: 3375
+        y: 741
+        width: 71
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_122
+      rect:
+        serializedVersion: 2
+        x: 3460
+        y: 743
+        width: 71
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_123
+      rect:
+        serializedVersion: 2
+        x: 3555
+        y: 741
+        width: 71
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_124
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 547
+        width: 247
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_125
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 537
+        width: 249
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_126
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 543
+        width: 218
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_127
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 547
+        width: 247
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_128
+      rect:
+        serializedVersion: 2
+        x: 1241
+        y: 537
+        width: 249
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_129
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 543
+        width: 218
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_130
+      rect:
+        serializedVersion: 2
+        x: 1955
+        y: 547
+        width: 249
+        height: 132
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_131
+      rect:
+        serializedVersion: 2
+        x: 2222
+        y: 537
+        width: 247
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_132
+      rect:
+        serializedVersion: 2
+        x: 2499
+        y: 531
+        width: 33
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_133
+      rect:
+        serializedVersion: 2
+        x: 2532
+        y: 543
+        width: 216
+        height: 125
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_134
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 240
+        width: 1057
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_135
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 371
+        width: 24
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_136
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 393
+        width: 221
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_137
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 446
+        width: 20
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_138
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 381
+        width: 224
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_139
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 379
+        width: 246
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_140
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 371
+        width: 24
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_141
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 393
+        width: 221
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_142
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 446
+        width: 21
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_143
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 381
+        width: 224
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_144
+      rect:
+        serializedVersion: 2
+        x: 1543
+        y: 379
+        width: 246
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_145
+      rect:
+        serializedVersion: 2
+        x: 1957
+        y: 371
+        width: 22
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_146
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 393
+        width: 220
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_147
+      rect:
+        serializedVersion: 2
+        x: 2253
+        y: 446
+        width: 22
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_148
+      rect:
+        serializedVersion: 2
+        x: 2279
+        y: 381
+        width: 222
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_149
+      rect:
+        serializedVersion: 2
+        x: 2524
+        y: 379
+        width: 246
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_150
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 423
+        width: 4
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_151
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 365
+        width: 21
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_152
+      rect:
+        serializedVersion: 2
+        x: 2253
+        y: 365
+        width: 22
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_153
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 365
+        width: 19
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_154
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 319
+        width: 18
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_155
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 337
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_156
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 319
+        width: 18
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_157
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 337
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_158
+      rect:
+        serializedVersion: 2
+        x: 1957
+        y: 319
+        width: 18
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_159
+      rect:
+        serializedVersion: 2
+        x: 1979
+        y: 337
+        width: 9
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_160
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 240
+        width: 18
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_161
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 264
+        width: 221
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_162
+      rect:
+        serializedVersion: 2
+        x: 323
+        y: 171
+        width: 131
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_163
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 173
+        width: 123
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_164
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 175
+        width: 122
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_165
+      rect:
+        serializedVersion: 2
+        x: 808
+        y: 173
+        width: 122
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_166
+      rect:
+        serializedVersion: 2
+        x: 976
+        y: 240
+        width: 18
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_167
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 264
+        width: 221
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_168
+      rect:
+        serializedVersion: 2
+        x: 1290
+        y: 171
+        width: 131
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_169
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 173
+        width: 123
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_170
+      rect:
+        serializedVersion: 2
+        x: 1611
+        y: 175
+        width: 122
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_171
+      rect:
+        serializedVersion: 2
+        x: 1775
+        y: 173
+        width: 122
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_172
+      rect:
+        serializedVersion: 2
+        x: 1957
+        y: 240
+        width: 18
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_173
+      rect:
+        serializedVersion: 2
+        x: 1984
+        y: 264
+        width: 220
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_174
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 171
+        width: 129
+        height: 131
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_175
+      rect:
+        serializedVersion: 2
+        x: 2439
+        y: 173
+        width: 121
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_176
+      rect:
+        serializedVersion: 2
+        x: 2590
+        y: 175
+        width: 122
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_177
+      rect:
+        serializedVersion: 2
+        x: 2756
+        y: 173
+        width: 122
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_178
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 244
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_179
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 244
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_180
+      rect:
+        serializedVersion: 2
+        x: 1979
+        y: 244
+        width: 5
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_181
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 124
+        width: 51
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_182
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 120
+        width: 51
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_183
+      rect:
+        serializedVersion: 2
+        x: 181
+        y: 126
+        width: 51
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_184
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 118
+        width: 52
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_185
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 56
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_186
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 58
+        width: 71
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_187
+      rect:
+        serializedVersion: 2
+        x: 988
+        y: 124
+        width: 51
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_188
+      rect:
+        serializedVersion: 2
+        x: 1065
+        y: 120
+        width: 51
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_189
+      rect:
+        serializedVersion: 2
+        x: 1148
+        y: 126
+        width: 51
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_190
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 118
+        width: 52
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_191
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 56
+        width: 73
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_192
+      rect:
+        serializedVersion: 2
+        x: 1488
+        y: 58
+        width: 71
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_193
+      rect:
+        serializedVersion: 2
+        x: 1967
+        y: 124
+        width: 51
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_194
+      rect:
+        serializedVersion: 2
+        x: 2044
+        y: 120
+        width: 51
+        height: 73
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_195
+      rect:
+        serializedVersion: 2
+        x: 2127
+        y: 126
+        width: 53
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_196
+      rect:
+        serializedVersion: 2
+        x: 2202
+        y: 118
+        width: 51
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_197
+      rect:
+        serializedVersion: 2
+        x: 2285
+        y: 56
+        width: 75
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_198
+      rect:
+        serializedVersion: 2
+        x: 2467
+        y: 58
+        width: 71
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_199
+      rect:
+        serializedVersion: 2
+        x: 3189
+        y: 106
+        width: 314
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_200
+      rect:
+        serializedVersion: 2
+        x: 3513
+        y: 122
+        width: 12
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_201
+      rect:
+        serializedVersion: 2
+        x: 3545
+        y: 122
+        width: 12
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_202
+      rect:
+        serializedVersion: 2
+        x: 3576
+        y: 122
+        width: 12
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_203
+      rect:
+        serializedVersion: 2
+        x: 3608
+        y: 122
+        width: 12
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_204
+      rect:
+        serializedVersion: 2
+        x: 3638
+        y: 122
+        width: 12
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_205
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 56
+        width: 71
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_206
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 56
+        width: 69
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_207
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 56
+        width: 71
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_208
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 56
+        width: 69
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_209
+      rect:
+        serializedVersion: 2
+        x: 2382
+        y: 56
+        width: 71
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_210
+      rect:
+        serializedVersion: 2
+        x: 2562
+        y: 56
+        width: 71
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_211
+      rect:
+        serializedVersion: 2
+        x: 3513
+        y: 106
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_212
+      rect:
+        serializedVersion: 2
+        x: 3543
+        y: 106
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_213
+      rect:
+        serializedVersion: 2
+        x: 3574
+        y: 106
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_214
+      rect:
+        serializedVersion: 2
+        x: 3606
+        y: 106
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: energyBall_215
+      rect:
+        serializedVersion: 2
+        x: 3638
+        y: 106
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
