@@ -5,34 +5,32 @@ using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
-public class LevelOneMaster : MonoBehaviour {
-	
+public class WaterMaster : MonoBehaviour {
+
 	public Transform target;
 	PlayerScript player;
 	public Transform aKey;
 	public Transform aHeart;
-	
-	void Start(){
 
-		// save player stats and level stats
+	void Start () {
 		player = target.gameObject.GetComponent<PlayerScript> ();
 		BinaryFormatter bf = new BinaryFormatter();
 		FileStream file = File.Create(Application.persistentDataPath + "/checkpoint.dat");
 		CheckpointReached data = new CheckpointReached();
-
+		
 		data.playPosX = target.position.x;
 		data.playPosY = target.position.y;
 		data.playPosZ = target.position.z;
 		data.health = player.playerStats.Health;
 		data.currKeys = 0;
-
+		
 		GameObject[] locKeys = GameObject.FindGameObjectsWithTag("Key");
 		for (int i = 0; i < locKeys.Length; i++) {
 			data.keysX.Add(locKeys[i].transform.position.x);
 			data.keysY.Add(locKeys[i].transform.position.y);
 			data.keysZ.Add(locKeys[i].transform.position.z);
 		}
-
+		
 		GameObject[] hearts = GameObject.FindGameObjectsWithTag("Heart");
 		for (int i = 0; i < hearts.Length; i++) {
 			data.heartX.Add(hearts[i].transform.position.x);
@@ -42,15 +40,15 @@ public class LevelOneMaster : MonoBehaviour {
 		
 		bf.Serialize(file, data);
 		file.Close ();
-
-		
+	
 	}
-
-	void Update(){
+	
+	// Update is called once per frame
+	void Update () {
 		if (player.playerStats.Health < 1) {
 			StartCoroutine(waitToSpawn());
 		}
-
+		
 		if (CanvasController.clearedLevel) {
 			BinaryFormatter bf = new BinaryFormatter();
 			FileStream file = File.Create(Application.persistentDataPath + "/playerInfo.dat");
@@ -68,17 +66,7 @@ public class LevelOneMaster : MonoBehaviour {
 				data.ms = 16f;
 				data.mx = 3;
 				
-			} else if(ScoreManager.numbKeys == 2 || ScoreManager.numbKeys == 3){ // Extra life
-				
-				data.heal = 4;
-				data.jf = 1410;
-				data.hdj = false;
-				//				data.swordSizeX = 1.3f;
-				//				data.swordSizeY = 1.3f;
-				data.ms = 16f;
-				data.mx = 4;
-				
-			}  else if(ScoreManager.numbKeys == 4){ // extra jump
+			} else if(ScoreManager.numbKeys == 2){ // extra jump
 				
 				data.heal = 3;
 				data.jf = 1800;
@@ -88,7 +76,18 @@ public class LevelOneMaster : MonoBehaviour {
 				data.ms = 16f;
 				data.mx = 3;
 				
-			}  else if(ScoreManager.numbKeys == 5){ // extra speed
+			}  else if(ScoreManager.numbKeys == 3){ // double jump
+
+				data.heal = 3;
+				data.jf = 1410;
+				data.hdj = true;
+				//				data.swordSizeX = 1.3f;
+				//				data.swordSizeY = 1.3f;
+				data.ms = 16f;
+				data.mx = 3;
+
+				
+			}  else if(ScoreManager.numbKeys == 4){ // extra speed
 				
 				data.heal = 3;
 				data.jf = 1410;
@@ -98,26 +97,25 @@ public class LevelOneMaster : MonoBehaviour {
 				data.ms = 20f;
 				data.mx = 3;
 				
-			} else if(ScoreManager.numbKeys == 6){ // double jump
-				
-				data.heal = 3;
+			} else if(ScoreManager.numbKeys == 5){ // extra life
+
+				data.heal = 4;
 				data.jf = 1410;
-				data.hdj = true;
+				data.hdj = false;
 				//				data.swordSizeX = 1.3f;
 				//				data.swordSizeY = 1.3f;
 				data.ms = 16f;
-				data.mx = 3;
-				
+				data.mx = 4;
+
 			}
 			bf.Serialize(file, data);
 			file.Close ();
 			CanvasController.clearedLevel = false;
-			Application.LoadLevel("Two");
+			//Application.LoadLevel("Rainy");
 		}
 	
 	}
-	
-//
+
 	IEnumerator waitToSpawn(){
 		yield return new WaitForSeconds (1);
 		if (File.Exists (Application.persistentDataPath + "/playerInfo.dat")) {
@@ -130,7 +128,7 @@ public class LevelOneMaster : MonoBehaviour {
 			player.playerStats.Health = data.health;
 			Heart.DrawHeart (data.health);
 			ScoreManager.numbKeys = data.currKeys;
-
+			
 			GameObject[] center = GameObject.FindGameObjectsWithTag("KeyCenter");
 			for (int i = 0; i < center.Length; i++) {
 				Destroy(center[i]);
@@ -147,7 +145,7 @@ public class LevelOneMaster : MonoBehaviour {
 				Vector3 temp0 = new Vector3(kx[i], ky[i], kz[i]);
 				Instantiate(aKey, temp0, temp1);
 			}
-
+			
 			GameObject[] destHeart = GameObject.FindGameObjectsWithTag("Heart");
 			for (int i = 0; i < destHeart.Length; i++) {
 				Destroy(destHeart[i]);
@@ -161,14 +159,14 @@ public class LevelOneMaster : MonoBehaviour {
 			}
 			
 		}
-
+		
 	}
 	
-
+	
 	void OnTriggerEnter2D (Collider2D obj){
 		
 		if (obj.name == "Player") {
-
+			
 			BinaryFormatter bf = new BinaryFormatter();
 			FileStream file = File.Open(Application.persistentDataPath + "/checkpoint.dat", FileMode.Open);
 			CheckpointReached data = new CheckpointReached();
@@ -184,18 +182,17 @@ public class LevelOneMaster : MonoBehaviour {
 				data.keysY.Add(locKeys[i].transform.position.y);
 				data.keysZ.Add(locKeys[i].transform.position.z);
 			}
-
+			
 			GameObject[] hearts = GameObject.FindGameObjectsWithTag("Heart");
 			for (int i = 0; i < hearts.Length; i++) {
 				data.heartX.Add(hearts[i].transform.position.x);
 				data.heartY.Add(hearts[i].transform.position.y);
 				data.heartZ.Add(hearts[i].transform.position.z);
 			}
-
+			
 			bf.Serialize(file, data);
 			file.Close ();
 		}
-
+		
 	}
-
 }

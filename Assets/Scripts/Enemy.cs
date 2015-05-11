@@ -82,7 +82,6 @@ public class Enemy : MonoBehaviour {
 		if (timer == movement.maxTimer) {
 
 			if(movement.wait && movement.forward){
-				Debug.Log ("WAIT!");
 				StartCoroutine(Wait (movement.waitTime));
 			}
 			else{
