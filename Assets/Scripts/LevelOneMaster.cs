@@ -13,6 +13,8 @@ public class LevelOneMaster : MonoBehaviour {
 	public Transform aHeart;
 	
 	void Start(){
+
+		// save player stats and level stats
 		player = target.gameObject.GetComponent<PlayerScript> ();
 		BinaryFormatter bf = new BinaryFormatter();
 		FileStream file = File.Create(Application.persistentDataPath + "/checkpoint.dat");
@@ -40,6 +42,8 @@ public class LevelOneMaster : MonoBehaviour {
 		
 		bf.Serialize(file, data);
 		file.Close ();
+
+		
 	}
 
 	void Update(){

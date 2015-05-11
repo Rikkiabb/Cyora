@@ -171,11 +171,12 @@ public class PlayerScript : MonoBehaviour {
 		// So if our player empties his health he dies
 		if(playerStats.Health <= 0){
 			Debug.Log("Kill Player!!");
-			freefall.mass = 2000;
-			Destroy (collide);
-			GameObject Sword = GameObject.FindGameObjectWithTag("Sword");
-			Destroy(Sword);
-			isMoving = false;
+			return;
+//			freefall.mass = 2000;
+//			Destroy (collide);
+//			GameObject Sword = GameObject.FindGameObjectWithTag("Sword");
+//			Destroy(Sword);
+//			isMoving = false;
 		}
 	}
 
@@ -265,3 +266,4 @@ class CheckpointReached{
 	public List<float> heartY = new List<float> ();
 	public List<float> heartZ = new List<float> ();
 }
+
