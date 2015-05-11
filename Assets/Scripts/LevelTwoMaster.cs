@@ -125,7 +125,6 @@ public class LevelTwoMaster : MonoBehaviour {
 		if (CanvasController.clearedLevel) {
 			BinaryFormatter bf = new BinaryFormatter();
 			FileStream file = File.Create(Application.persistentDataPath + "/playerInfo.dat");
-			// reyna að ná aðgang að playerdata
 			PlayerData data = new PlayerData();
 
 			if(ScoreManager.numbKeys == 0){ // Nothing happens
