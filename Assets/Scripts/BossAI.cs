@@ -1,9 +1,17 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 
 
 public class BossAI : MonoBehaviour {
 
+	// Create a new player stat class which handles his health and weapons
+	[System.Serializable]
+	public class BossStats {
+		public int Health = 3;
+		public int attackHit = 1;
+	}
+
+	public BossStats stats = new BossStats();
 	public Transform Player;
 	public Transform transformEnergyBall;
 	Rigidbody2D energyBall;
@@ -14,6 +22,10 @@ public class BossAI : MonoBehaviour {
 	float speed = 7f;
 	float ballSpeed = 17f;
 	bool canShoot = true;
+	public bool isHurt = false;
+	int startHealth;
+	EnemyHealth eh;
+	Animator anim;
 
 
 
@@ -21,6 +33,9 @@ public class BossAI : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		energyBall = transformEnergyBall.gameObject.GetComponent<Rigidbody2D> ();
+		eh = gameObject.GetComponentInChildren<EnemyHealth>();
+		startHealth = stats.Health;
+		anim = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -90,8 +105,37 @@ public class BossAI : MonoBehaviour {
 		
 	}
 
+	public void DamageBoss (int damage){
+		if (isHurt) {
+			return;
+		}
+		isHurt = true;
+		StartCoroutine (WaitHurt ());
+		stats.Health -= damage;
+		
+		// So if our player empties his health he dies
+		if(stats.Health <= 0){
+			Debug.Log("Kill Enemy!!");
+			Destroy (transform.parent.gameObject);
+			return;
+		}
+		
+		anim.SetBool ("IsHurt", true);
+		
+		float damagePercent = (float)stats.Health / startHealth;
+
+		eh.UpdateHealthBar(damagePercent);
+	}
+
+
 	IEnumerator WaitEnergyBall(){
 		yield return new WaitForSeconds(2);
 		canShoot = true;
+	}
+
+	IEnumerator WaitHurt(){
+		yield return new WaitForSeconds(2);
+		isHurt = false;
+		anim.SetBool ("IsHurt", false);
 	}
 }
