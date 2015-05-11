@@ -78,7 +78,6 @@ public class LevelTwoMaster : MonoBehaviour {
 			bf.Serialize(file, data);
 			file.Close ();
 
-			Debug.Log("Left, Right" +windLeft + " " +windRight);
 	
 			if(!windLeft){
 

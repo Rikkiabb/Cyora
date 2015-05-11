@@ -21,3 +21,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Icy.unity
   - enabled: 1
     path: Assets/Scenes/Two.unity
+  - enabled: 1
+    path: Assets/Scenes/Rainy.unity
