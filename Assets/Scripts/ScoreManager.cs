@@ -11,8 +11,9 @@ public class ScoreManager : MonoBehaviour {
 	// Use this for initialization
 
 	void Start(){
-		GameObject[] arr = GameObject.FindGameObjectsWithTag("Key");
+		GameObject[] arr = GameObject.FindGameObjectsWithTag("Key");	
 		totalKeys = arr.Length.ToString();
+		Debug.Log(totalKeys);
 	}
 
 
