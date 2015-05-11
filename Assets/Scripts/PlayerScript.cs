@@ -55,8 +55,10 @@ public class PlayerScript : MonoBehaviour {
 			setHealth (data.heal);
 			setJumpForce (data.jf);
 			hasDoubleJump = data.hdj;
-			GameObject sword = GameObject.FindGameObjectWithTag ("Sword");
-			sword.transform.localScale = new Vector3(data.swordSizeX, data.swordSizeY, 1f);
+//			GameObject sword = GameObject.FindGameObjectWithTag ("Sword");
+//			sword.transform.localScale = new Vector3(data.swordSizeX, data.swordSizeY, 1f);
+			maxHealth = data.mx;
+			maxSpeed = data.ms;
 		}
 		isMoving = true;
 	
@@ -248,8 +250,10 @@ class PlayerData{
 	public int heal;
 	public float jf;
 	public bool hdj;
-	public float swordSizeX;
-	public float swordSizeY;
+//	public float swordSizeX;
+//	public float swordSizeY;
+	public int mx;
+	public float ms;
 }
 
 [System.Serializable]

@@ -51,6 +51,71 @@ public class LevelOneMaster : MonoBehaviour {
 			// gera courentine til að hafa smá mismun
 			StartCoroutine(waitToSpawn());
 		}
+
+		if (CanvasController.clearedLevel) {
+			BinaryFormatter bf = new BinaryFormatter();
+			FileStream file = File.Create(Application.persistentDataPath + "/playerInfo.dat");
+			PlayerData data = new PlayerData();
+			
+			if(ScoreManager.numbKeys == 0 || ScoreManager.numbKeys == 1){ // Nothing happens
+				
+				// Setting variables, could use a constructor for a smaller code
+				
+				data.heal = 3;
+				data.jf = 1410;
+				data.hdj = false;
+				//				data.swordSizeX = 1.3f;
+				//				data.swordSizeY = 1.3f;
+				data.ms = 16f;
+				data.mx = 3;
+				
+			} else if(ScoreManager.numbKeys == 2 || ScoreManager.numbKeys == 3){ // Extra life
+				
+				data.heal = 4;
+				data.jf = 1410;
+				data.hdj = false;
+				//				data.swordSizeX = 1.3f;
+				//				data.swordSizeY = 1.3f;
+				data.ms = 16f;
+				data.mx = 4;
+				
+			}  else if(ScoreManager.numbKeys == 4){ // extra jump
+				
+				data.heal = 3;
+				data.jf = 1800;
+				data.hdj = false;
+				//				data.swordSizeX = 1.3f;
+				//				data.swordSizeY = 1.3f;
+				data.ms = 16f;
+				data.mx = 3;
+				
+			}  else if(ScoreManager.numbKeys == 5){ // extra speed
+				
+				data.heal = 3;
+				data.jf = 1410;
+				data.hdj = false;
+				//				data.swordSizeX = 1.3f;
+				//				data.swordSizeY = 1.3f;
+				data.ms = 20f;
+				data.mx = 3;
+				
+			} else if(ScoreManager.numbKeys == 6){ // double jump
+				
+				data.heal = 3;
+				data.jf = 1410;
+				data.hdj = true;
+				//				data.swordSizeX = 1.3f;
+				//				data.swordSizeY = 1.3f;
+				data.ms = 16f;
+				data.mx = 3;
+				
+			}
+			bf.Serialize(file, data);
+			file.Close ();
+			CanvasController.clearedLevel = false;
+			Application.LoadLevel("Two");
+		}
+	
 	}
 	
 //

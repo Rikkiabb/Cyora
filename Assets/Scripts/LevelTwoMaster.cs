@@ -134,32 +134,40 @@ public class LevelTwoMaster : MonoBehaviour {
 				data.heal = 3;
 				data.jf = 1410;
 				data.hdj = false;
-				data.swordSizeX = 1.3f;
-				data.swordSizeY = 1.3f;
+//				data.swordSizeX = 1.3f;
+//				data.swordSizeY = 1.3f;
+				data.ms = 16f;
+				data.mx = 3;
 
 			} else if(ScoreManager.numbKeys == 1 || ScoreManager.numbKeys == 2){ // Double jump 
 
 				data.heal = 3;
 				data.jf = 1410;
 				data.hdj = true;
-				data.swordSizeX = 1.3f;
-				data.swordSizeY = 1.3f;
+//				data.swordSizeX = 1.3f;
+//				data.swordSizeY = 1.3f;
+				data.ms = 16f;
+				data.mx = 3;
 
-			}  else if(ScoreManager.numbKeys == 3 || ScoreManager.numbKeys == 4){ // extra life
-
-				data.heal = 4;
-				data.jf = 1410;
-				data.hdj = false;
-				data.swordSizeX = 1.3f;
-				data.swordSizeY = 1.3f;
-				
-			}  else if(ScoreManager.numbKeys == 5){ // bigger sword
+			}  else if(ScoreManager.numbKeys == 3){ // extra speed
 
 				data.heal = 3;
 				data.jf = 1410;
 				data.hdj = false;
-				data.swordSizeX = 1.6f;
-				data.swordSizeY = 1.6f;
+//				data.swordSizeX = 1.3f;
+//				data.swordSizeY = 1.3f;
+				data.ms = 20f;
+				data.mx = 3;
+				
+			}  else if(ScoreManager.numbKeys == 4 || ScoreManager.numbKeys == 5){ // extra life
+
+				data.heal = 4;
+				data.jf = 1410;
+				data.hdj = false;
+//				data.swordSizeX = 1.6f;
+//				data.swordSizeY = 1.6f;
+				data.ms = 16f;
+				data.mx = 4;
 				
 			}
 			bf.Serialize(file, data);
