@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: b2a2c136f8dc496488490f097c6ba705
+labels:
+- music
+- platform
+- cheerful
+- melodic
+- uplifting
+AudioImporter:
+  serializedVersion: 6
+  defaultSettings:
+    loadType: 1
+    sampleRateSetting: 0
+    sampleRateOverride: 0
+    compressionFormat: 0
+    quality: .5
+    conversionMode: 0
+  platformSettingOverrides: {}
+  forceToMono: 0
+  preloadAudioData: 1
+  loadInBackground: 0
+  3D: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
