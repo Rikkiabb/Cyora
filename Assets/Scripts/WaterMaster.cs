@@ -13,6 +13,7 @@ public class WaterMaster : MonoBehaviour {
 	public Transform aHeart;
 
 	void Start () {
+		GameMasterCS.setIce(false);
 		player = target.gameObject.GetComponent<PlayerScript> ();
 		BinaryFormatter bf = new BinaryFormatter();
 		FileStream file = File.Create(Application.persistentDataPath + "/checkpoint.dat");

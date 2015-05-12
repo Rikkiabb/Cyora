@@ -19,6 +19,7 @@ public class IcyLevelManager : MonoBehaviour {
 		GameMasterCS.setIce(true);
 		// save player stats and level stats
 		player = target.gameObject.GetComponent<PlayerScript> ();
+		player.fallBoundary = 700	;
 		BinaryFormatter bf = new BinaryFormatter();
 		FileStream file = File.Create(Application.persistentDataPath + "/checkpoint.dat");
 		CheckpointReached data = new CheckpointReached();
