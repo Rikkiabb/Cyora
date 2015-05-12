@@ -25,6 +25,7 @@ TagManager:
   - Water
   - WaterEnemy
   - Heart
+  - Life3
   layers:
   - Default
   - TransparentFX

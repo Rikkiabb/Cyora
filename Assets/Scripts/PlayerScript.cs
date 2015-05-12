@@ -60,6 +60,7 @@ public class PlayerScript : MonoBehaviour {
 			maxHealth = data.mx;
 			maxSpeed = data.ms;
 		}
+		Heart.DrawHeart(maxHealth);
 		isMoving = true;
 	
 	}

@@ -17,7 +17,7 @@ public class StartMaster : MonoBehaviour {
 		data.jf = 1410;
 		data.hdj = false;
 		data.ms = 16f;
-		data.mx = 4;
+		data.mx = 3;
 //		data.swordSizeX = 1.3f;
 //		data.swordSizeY = 1.3f;
 		bf.Serialize(file, data);

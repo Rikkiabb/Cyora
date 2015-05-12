@@ -77,6 +77,7 @@ public class LevelOneMaster : MonoBehaviour {
 				//				data.swordSizeY = 1.3f;
 				data.ms = 16f;
 				data.mx = 4;
+
 				
 			}  else if(ScoreManager.numbKeys == 4){ // extra jump
 				
