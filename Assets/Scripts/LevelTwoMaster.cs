@@ -229,6 +229,8 @@ public class LevelTwoMaster : MonoBehaviour {
 			bf.Serialize(file, data);
 			file.Close ();
 			CanvasController.clearedLevel = false;
+			windLeft = false;
+			windRight = false;
 			Application.LoadLevel("Icy");
 		}
 	}
