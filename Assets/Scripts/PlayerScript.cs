@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
@@ -47,21 +48,6 @@ public class PlayerScript : MonoBehaviour {
 	public bool allowAttack = true;
 
 	void Awake(){
-		// Þurfum að finna út úr því hvernig við eigum að stilla þetta þannig það er ekki lesið í main menu, instructions og tutorial og one
-//		if (Application.loadedLevel == 0) {
-//
-//			BinaryFormatter bf = new BinaryFormatter();
-//			FileStream file = File.Create(Application.persistentDataPath + "/playerInfo.dat");
-//			PlayerData data = new PlayerData();
-//			data.heal = 3;
-//			data.jf = 1410;
-//			data.hdj = false;
-//			data.swordSizeX = 1.3f;
-//			data.swordSizeY = 1.3f;
-//			bf.Serialize(file, data);
-//			file.Close ();
-//
-//		} else 
 		if (File.Exists (Application.persistentDataPath + "/playerInfo.dat")) {
 			BinaryFormatter bf = new BinaryFormatter ();
 			FileStream file = File.Open (Application.persistentDataPath + "/playerInfo.dat", FileMode.Open);
@@ -70,9 +56,12 @@ public class PlayerScript : MonoBehaviour {
 			setHealth (data.heal);
 			setJumpForce (data.jf);
 			hasDoubleJump = data.hdj;
-			GameObject sword = GameObject.FindGameObjectWithTag ("Sword");
-			sword.transform.localScale = new Vector3(data.swordSizeX, data.swordSizeY, 1f);
+//			GameObject sword = GameObject.FindGameObjectWithTag ("Sword");
+//			sword.transform.localScale = new Vector3(data.swordSizeX, data.swordSizeY, 1f);
+			maxHealth = data.mx;
+			maxSpeed = data.ms;
 		}
+		Heart.DrawHeart(maxHealth);
 		isMoving = true;
 	
 	}
@@ -186,11 +175,12 @@ public class PlayerScript : MonoBehaviour {
 		// So if our player empties his health he dies
 		if(playerStats.Health <= 0){
 			Debug.Log("Kill Player!!");
-			freefall.mass = 2000;
-			Destroy (collide);
-			GameObject Sword = GameObject.FindGameObjectWithTag("Sword");
-			Destroy(Sword);
-			isMoving = false;
+			return;
+//			freefall.mass = 2000;
+//			Destroy (collide);
+//			GameObject Sword = GameObject.FindGameObjectWithTag("Sword");
+//			Destroy(Sword);
+//			isMoving = false;
 		}
 	}
 
@@ -264,6 +254,24 @@ class PlayerData{
 	public int heal;
 	public float jf;
 	public bool hdj;
-	public float swordSizeX;
-	public float swordSizeY;
+//	public float swordSizeX;
+//	public float swordSizeY;
+	public int mx;
+	public float ms;
 }
+
+[System.Serializable]
+class CheckpointReached{
+	public float playPosX;
+	public float playPosY;
+	public float playPosZ;
+	public int health;
+	public int currKeys;
+	public List<float> keysX = new List<float> ();
+	public List<float> keysY = new List<float> ();
+	public List<float> keysZ = new List<float> ();
+	public List<float> heartX = new List<float> ();
+	public List<float> heartY = new List<float> ();
+	public List<float> heartZ = new List<float> ();
+}
+

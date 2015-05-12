@@ -16,8 +16,10 @@ public class StartMaster : MonoBehaviour {
 		data.heal = 3;
 		data.jf = 1410;
 		data.hdj = false;
-		data.swordSizeX = 1.3f;
-		data.swordSizeY = 1.3f;
+		data.ms = 16f;
+		data.mx = 3;
+//		data.swordSizeX = 1.3f;
+//		data.swordSizeY = 1.3f;
 		bf.Serialize(file, data);
 		file.Close ();
 	}

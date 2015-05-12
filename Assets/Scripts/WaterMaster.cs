@@ -5,21 +5,16 @@ using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
-public class IcyLevelManager : MonoBehaviour {
+public class WaterMaster : MonoBehaviour {
 
 	public Transform target;
 	PlayerScript player;
 	public Transform aKey;
 	public Transform aHeart;
 
-
-	// Use this for initialization
-
-	void Start(){
-		GameMasterCS.setIce(true);
-		// save player stats and level stats
+	void Start () {
+		GameMasterCS.setIce(false);
 		player = target.gameObject.GetComponent<PlayerScript> ();
-		player.fallBoundary = 700	;
 		BinaryFormatter bf = new BinaryFormatter();
 		FileStream file = File.Create(Application.persistentDataPath + "/checkpoint.dat");
 		CheckpointReached data = new CheckpointReached();
@@ -46,7 +41,9 @@ public class IcyLevelManager : MonoBehaviour {
 		
 		bf.Serialize(file, data);
 		file.Close ();
+	
 	}
+	
 	// Update is called once per frame
 	void Update () {
 		if (player.playerStats.Health < 1) {
@@ -70,17 +67,7 @@ public class IcyLevelManager : MonoBehaviour {
 				data.ms = 16f;
 				data.mx = 3;
 				
-			} else if(ScoreManager.numbKeys == 2 || ScoreManager.numbKeys == 3){ // Extra life
-				
-				data.heal = 4;
-				data.jf = 1410;
-				data.hdj = false;
-				//				data.swordSizeX = 1.3f;
-				//				data.swordSizeY = 1.3f;
-				data.ms = 16f;
-				data.mx = 4;
-				
-			}  else if(ScoreManager.numbKeys == 4){ // extra jump
+			} else if(ScoreManager.numbKeys == 2){ // extra jump
 				
 				data.heal = 3;
 				data.jf = 1800;
@@ -90,7 +77,18 @@ public class IcyLevelManager : MonoBehaviour {
 				data.ms = 16f;
 				data.mx = 3;
 				
-			}  else if(ScoreManager.numbKeys == 5){ // extra speed
+			}  else if(ScoreManager.numbKeys == 3){ // double jump
+
+				data.heal = 3;
+				data.jf = 1410;
+				data.hdj = true;
+				//				data.swordSizeX = 1.3f;
+				//				data.swordSizeY = 1.3f;
+				data.ms = 16f;
+				data.mx = 3;
+
+				
+			}  else if(ScoreManager.numbKeys == 4){ // extra speed
 				
 				data.heal = 3;
 				data.jf = 1410;
@@ -100,26 +98,25 @@ public class IcyLevelManager : MonoBehaviour {
 				data.ms = 20f;
 				data.mx = 3;
 				
-			} else if(ScoreManager.numbKeys == 6){ // double jump
-				
-				data.heal = 3;
+			} else if(ScoreManager.numbKeys == 5){ // extra life
+
+				data.heal = 4;
 				data.jf = 1410;
-				data.hdj = true;
+				data.hdj = false;
 				//				data.swordSizeX = 1.3f;
 				//				data.swordSizeY = 1.3f;
 				data.ms = 16f;
-				data.mx = 3;
-				
+				data.mx = 4;
+
 			}
 			bf.Serialize(file, data);
 			file.Close ();
 			CanvasController.clearedLevel = false;
-			Application.LoadLevel("Rainy");
+			//Application.LoadLevel("Rainy");
 		}
-		
-	}
 	
-	//
+	}
+
 	IEnumerator waitToSpawn(){
 		yield return new WaitForSeconds (1);
 		if (File.Exists (Application.persistentDataPath + "/playerInfo.dat")) {

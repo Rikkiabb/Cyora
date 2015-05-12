@@ -146,7 +146,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Press up or \nspace to jump"
+  m_Text: "Press up or \nw to jump"
 --- !u!222 &32818421
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -601,9 +601,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Press z to
+  m_Text: 'Press space or
 
-    attack!'
+    shift to attack!'
 --- !u!222 &444458729
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -898,9 +898,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Press left/right
+  m_Text: 'Press left/right or
 
-    to move player'
+    a/d to move player'
 --- !u!222 &1085956822
 CanvasRenderer:
   m_ObjectHideFlags: 0

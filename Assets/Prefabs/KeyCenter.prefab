@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 441634}
   m_Layer: 0
   m_Name: KeyCenter
-  m_TagString: Untagged
+  m_TagString: KeyCenter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29,7 +29,7 @@ GameObject:
   - 95: {fileID: 9596728}
   m_Layer: 0
   m_Name: Key
-  m_TagString: Untagged
+  m_TagString: Key
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyEffect: {fileID: 478134, guid: b6baff40b1b134d47a3932762b2e2741, type: 2}
+  dissapear: 0
 --- !u!212 &21245372
 SpriteRenderer:
   m_ObjectHideFlags: 1

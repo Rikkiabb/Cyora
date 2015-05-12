@@ -23,7 +23,7 @@ public class CanvasController : MonoBehaviour {
 			// target.position is the position of the player, we add 0 to the x-axis, nothing to the y-axis and the z-axis is a constant
 			anim.SetTrigger("GameOver");
 			hasExited = true;
-			Physics2D.gravity = new Vector2(0, -30);
+//			Physics2D.gravity = new Vector2(0, -30);
 
 		}
 
@@ -37,6 +37,13 @@ public class CanvasController : MonoBehaviour {
 			if(Input.GetButtonDown ("Mouse X")){ // R
 				anim.SetTrigger ("Restart");
 				hasExited = false;
+				if(LevelTwoMaster.windRight){
+					Physics2D.gravity = new Vector2(115, -30);
+				} else if (LevelTwoMaster.windLeft){
+					Physics2D.gravity = new Vector2(-115, -30);
+				} else {
+					Physics2D.gravity = new Vector2(0, -30);
+				}
 //				ScoreManager.numbKeys = 0;
 //				Application.LoadLevel(Application.loadedLevel);
 			}

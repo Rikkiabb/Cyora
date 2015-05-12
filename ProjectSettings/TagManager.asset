@@ -24,9 +24,8 @@ TagManager:
   - KeyCenter
   - Water
   - WaterEnemy
-  - Boss
-  - Cloud
-  - Ball
+  - Heart
+  - Life3
   layers:
   - Default
   - TransparentFX
