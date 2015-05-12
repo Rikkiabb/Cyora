@@ -116,24 +116,23 @@ public class LevelTwoMaster : MonoBehaviour {
 		GameObject[] arr = GameObject.FindGameObjectsWithTag("Door");
 		GameObject[] arr1 = GameObject.FindGameObjectsWithTag("Enemy");
 
-		yield return new WaitForSeconds (2);
-		windOff = true;
-		
 		for(int i = 0; i < arr.Length; i++){
 			Destroy (arr[i]);
 		}
-
+		
 		for(int i = 0; i < arr1.Length; i++){
 			Destroy (arr1[i]);
 		}
+
+		yield return new WaitForSeconds (2);
+		windOff = true;
+		
+
 	}
 
 
 
 	IEnumerator waitEffectFirstCloud(){
-		
-		yield return new WaitForSeconds (1);
-		windLeft = true;
 		GameObject[] arr0 = GameObject.FindGameObjectsWithTag("WindCloud");
 		for(int i = 0; i < arr0.Length; i++){
 			arr0[i].AddComponent<Rigidbody2D> ();
@@ -150,13 +149,14 @@ public class LevelTwoMaster : MonoBehaviour {
 			rb1.mass = 0;
 			rb1.gravityScale = 15;
 		}
+		yield return new WaitForSeconds (5);
+		windLeft = true;
+
 		
 	}
 
 	IEnumerator waitEffectSecondCloud(){
-		
-		yield return new WaitForSeconds (1);
-		windRight = true;
+
 		GameObject fly = GameObject.FindGameObjectWithTag("SecondMoveWind");
 		Rigidbody2D rb = fly.GetComponent<Rigidbody2D> ();
 		rb.isKinematic = false;
@@ -164,6 +164,9 @@ public class LevelTwoMaster : MonoBehaviour {
 		rb.gravityScale = 25;
 		GameObject fly1 = GameObject.FindGameObjectWithTag("SecondWind");
 		fly1.AddComponent<Rigidbody2D> ();
+		yield return new WaitForSeconds (5);
+		windRight = true;
+
 //		Rigidbody2D rb = fly1.GetComponent<Rigidbody2D> ();
 //		rb.mass = 3;
 //		rb.gravityScale = 50;

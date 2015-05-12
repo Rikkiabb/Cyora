@@ -25,7 +25,7 @@ public class EnemyHealth : MonoBehaviour {
 	{
 		
 		// Set the scale of the health bar to be proportional to the player's health.
-
-		healthBar.transform.localScale = new Vector3(healthScale.x * healthPercentage, 1, 1);
+		float healthy = healthBar.transform.localScale.y;
+		healthBar.transform.localScale = new Vector3(healthScale.x * healthPercentage, healthy, 1);
 	}
 }
