@@ -2873,10 +2873,6 @@ Prefab:
       propertyPath: m_Name
       value: EnemyWater 1
       objectReference: {fileID: 0}
-    - target: {fileID: 478514, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
   m_IsPrefabParent: 0
@@ -40460,11 +40456,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 478514, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -21.7184658
+      value: -26.9699993
       objectReference: {fileID: 0}
     - target: {fileID: 478514, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 154.279587
+      value: 153.009995
       objectReference: {fileID: 0}
     - target: {fileID: 478514, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -40500,6 +40496,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 478514, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
       propertyPath: m_LocalScale.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11457998, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
+      propertyPath: movement.speed
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -44830,11 +44830,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 478514, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 15.7600002
+      value: 15.8000002
       objectReference: {fileID: 0}
     - target: {fileID: 478514, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 22.7000008
+      value: 21.7000008
       objectReference: {fileID: 0}
     - target: {fileID: 478514, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -44858,7 +44858,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 478514, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 478514, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
       propertyPath: m_LocalScale.z
@@ -117333,7 +117333,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 478514, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 176.100006
+      value: 175.550003
       objectReference: {fileID: 0}
     - target: {fileID: 478514, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
       propertyPath: m_LocalPosition.z
@@ -120845,6 +120845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 3
   hasDoubleJump: 0
+  isHurt: 0
   playerStats:
     Health: 3
   fallBoundary: -30
@@ -133992,7 +133993,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 489004, guid: fea6dc4b23d3942b589b87d765cf2119, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 155.300003
+      value: 157.220001
       objectReference: {fileID: 0}
     - target: {fileID: 489004, guid: fea6dc4b23d3942b589b87d765cf2119, type: 2}
       propertyPath: m_LocalPosition.z
@@ -134016,7 +134017,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 489004, guid: fea6dc4b23d3942b589b87d765cf2119, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fea6dc4b23d3942b589b87d765cf2119, type: 2}

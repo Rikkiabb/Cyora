@@ -61,7 +61,9 @@ public class PlayerScript : MonoBehaviour {
 			maxHealth = data.mx;
 			maxSpeed = data.ms;
 		}
-		Heart.DrawHeart(maxHealth);
+		if (maxHealth > 0) {
+			Heart.DrawHeart (maxHealth);
+		}
 		isMoving = true;
 	
 	}
