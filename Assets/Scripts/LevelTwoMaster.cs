@@ -59,7 +59,6 @@ public class LevelTwoMaster : MonoBehaviour {
 			data.health = player.playerStats.Health;
 			data.currKeys = ScoreManager.numbKeys;
 
-			Debug.Log ("HER: " + target.position.x);
 
 			GameObject[] locKeys = GameObject.FindGameObjectsWithTag("Key");
 			for (int i = 0; i < locKeys.Length; i++) {
