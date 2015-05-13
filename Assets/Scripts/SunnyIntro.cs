@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Intro3 : MonoBehaviour {
+public class SunnyIntro : MonoBehaviour {
 	
 	bool playScene;
 	
@@ -9,25 +9,29 @@ public class Intro3 : MonoBehaviour {
 	void Start () {
 		
 		playScene = true;
-		StartCoroutine (WaitScene ());
+		StartCoroutine (WaitCloud ());
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
+		
 		if (Input.GetButtonDown ("Fire1")) {
 			Application.LoadLevel("One");
 		}
 
-		if (!playScene) {
-			Application.LoadLevel("SunnyIntro");
-		}
 	}
 	
+	IEnumerator WaitCloud(){
+		
+		yield return new WaitForSeconds (7);
+		Destroy (GameObject.Find ("CloudFull").gameObject);
+		StartCoroutine (WaitScene ());
+	}
+
 	IEnumerator WaitScene(){
 		
-		yield return new WaitForSeconds (10);
-		playScene = false;
+		yield return new WaitForSeconds (2);
+		Application.LoadLevel("One");
 	}
 }

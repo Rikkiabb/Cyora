@@ -31,3 +31,5 @@ EditorBuildSettings:
     path: Assets/Scenes/Intro.unity
   - enabled: 1
     path: Assets/Scenes/Intro1.unity
+  - enabled: 1
+    path: Assets/Scenes/SunnyIntro.unity
