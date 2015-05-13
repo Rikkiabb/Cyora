@@ -170,7 +170,7 @@ TextMesh:
 
     You have to save the kingdom'
   m_OffsetZ: 0
-  m_CharacterSize: .5
+  m_CharacterSize: .25
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
@@ -193,7 +193,7 @@ Transform:
   m_LocalScale: {x: .686994433, y: .686994433, z: .686994433}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!23 &606005960
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -295,7 +295,6 @@ GameObject:
   - 124: {fileID: 1258455512}
   - 81: {fileID: 1258455511}
   - 114: {fileID: 1258455517}
-  - 114: {fileID: 1258455516}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -367,18 +366,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
---- !u!114 &1258455516
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1258455510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e472f707a725842b6b505b1fd6ab3300, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_RootOrder: 4
 --- !u!114 &1258455517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,6 +378,80 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e472f707a725842b6b505b1fd6ab3300, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1263826770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1263826773}
+  - 23: {fileID: 1263826772}
+  - 102: {fileID: 1263826771}
+  m_Layer: 0
+  m_Name: Text 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!102 &1263826771
+TextMesh:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1263826770}
+  m_Text: Press Space to skip...
+  m_OffsetZ: 0
+  m_CharacterSize: .200000003
+  m_LineSpacing: 1
+  m_Anchor: 0
+  m_Alignment: 0
+  m_TabSize: 4
+  m_FontSize: 0
+  m_FontStyle: 0
+  m_RichText: 1
+  m_Font: {fileID: 12800000, guid: 4d6eea763b7dbd64592a210d5870ef9b, type: 3}
+  m_Color:
+    serializedVersion: 2
+    rgba: 4278190080
+--- !u!23 &1263826772
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1263826770}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 4d6eea763b7dbd64592a210d5870ef9b, type: 3}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!4 &1263826773
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1263826770}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.19999981, y: -3.79999995, z: 9.60000038}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
 --- !u!4 &1856804928 stripped
 Transform:
   m_PrefabParentObject: {fileID: 432850, guid: 0ce5f558c69d7486b84c1074278d152a, type: 2}
@@ -422,7 +484,7 @@ Transform:
   m_Children:
   - {fileID: 1856804928}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!95 &1982071348
 Animator:
   serializedVersion: 3

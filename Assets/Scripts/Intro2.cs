@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Intro1 : MonoBehaviour {
-
+public class Intro2 : MonoBehaviour {
+	
 	bool playScene;
-
+	
 	// Use this for initialization
 	void Start () {
-
+		
 		playScene = true;
 		StartCoroutine (WaitScene ());
-
+		
 	}
 	
 	// Update is called once per frame
@@ -21,12 +21,12 @@ public class Intro1 : MonoBehaviour {
 		}
 
 		if (!playScene) {
-			Application.LoadLevel("Intro2");
+			Application.LoadLevel("Intro3");
 		}
 	}
-
+	
 	IEnumerator WaitScene(){
-		Debug.Log("WAITWHAT!");
+		
 		yield return new WaitForSeconds (10);
 		playScene = false;
 	}
