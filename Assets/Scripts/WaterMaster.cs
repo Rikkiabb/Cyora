@@ -86,7 +86,6 @@ public class WaterMaster : MonoBehaviour {
 				//				data.swordSizeY = 1.3f;
 				data.ms = 16f;
 				data.mx = 3;
-
 				
 			}  else if(ScoreManager.numbKeys == 4){ // extra speed
 				

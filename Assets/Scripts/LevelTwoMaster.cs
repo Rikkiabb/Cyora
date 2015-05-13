@@ -195,17 +195,33 @@ public class LevelTwoMaster : MonoBehaviour {
 				data.ms = 16f;
 				data.mx = 3;
 
-			} else if(ScoreManager.numbKeys == 1 || ScoreManager.numbKeys == 2){ // Double jump 
+				CanvasController.anim.SetTrigger("NoReward");
+
+			} else if(ScoreManager.numbKeys == 1){ // Extra jump power 
 
 				data.heal = 3;
-				data.jf = 1410;
+				data.jf = 1800;
 				data.hdj = true;
 //				data.swordSizeX = 1.3f;
 //				data.swordSizeY = 1.3f;
 				data.ms = 16f;
 				data.mx = 3;
 
-			}  else if(ScoreManager.numbKeys == 3){ // extra speed
+				CanvasController.anim.SetTrigger("ExtraJump");
+
+			}  else if(ScoreManager.numbKeys == 2){ // Double jump 
+				
+				data.heal = 3;
+				data.jf = 1410;
+				data.hdj = true;
+				//				data.swordSizeX = 1.3f;
+				//				data.swordSizeY = 1.3f;
+				data.ms = 16f;
+				data.mx = 3;
+				
+				CanvasController.anim.SetTrigger("DoubleJump");
+
+			} else if(ScoreManager.numbKeys == 3){ // extra speed
 
 				data.heal = 3;
 				data.jf = 1410;
@@ -214,6 +230,8 @@ public class LevelTwoMaster : MonoBehaviour {
 //				data.swordSizeY = 1.3f;
 				data.ms = 20f;
 				data.mx = 3;
+
+				CanvasController.anim.SetTrigger("ExtraSpeed");
 				
 			}  else if(ScoreManager.numbKeys == 4 || ScoreManager.numbKeys == 5){ // extra life
 
@@ -224,6 +242,8 @@ public class LevelTwoMaster : MonoBehaviour {
 //				data.swordSizeY = 1.6f;
 				data.ms = 16f;
 				data.mx = 4;
+
+				CanvasController.anim.SetTrigger("ExtraLife");
 				
 			}
 			bf.Serialize(file, data);
@@ -231,8 +251,13 @@ public class LevelTwoMaster : MonoBehaviour {
 			CanvasController.clearedLevel = false;
 			windLeft = false;
 			windRight = false;
-			Application.LoadLevel("Icy");
+			StartCoroutine(waitToShowUpgrade());
 		}
+	}
+
+	IEnumerator waitToShowUpgrade(){
+		yield return new WaitForSeconds (14);
+		Application.LoadLevel("Icy");
 	}
 
 	IEnumerator waitToSpawn(){
