@@ -89,6 +89,7 @@ public class LevelOneMaster : MonoBehaviour {
 				//				data.swordSizeY = 1.3f;
 				data.ms = 16f;
 				data.mx = 3;
+				CanvasController.anim.SetTrigger("ExtraJump");
 				
 			}  else if(ScoreManager.numbKeys == 5){ // extra speed
 				
@@ -99,6 +100,7 @@ public class LevelOneMaster : MonoBehaviour {
 				//				data.swordSizeY = 1.3f;
 				data.ms = 20f;
 				data.mx = 3;
+				CanvasController.anim.SetTrigger("ExtraSpeed");
 				
 			} else if(ScoreManager.numbKeys == 6){ // double jump
 				
@@ -109,6 +111,7 @@ public class LevelOneMaster : MonoBehaviour {
 				//				data.swordSizeY = 1.3f;
 				data.ms = 16f;
 				data.mx = 3;
+				CanvasController.anim.SetTrigger("DoubleJump");
 				
 			}
 			bf.Serialize(file, data);
