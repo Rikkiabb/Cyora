@@ -2054,7 +2054,7 @@ Transform:
   m_LocalScale: {x: 6.5164237, y: 6.51642323, z: .814552903}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 77
+  m_RootOrder: 80
 --- !u!1001 &299178094
 Prefab:
   m_ObjectHideFlags: 0
@@ -3009,7 +3009,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 66801de7b4e6849d381ac9d97a4bc13c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e243f960513346a6a464842ab0dcd1f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: .774999976}
 --- !u!4 &378974786
 Transform:
@@ -4765,7 +4765,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 66801de7b4e6849d381ac9d97a4bc13c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e243f960513346a6a464842ab0dcd1f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: .774999976}
 --- !u!4 &613142790
 Transform:
@@ -5645,7 +5645,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 66801de7b4e6849d381ac9d97a4bc13c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e243f960513346a6a464842ab0dcd1f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &739264336
 Transform:
@@ -5955,7 +5955,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 66801de7b4e6849d381ac9d97a4bc13c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e243f960513346a6a464842ab0dcd1f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &794299799
 Transform:
@@ -7861,7 +7861,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 66801de7b4e6849d381ac9d97a4bc13c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e243f960513346a6a464842ab0dcd1f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: .774999976}
 --- !u!4 &1117867278
 Transform:
@@ -10820,7 +10820,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 66801de7b4e6849d381ac9d97a4bc13c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e243f960513346a6a464842ab0dcd1f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: .774999976}
 --- !u!4 &1510682434
 Transform:
