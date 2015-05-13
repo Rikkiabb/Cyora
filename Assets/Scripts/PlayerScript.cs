@@ -7,6 +7,7 @@ using System.IO;
 
 public class PlayerScript : MonoBehaviour {
 
+	private AudioSource source;
 	public int maxHealth = 3;
 	CircleCollider2D collide;
 	Rigidbody2D freefall;
@@ -73,6 +74,7 @@ public class PlayerScript : MonoBehaviour {
 		anim = GetComponent<Animator> ();
 		collide = GetComponent<CircleCollider2D> ();
 		freefall = GetComponent<Rigidbody2D> ();
+		source = GetComponent<AudioSource>();
 	}
 
 	private float lastHitTime;
@@ -246,7 +248,11 @@ public class PlayerScript : MonoBehaviour {
 
 	}
 	
-
+	void OnTriggerEnter2D(Collider2D coll){
+		if(coll.tag == "Key"){
+			source.Play();
+		}
+	}
 
 	
 }
