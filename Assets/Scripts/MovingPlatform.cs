@@ -9,8 +9,11 @@ public class MovingPlatform : MonoBehaviour {
 	public bool leftToRight = true;
 	int timer = 0;
 
-	public int maxTimer = 10;
-	
+	public float maxTimer = 10f;
+
+	void Start(){
+		StartCoroutine (WaitForward (maxTimer));
+	}
 
 	// Update is called once per frame
 	void Update () {
@@ -21,32 +24,39 @@ public class MovingPlatform : MonoBehaviour {
 			
 			if (leftToRight) {
 
-				GetComponent<Rigidbody2D> ().velocity = new Vector2 (speed*Time.deltaTime, 0) ;
+				GetComponent<Rigidbody2D> ().velocity = new Vector2 (speed, 0) ;
 			
 			} else {
-				GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, speed*Time.deltaTime) ;
+				GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, speed) ;
 			}
 
 		} else {
 			
 			if (leftToRight) {
 				
-				GetComponent<Rigidbody2D> ().velocity = new Vector2 (-speed*Time.deltaTime, 0) ;
+				GetComponent<Rigidbody2D> ().velocity = new Vector2 (-speed, 0) ;
 				
 			} else {
-				GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, -speed*Time.deltaTime) ;
+				GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, -speed) ;
 			}			
 		}
 		
-		Debug.Log (Time.time);
-		timer++;
-		if (timer == maxTimer) {
-			timer = 0;
-//			Time.time;
-			forward = !forward;
-		}
+//		Debug.Log (Time.time);
+//		timer++;
+//		if (timer == maxTimer) {
+//			timer = 0;
+////			Time.time;
+//			forward = !forward;
+//		}
 		
 		
+	}
+
+	IEnumerator WaitForward(float waitTime){
+
+		yield return new WaitForSeconds (waitTime);
+		forward = !forward;
+		StartCoroutine (WaitForward (waitTime));
 	}
 
 	void OnCollisionStay2D(Collision2D coll){

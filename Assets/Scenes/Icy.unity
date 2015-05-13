@@ -2762,6 +2762,10 @@ Prefab:
       propertyPath: m_Material
       value: 
       objectReference: {fileID: 6200000, guid: a6e39217ddfbd4e88b9281f466db95b8, type: 2}
+    - target: {fileID: 11451718, guid: 75bc9d6f7670145d5832a9975ead285b, type: 2}
+      propertyPath: maxTimer
+      value: 4.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75bc9d6f7670145d5832a9975ead285b, type: 2}
   m_IsPrefabParent: 0
@@ -13264,6 +13268,10 @@ Prefab:
       propertyPath: forward
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11451718, guid: 75bc9d6f7670145d5832a9975ead285b, type: 2}
+      propertyPath: maxTimer
+      value: 4.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75bc9d6f7670145d5832a9975ead285b, type: 2}
   m_IsPrefabParent: 0
@@ -19358,15 +19366,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 413510, guid: bf828e22595804c29b092806d4926cde, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 975.700012
+      value: 954.5
       objectReference: {fileID: 0}
     - target: {fileID: 413510, guid: bf828e22595804c29b092806d4926cde, type: 2}
       propertyPath: m_RootOrder
-      value: 213
+      value: 202
       objectReference: {fileID: 0}
     - target: {fileID: 413510, guid: bf828e22595804c29b092806d4926cde, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 88.8000031
+      value: 138.800003
       objectReference: {fileID: 0}
     - target: {fileID: 11471164, guid: bf828e22595804c29b092806d4926cde, type: 2}
       propertyPath: maxSpeed
@@ -19405,7 +19413,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
-  Mute: 0
+  Mute: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
