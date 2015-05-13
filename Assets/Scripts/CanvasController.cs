@@ -4,7 +4,7 @@ using System.Collections;
 public class CanvasController : MonoBehaviour {
 
 	public Transform target;
-	Animator anim;
+	public static Animator anim;
 	bool hasExited = false;
 	static public bool clearedLevel;
 

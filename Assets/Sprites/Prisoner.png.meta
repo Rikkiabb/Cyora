@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: 131a2243d643a449e9d84b12c3eebd63
+timeCreated: 1431456624
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Prisoner_0
+    21300002: Prisoner_1
+    21300004: Prisoner_2
+    21300006: Prisoner_3
+    21300008: Prisoner_4
+    21300010: Prisoner_5
+    21300012: Prisoner_6
+    21300014: Prisoner_7
+    21300016: Prisoner_8
+    21300018: Prisoner_9
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: Prisoner_0
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 23
+        width: 75
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Prisoner_1
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 23
+        width: 75
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Prisoner_2
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 23
+        width: 75
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Prisoner_3
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 23
+        width: 75
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Prisoner_4
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 23
+        width: 75
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Prisoner_5
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 23
+        width: 75
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Prisoner_6
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 23
+        width: 75
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Prisoner_7
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 23
+        width: 75
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Prisoner_8
+      rect:
+        serializedVersion: 2
+        x: 1053
+        y: 23
+        width: 75
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Prisoner_9
+      rect:
+        serializedVersion: 2
+        x: 1181
+        y: 23
+        width: 75
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
