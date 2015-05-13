@@ -2,13 +2,11 @@
 using System.Collections;
 
 public class SunnyIntro : MonoBehaviour {
-	
-	bool playScene;
+
 	
 	// Use this for initialization
 	void Start () {
-		
-		playScene = true;
+
 		StartCoroutine (WaitCloud ());
 		
 	}

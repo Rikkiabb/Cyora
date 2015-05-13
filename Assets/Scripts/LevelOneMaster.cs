@@ -123,7 +123,7 @@ public class LevelOneMaster : MonoBehaviour {
 	}
 	IEnumerator waitToShowUpgrade(){
 		yield return new WaitForSeconds (14);
-		Application.LoadLevel("Two");
+		Application.LoadLevel("SunnyOutro");
 	}
 //
 	IEnumerator waitToSpawn(){
