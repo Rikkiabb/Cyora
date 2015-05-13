@@ -1,23 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+
 public class MovingPlatform : MonoBehaviour {
 	
 	public bool forward = false;
 	public float speed = 5f;
 	public bool leftToRight = true;
 	int timer = 0;
-	public int maxTimer = 10;
-	
+
+	public float maxTimer = 10f;
+
+	void Start(){
+		StartCoroutine (WaitForward (maxTimer));
+	}
 
 	// Update is called once per frame
 	void Update () {
+		//
 		
 		
 		if (forward) {
 			
 			if (leftToRight) {
-		
+
 				GetComponent<Rigidbody2D> ().velocity = new Vector2 (speed, 0) ;
 			
 			} else {
@@ -35,14 +41,22 @@ public class MovingPlatform : MonoBehaviour {
 			}			
 		}
 		
+//		Debug.Log (Time.time);
+//		timer++;
+//		if (timer == maxTimer) {
+//			timer = 0;
+////			Time.time;
+//			forward = !forward;
+//		}
 		
-		timer++;
-		if (timer == maxTimer) {
-			timer = 0;
-			forward = !forward;
-		}
 		
-		
+	}
+
+	IEnumerator WaitForward(float waitTime){
+
+		yield return new WaitForSeconds (waitTime);
+		forward = !forward;
+		StartCoroutine (WaitForward (waitTime));
 	}
 
 	void OnCollisionStay2D(Collision2D coll){
