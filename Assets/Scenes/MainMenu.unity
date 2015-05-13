@@ -346,6 +346,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4670e2cc170db49118e1b17f6690a985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  groundCheck: {fileID: 0}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  jumpForce: 1400
+  allowAttack: 1
+  doubleJump: 0
+  maxSpeed: 16
 --- !u!4 &191863340
 Transform:
   m_ObjectHideFlags: 0
@@ -407,6 +415,25 @@ GameObject:
 Transform:
   m_PrefabParentObject: {fileID: 400022, guid: c29e765e7bd9d4334a9581ffbfcadbaa, type: 2}
   m_PrefabInternal: {fileID: 322503469}
+--- !u!114 &277126552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 277126550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4670e2cc170db49118e1b17f6690a985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundCheck: {fileID: 481424771}
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 4294967039
+  jumpForce: 1400
+  allowAttack: 1
+  doubleJump: 0
+  maxSpeed: 16
 --- !u!58 &277126553
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -420,31 +447,6 @@ CircleCollider2D:
   m_Offset: {x: .150000006, y: .769999981}
   serializedVersion: 2
   m_Radius: 1.72000003
---- !u!114 &277126555
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 277126550}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ba97089061614c6699a882907aa550b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 3
-  hasDoubleJump: 0
-  playerStats:
-    Health: 3
-  fallBoundary: -30
-  maxSpeed: 10
-  facingRight: 1
-  groundCheck: {fileID: 481424771}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 4294967039
-  jumpForce: 1100
-  allowAttack: 1
-  repeatSwing: 0
 --- !u!50 &277126556
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -1403,7 +1405,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 6bf2b47c467821641a686aa159989b5e, type: 3}
     m_FontSize: 16
     m_FontStyle: 1
     m_BestFit: 0
@@ -1469,7 +1471,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 6bf2b47c467821641a686aa159989b5e, type: 3}
     m_FontSize: 16
     m_FontStyle: 1
     m_BestFit: 0
@@ -1535,7 +1537,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 6bf2b47c467821641a686aa159989b5e, type: 3}
     m_FontSize: 16
     m_FontStyle: 1
     m_BestFit: 0
@@ -1642,7 +1644,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_Font: {fileID: 12800000, guid: 6bf2b47c467821641a686aa159989b5e, type: 3}
     m_FontSize: 16
     m_FontStyle: 1
     m_BestFit: 0
