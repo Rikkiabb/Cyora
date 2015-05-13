@@ -37,3 +37,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SunnyOutro.unity
   - enabled: 1
     path: Assets/Scenes/WindyIntro.unity
+  - enabled: 1
+    path: Assets/Scenes/WindyOutro.unity
+  - enabled: 1
+    path: Assets/Scenes/IcyIntro.unity
+  - enabled: 1
+    path: Assets/Scenes/IcyOutro.unity

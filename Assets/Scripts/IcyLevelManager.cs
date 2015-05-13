@@ -115,7 +115,7 @@ public class IcyLevelManager : MonoBehaviour {
 			file.Close ();
 			CanvasController.clearedLevel = false;
 			PlayerScript.finished = false;
-			Application.LoadLevel("Rainy");
+			Application.LoadLevel("IcyOutro");
 		}
 		
 	}
