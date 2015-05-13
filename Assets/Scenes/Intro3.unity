@@ -155,7 +155,7 @@ TextMesh:
   m_GameObject: {fileID: 481582943}
   m_Text: Press Space to skip...
   m_OffsetZ: 0
-  m_CharacterSize: .300000012
+  m_CharacterSize: .200000003
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
@@ -231,7 +231,7 @@ TextMesh:
     them all!\nYou will receive \nan upgrade after each level\ndepending on how many
     keys\nyou collected!"
   m_OffsetZ: 0
-  m_CharacterSize: .5
+  m_CharacterSize: .300000012
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
