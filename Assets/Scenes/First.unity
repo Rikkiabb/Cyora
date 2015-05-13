@@ -160,7 +160,7 @@ Transform:
   m_LocalScale: {x: 53.6411324, y: 1.02477562, z: 1.02477562}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &64901560
 GameObject:
   m_ObjectHideFlags: 0
@@ -280,7 +280,7 @@ RectTransform:
   m_Children:
   - {fileID: 1050874912}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -373,16 +373,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 3
+  hasDoubleJump: 0
+  isHurt: 0
   playerStats:
     Health: 3
   fallBoundary: -20
-  maxSpeed: 10
+  maxSpeed: 16
   facingRight: 1
   groundCheck: {fileID: 481424771}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 4294967039
-  jumpForce: 700
+  jumpForce: 1410
+  allowAttack: 1
   repeatSwing: 1
 --- !u!50 &277126556
 Rigidbody2D:
@@ -409,6 +412,7 @@ GameObject:
   - 224: {fileID: 308447027}
   - 222: {fileID: 308447029}
   - 114: {fileID: 308447028}
+  - 95: {fileID: 308447030}
   m_Layer: 5
   m_Name: Life1
   m_TagString: Life1
@@ -460,6 +464,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 308447026}
+--- !u!95 &308447030
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 308447026}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4f41bddade69e4ddda62df75cb5ef9c7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1001 &322503469
 Prefab:
   m_ObjectHideFlags: 0
@@ -485,7 +506,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: c29e765e7bd9d4334a9581ffbfcadbaa, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: c29e765e7bd9d4334a9581ffbfcadbaa, type: 2}
       propertyPath: m_LocalScale.x
@@ -685,11 +706,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: c29e765e7bd9d4334a9581ffbfcadbaa, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.6400001
+      value: 2.5999999
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: c29e765e7bd9d4334a9581ffbfcadbaa, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -7.76000023
+      value: -16.7999992
       objectReference: {fileID: 0}
     - target: {fileID: 100022, guid: c29e765e7bd9d4334a9581ffbfcadbaa, type: 2}
       propertyPath: m_TagString
@@ -900,7 +921,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!114 &576061951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -940,7 +961,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &768698996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1037,6 +1058,52 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 823348509}
+--- !u!1001 &890277348
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 457832, guid: 96ce3254393fb4abd9e635c893fd9f62, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 19.1000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 457832, guid: 96ce3254393fb4abd9e635c893fd9f62, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 457832, guid: 96ce3254393fb4abd9e635c893fd9f62, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -35.0999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 457832, guid: 96ce3254393fb4abd9e635c893fd9f62, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 457832, guid: 96ce3254393fb4abd9e635c893fd9f62, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 457832, guid: 96ce3254393fb4abd9e635c893fd9f62, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 457832, guid: 96ce3254393fb4abd9e635c893fd9f62, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 457832, guid: 96ce3254393fb4abd9e635c893fd9f62, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11407000, guid: 96ce3254393fb4abd9e635c893fd9f62, type: 2}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 277126551}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 96ce3254393fb4abd9e635c893fd9f62, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1050874911
 GameObject:
   m_ObjectHideFlags: 0
@@ -1106,7 +1173,7 @@ RectTransform:
   - {fileID: 823348510}
   - {fileID: 572301085}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -1268,7 +1335,7 @@ Transform:
   m_LocalScale: {x: 42.3709221, y: 1.02477562, z: 1.02477562}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &1455017604
 GameObject:
   m_ObjectHideFlags: 0
@@ -1279,6 +1346,7 @@ GameObject:
   - 224: {fileID: 1455017605}
   - 222: {fileID: 1455017607}
   - 114: {fileID: 1455017606}
+  - 95: {fileID: 1455017608}
   m_Layer: 5
   m_Name: Life0
   m_TagString: Life0
@@ -1330,6 +1398,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1455017604}
+--- !u!95 &1455017608
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1455017604}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4f41bddade69e4ddda62df75cb5ef9c7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &2099916452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,6 +1425,7 @@ GameObject:
   - 224: {fileID: 2099916453}
   - 222: {fileID: 2099916455}
   - 114: {fileID: 2099916454}
+  - 95: {fileID: 2099916456}
   m_Layer: 5
   m_Name: Life2
   m_TagString: Life2
@@ -1391,3 +1477,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2099916452}
+--- !u!95 &2099916456
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2099916452}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4f41bddade69e4ddda62df75cb5ef9c7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1

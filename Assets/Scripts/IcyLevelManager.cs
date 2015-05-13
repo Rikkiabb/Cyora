@@ -114,6 +114,7 @@ public class IcyLevelManager : MonoBehaviour {
 			bf.Serialize(file, data);
 			file.Close ();
 			CanvasController.clearedLevel = false;
+			PlayerScript.finished = false;
 			Application.LoadLevel("Rainy");
 		}
 		
