@@ -2873,6 +2873,14 @@ Prefab:
       propertyPath: m_Name
       value: EnemyWater 1
       objectReference: {fileID: 0}
+    - target: {fileID: 149220, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422924, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
   m_IsPrefabParent: 0
@@ -40502,6 +40510,10 @@ Prefab:
       propertyPath: movement.speed
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11422924, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
   m_IsPrefabParent: 0
@@ -43666,7 +43678,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11451718, guid: 75bc9d6f7670145d5832a9975ead285b, type: 2}
       propertyPath: maxTimer
-      value: 80
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 11451718, guid: 75bc9d6f7670145d5832a9975ead285b, type: 2}
       propertyPath: forward
@@ -44863,6 +44875,10 @@ Prefab:
     - target: {fileID: 478514, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
       propertyPath: m_LocalScale.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11422924, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
@@ -51881,7 +51897,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: c29e765e7bd9d4334a9581ffbfcadbaa, type: 2}
       propertyPath: m_RootOrder
-      value: 1292
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: c29e765e7bd9d4334a9581ffbfcadbaa, type: 2}
       propertyPath: m_LocalScale.x
@@ -52089,11 +52105,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: c29e765e7bd9d4334a9581ffbfcadbaa, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 3.0999999
+      value: .360000014
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: c29e765e7bd9d4334a9581ffbfcadbaa, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.29999995
+      value: -.699999988
       objectReference: {fileID: 0}
     - target: {fileID: 100022, guid: c29e765e7bd9d4334a9581ffbfcadbaa, type: 2}
       propertyPath: m_TagString
@@ -52335,7 +52351,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11451718, guid: 75bc9d6f7670145d5832a9975ead285b, type: 2}
       propertyPath: maxTimer
-      value: 80
+      value: 4.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75bc9d6f7670145d5832a9975ead285b, type: 2}
@@ -64683,7 +64699,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11451718, guid: 75bc9d6f7670145d5832a9975ead285b, type: 2}
       propertyPath: maxTimer
-      value: 70
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 11451718, guid: 75bc9d6f7670145d5832a9975ead285b, type: 2}
       propertyPath: forward
@@ -95240,7 +95256,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 14
+  orthographic size: 15
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -95288,8 +95304,8 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
-  Mute: 0
+  Loop: 1
+  Mute: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -117437,6 +117453,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11422924, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5c0e4e36673db4e7bb31cf11c743d4c2, type: 2}
   m_IsPrefabParent: 0
@@ -121174,7 +121194,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11451718, guid: 75bc9d6f7670145d5832a9975ead285b, type: 2}
       propertyPath: maxTimer
-      value: 70
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11451718, guid: 75bc9d6f7670145d5832a9975ead285b, type: 2}
       propertyPath: forward
@@ -137477,7 +137497,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11451718, guid: 75bc9d6f7670145d5832a9975ead285b, type: 2}
       propertyPath: maxTimer
-      value: 70
+      value: 4.5
       objectReference: {fileID: 0}
     - target: {fileID: 11451718, guid: 75bc9d6f7670145d5832a9975ead285b, type: 2}
       propertyPath: forward
