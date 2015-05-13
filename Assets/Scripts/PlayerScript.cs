@@ -250,7 +250,7 @@ public class PlayerScript : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D coll){
 		if(coll.tag == "Key"){
-			source.Play();
+			source.Play();	
 		}
 	}
 

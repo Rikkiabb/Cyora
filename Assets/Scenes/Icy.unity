@@ -19358,15 +19358,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 413510, guid: bf828e22595804c29b092806d4926cde, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 952
+      value: 975.700012
       objectReference: {fileID: 0}
     - target: {fileID: 413510, guid: bf828e22595804c29b092806d4926cde, type: 2}
       propertyPath: m_RootOrder
-      value: 223
+      value: 213
       objectReference: {fileID: 0}
     - target: {fileID: 413510, guid: bf828e22595804c29b092806d4926cde, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9
+      value: 88.8000031
       objectReference: {fileID: 0}
     - target: {fileID: 11471164, guid: bf828e22595804c29b092806d4926cde, type: 2}
       propertyPath: maxSpeed
@@ -20529,7 +20529,7 @@ Transform:
   m_LocalScale: {x: 5.33788395, y: 5.33788395, z: 7.32154465}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 89
+  m_RootOrder: 86
 --- !u!1001 &1874352435
 Prefab:
   m_ObjectHideFlags: 0
