@@ -1488,7 +1488,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11465028, guid: 3ea2309e63545449cb78998735423946, type: 2}
       propertyPath: movement.maxTimer
-      value: 10
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 11465028, guid: 3ea2309e63545449cb78998735423946, type: 2}
       propertyPath: movement.wait
@@ -3699,7 +3699,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: movement.maxTimer
-      value: 20
+      value: 1.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 433174, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.70000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 433174, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.60000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 433174, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 35.0999985
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
@@ -4492,7 +4504,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: movement.maxTimer
-      value: 120
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 433174, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: m_LocalPosition.x
@@ -4550,7 +4562,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: movement.maxTimer
-      value: 50
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
+      propertyPath: movement.leftToRight
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
@@ -4994,6 +5010,14 @@ Prefab:
     - target: {fileID: 11465028, guid: 3ea2309e63545449cb78998735423946, type: 2}
       propertyPath: movement.wait
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465028, guid: 3ea2309e63545449cb78998735423946, type: 2}
+      propertyPath: movement.maxTimer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 483308, guid: 3ea2309e63545449cb78998735423946, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.60000002
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ea2309e63545449cb78998735423946, type: 2}
@@ -5498,7 +5522,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: movement.maxTimer
-      value: 100
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 433174, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: m_LocalPosition.x
@@ -6868,7 +6892,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: movement.maxTimer
-      value: 50
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
@@ -6985,7 +7009,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
-  Mute: 0
+  Mute: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -7147,7 +7171,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: movement.maxTimer
-      value: 120
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
@@ -7624,7 +7648,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: movement.maxTimer
-      value: 170
+      value: 2.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
