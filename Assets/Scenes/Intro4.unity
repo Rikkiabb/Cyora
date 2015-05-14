@@ -255,7 +255,7 @@ TextMesh:
 
     then you will spawn at that very point.'
   m_OffsetZ: 0
-  m_CharacterSize: .200000003
+  m_CharacterSize: .400000006
   m_LineSpacing: 1
   m_Anchor: 0
   m_Alignment: 0
