@@ -30,6 +30,7 @@ public class CanvasController : MonoBehaviour {
 			// target.position is the position of the player, we add 0 to the x-axis, nothing to the y-axis and the z-axis is a constant
 			anim.SetTrigger("GameOver");
 			hasExited = true;
+			PlayerScript.isMoving = false;
 //			Physics2D.gravity = new Vector2(0, -30);
 
 		}
@@ -43,13 +44,14 @@ public class CanvasController : MonoBehaviour {
 		if (hasExited) {
 			if(Input.GetButtonDown ("Mouse X")){ // R
 				anim.SetTrigger ("Restart");
+				PlayerScript.isMoving = true;
 				hasExited = false;
 				if(Application.loadedLevel == 31){
 					Physics2D.gravity = new Vector2(0, -30);
 					GameMasterCS.setIce (false);
 					Application.LoadLevel("Final");
 				} else if(Application.loadedLevel == 8){
-					Debug.Log ("LOAD THAT SHIT");
+					RainyStart.started = false;
 					Application.LoadLevel("Rainy");
 				} else {
 
