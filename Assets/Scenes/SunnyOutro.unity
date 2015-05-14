@@ -450,7 +450,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2001480394}
-  m_Text: YEAH! These beasts just got got!
+  m_Text: YEAH! Those beasts just got got!
   m_OffsetZ: 0
   m_CharacterSize: .5
   m_LineSpacing: 1
