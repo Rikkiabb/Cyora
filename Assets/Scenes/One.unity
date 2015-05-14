@@ -1123,6 +1123,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ba97089061614c6699a882907aa550b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSound: {fileID: 0}
+  keyCollect: {fileID: 0}
+  jumpSound: {fileID: 0}
+  deathSound: {fileID: 0}
   maxHealth: 3
   hasDoubleJump: 0
   isHurt: 0
@@ -4716,6 +4720,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 374291375}
+  aKey: {fileID: 441634, guid: d14a6336e2f814bc1b289f6db0af7dbf, type: 2}
+  aHeart: {fileID: 489004, guid: fea6dc4b23d3942b589b87d765cf2119, type: 2}
 --- !u!212 &1194761294
 SpriteRenderer:
   m_ObjectHideFlags: 0
