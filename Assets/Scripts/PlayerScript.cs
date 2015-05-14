@@ -10,7 +10,10 @@ public class PlayerScript : MonoBehaviour {
 	public AudioClip attackSound;
 	public AudioClip keyCollect;
 	public AudioClip jumpSound;
+	public AudioClip deathSound;
+
 	private AudioSource source;
+
 	public int maxHealth = 3;
 	CircleCollider2D collide;
 	Rigidbody2D freefall;
@@ -188,6 +191,8 @@ public class PlayerScript : MonoBehaviour {
 		// So if our player empties his health he dies
 		if(playerStats.Health <= 0){
 			Debug.Log("Kill Player!!");
+			source.clip = deathSound;
+			source.Play();
 			return;
 //			freefall.mass = 2000;
 //			Destroy (collide);
