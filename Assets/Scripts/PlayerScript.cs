@@ -11,6 +11,7 @@ public class PlayerScript : MonoBehaviour {
 	public AudioClip keyCollect;
 	public AudioClip jumpSound;
 	public AudioClip deathSound;
+	public AudioClip hurtSound;
 
 	private AudioSource source;
 
@@ -166,7 +167,10 @@ public class PlayerScript : MonoBehaviour {
 
 			return;
 		}
-		// Remove one of his lives
+		// Remove his lives
+		// play hurtsound
+		source.clip = hurtSound;
+		source.Play();
 		playerStats.Health -= damage;
 	
 

@@ -1887,6 +1887,7 @@ MonoBehaviour:
   keyCollect: {fileID: 8300000, guid: ad03aba1a1583422b87a3966c8f741d3, type: 3}
   jumpSound: {fileID: 8300000, guid: 76f8c00779b924bd1afa3e7a8ca2fa3e, type: 3}
   deathSound: {fileID: 8300000, guid: 8f53ad2d958c048e5a8e403a20d21df0, type: 3}
+  hurtSound: {fileID: 8300000, guid: 4d60a84f34e8d48309cd3fb190e66a8e, type: 3}
   maxHealth: 3
   hasDoubleJump: 0
   isHurt: 0
