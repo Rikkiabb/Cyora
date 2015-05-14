@@ -43,6 +43,11 @@ public class CanvasController : MonoBehaviour {
 		if (hasExited) {
 			if(Input.GetButtonDown ("Mouse X")){ // R
 				anim.SetTrigger ("Restart");
+				if(Application.loadedLevel == 31){
+					Physics2D.gravity = new Vector2(0, -30);
+					GameMasterCS.setIce (false);
+					Application.LoadLevel("Final");
+				}
 				hasExited = false;
 				if(LevelTwoMaster.windRight){
 					Physics2D.gravity = new Vector2(115, -30);
