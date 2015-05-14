@@ -147,7 +147,7 @@ public class IcyLevelManager : MonoBehaviour {
 			CheckpointReached data = new CheckpointReached();
 			
 			data.playPosX = target.position.x;
-			data.playPosY = target.position.y;
+			data.playPosY = (target.position.y + 5);
 			data.playPosZ = target.position.z;
 			data.health = player.playerStats.Health;
 			data.currKeys = ScoreManager.numbKeys;
