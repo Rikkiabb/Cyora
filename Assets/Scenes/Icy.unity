@@ -9099,6 +9099,26 @@ Prefab:
       propertyPath: aHeart
       value: 
       objectReference: {fileID: 489004, guid: fea6dc4b23d3942b589b87d765cf2119, type: 2}
+    - target: {fileID: 22402360, guid: 0b4974ce7036d415ba86da907cbb106f, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 275
+      objectReference: {fileID: 0}
+    - target: {fileID: 22430098, guid: 0b4974ce7036d415ba86da907cbb106f, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 275
+      objectReference: {fileID: 0}
+    - target: {fileID: 22426860, guid: 0b4974ce7036d415ba86da907cbb106f, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 275
+      objectReference: {fileID: 0}
+    - target: {fileID: 22406348, guid: 0b4974ce7036d415ba86da907cbb106f, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 275
+      objectReference: {fileID: 0}
+    - target: {fileID: 22438260, guid: 0b4974ce7036d415ba86da907cbb106f, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 275
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b4974ce7036d415ba86da907cbb106f, type: 2}
   m_IsPrefabParent: 0
