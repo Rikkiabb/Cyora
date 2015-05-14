@@ -469,7 +469,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1821007694}
-  m_Text: "CYORA\n\nGunnar Gylfason\nRikard Arnar B. Birgison\nStef\xE1n Hafsteinsson\n\nFuragu
+  m_Text: "CYORA\n\nGunnar Gylfason\nRikard Arnar B. Birgisson\nStef\xE1n Hafsteinsson\n\nFuragu
     Studios\n\n"
   m_OffsetZ: 0
   m_CharacterSize: .5
