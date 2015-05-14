@@ -17,9 +17,12 @@ public class KillBoxRainy : MonoBehaviour {
 			StartCoroutine(WaitUpgrade());
 
 		} else {
-			Vector3 temp = transform.position;
-			temp.y += 0.05f;
-			transform.position = temp;
+			if(RainyStart.started){
+				Vector3 temp = transform.position;
+				temp.y += 0.05f;
+				transform.position = temp;
+			}
+
 		}
 
 	}
