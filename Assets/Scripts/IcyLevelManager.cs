@@ -140,7 +140,7 @@ public class IcyLevelManager : MonoBehaviour {
 	
 	void OnTriggerEnter2D (Collider2D obj){
 		
-		if (obj.name == "Player") {
+		if (obj.name == "Player" && PlayerScript.isMoving) {
 			
 			BinaryFormatter bf = new BinaryFormatter();
 			FileStream file = File.Open(Application.persistentDataPath + "/checkpoint.dat", FileMode.Open);
