@@ -50414,8 +50414,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11445872, guid: 0b4974ce7036d415ba86da907cbb106f, type: 2}
       propertyPath: m_Text
-      value: "2 keys! \n\nokok for that you get extra jump power so you can jump a
-        little bit longer from betty!\n"
+      value: "2 keys! \n\nOkok for that you get extra jump power so you can jump a
+        little bit longer from Betty!\n"
       objectReference: {fileID: 0}
     - target: {fileID: 11471050, guid: 0b4974ce7036d415ba86da907cbb106f, type: 2}
       propertyPath: m_Text
@@ -50439,7 +50439,7 @@ Prefab:
       value: '5 keys!
 
 
-        Okok.... Now you stand a chance against betty because you have an extra life!'
+        Okok.... Now you stand a chance against Betty because you have an extra life!'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b4974ce7036d415ba86da907cbb106f, type: 2}
