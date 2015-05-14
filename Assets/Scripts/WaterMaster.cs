@@ -131,7 +131,7 @@ public class WaterMaster : MonoBehaviour {
 	}
 
 	IEnumerator waitToSpawn(){
-		yield return new WaitForSeconds (1);
+		yield return new WaitForSeconds (6);
 		if (File.Exists (Application.persistentDataPath + "/playerInfo.dat")) {
 			BinaryFormatter bf = new BinaryFormatter ();
 			FileStream file = File.Open (Application.persistentDataPath + "/checkpoint.dat", FileMode.Open);
