@@ -65,3 +65,11 @@ EditorBuildSettings:
     path: Assets/Scenes/SunnyOutro.unity
   - enabled: 1
     path: Assets/Scenes/SelectLevel.unity
+  - enabled: 1
+    path: Assets/Scenes/FinalOutro.unity
+  - enabled: 1
+    path: Assets/Scenes/RainyOutro.unity
+  - enabled: 1
+    path: Assets/Scenes/Final.unity
+  - enabled: 1
+    path: Assets/Scenes/FinalOutro1.unity

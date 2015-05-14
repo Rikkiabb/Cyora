@@ -56,6 +56,9 @@ public class GameMasterCS : MonoBehaviour {
 
 	}
 
+	public void Victory(){
+		StartCoroutine(WaitVictory());
+	}
 
 	IEnumerator WaitAnim(Animator anim, string stage){
 		BossAI[] boss = GameObject.Find ("Boss").GetComponentsInChildren<BossAI>();
@@ -105,5 +108,10 @@ public class GameMasterCS : MonoBehaviour {
 
 		GameObject.Find ("ICE").GetComponent<Animator>().SetBool("Ice", false);
 		GameObject.Find ("ENEMIES").GetComponent<Animator>().SetBool("Enemies", false);
+	}
+
+	IEnumerator WaitVictory(){
+		yield return new WaitForSeconds (4);
+		Application.LoadLevel("FinalOutro");
 	}
 }

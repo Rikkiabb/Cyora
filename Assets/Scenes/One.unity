@@ -1127,6 +1127,7 @@ MonoBehaviour:
   keyCollect: {fileID: 0}
   jumpSound: {fileID: 0}
   deathSound: {fileID: 0}
+  hurtSound: {fileID: 0}
   maxHealth: 3
   hasDoubleJump: 0
   isHurt: 0
@@ -4276,15 +4277,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11465028, guid: 3ea2309e63545449cb78998735423946, type: 2}
       propertyPath: movement.speed
-      value: 40
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 11465028, guid: 3ea2309e63545449cb78998735423946, type: 2}
       propertyPath: movement.maxTimer
-      value: 25
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11465028, guid: 3ea2309e63545449cb78998735423946, type: 2}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 105828, guid: 3ea2309e63545449cb78998735423946, type: 2}
       propertyPath: m_TagString
@@ -4293,6 +4294,10 @@ Prefab:
     - target: {fileID: 107080, guid: 3ea2309e63545449cb78998735423946, type: 2}
       propertyPath: m_TagString
       value: Still
+      objectReference: {fileID: 0}
+    - target: {fileID: 107080, guid: 3ea2309e63545449cb78998735423946, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ea2309e63545449cb78998735423946, type: 2}
