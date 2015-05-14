@@ -43,57 +43,62 @@ public class CanvasController : MonoBehaviour {
 		if (hasExited) {
 			if(Input.GetButtonDown ("Mouse X")){ // R
 				anim.SetTrigger ("Restart");
+				hasExited = false;
 				if(Application.loadedLevel == 31){
 					Physics2D.gravity = new Vector2(0, -30);
 					GameMasterCS.setIce (false);
 					Application.LoadLevel("Final");
-				}
-				hasExited = false;
-				if(LevelTwoMaster.windRight){
-					Physics2D.gravity = new Vector2(115, -30);
-				} else if (LevelTwoMaster.windLeft){
-					Physics2D.gravity = new Vector2(-115, -30);
+				} else if(Application.loadedLevel == 8){
+					Debug.Log ("LOAD THAT SHIT");
+					Application.LoadLevel("Rainy");
 				} else {
-					Physics2D.gravity = new Vector2(0, -30);
-				}
-				if (File.Exists (Application.persistentDataPath + "/playerInfo.dat")) {
-					BinaryFormatter bf = new BinaryFormatter ();
-					FileStream file = File.Open (Application.persistentDataPath + "/checkpoint.dat", FileMode.Open);
-					CheckpointReached data = ((CheckpointReached)bf.Deserialize (file));
-					file.Close ();
-					Vector3 temp = new Vector3(data.playPosX, data.playPosY, data.playPosZ);
-					player.transform.position = temp;
-					player.playerStats.Health = data.health;
-					Heart.DrawHeart (data.health);
-					ScoreManager.numbKeys = data.currKeys;
-					
-					GameObject[] center = GameObject.FindGameObjectsWithTag("KeyCenter");
-					for (int i = 0; i < center.Length; i++) {
-						Destroy(center[i]);
+
+					if(LevelTwoMaster.windRight){
+						Physics2D.gravity = new Vector2(115, -30);
+					} else if (LevelTwoMaster.windLeft){
+						Physics2D.gravity = new Vector2(-115, -30);
+					} else {
+						Physics2D.gravity = new Vector2(0, -30);
 					}
-					GameObject[] remKey = GameObject.FindGameObjectsWithTag("Key");
-					for (int i = 0; i < remKey.Length; i++) {
-						Destroy(remKey[i]);
-					}
-					Quaternion temp1 = new Quaternion(0f, 0f, 0f, 0f);
-					float[] kx = data.keysX.ToArray();
-					float[] ky = data.keysY.ToArray();
-					float[] kz = data.keysZ.ToArray();
-					for(int i = 0; i < kx.Length; i++){
-						Vector3 temp0 = new Vector3(kx[i], ky[i], kz[i]);
-						Instantiate(aKey, temp0, temp1);
-					}
-					
-					GameObject[] destHeart = GameObject.FindGameObjectsWithTag("Heart");
-					for (int i = 0; i < destHeart.Length; i++) {
-						Destroy(destHeart[i]);
-					}
-					float[] hx = data.heartX.ToArray();
-					float[] hy = data.heartY.ToArray();
-					float[] hz = data.heartZ.ToArray();
-					for(int i = 0; i < kx.Length; i++){
-						Vector3 temp0 = new Vector3(hx[i], hy[i], hz[i]);
-						Instantiate(aHeart, temp0, temp1);
+					if (File.Exists (Application.persistentDataPath + "/playerInfo.dat")) {
+						BinaryFormatter bf = new BinaryFormatter ();
+						FileStream file = File.Open (Application.persistentDataPath + "/checkpoint.dat", FileMode.Open);
+						CheckpointReached data = ((CheckpointReached)bf.Deserialize (file));
+						file.Close ();
+						Vector3 temp = new Vector3(data.playPosX, data.playPosY, data.playPosZ);
+						player.transform.position = temp;
+						player.playerStats.Health = data.health;
+						Heart.DrawHeart (data.health);
+						ScoreManager.numbKeys = data.currKeys;
+						
+						GameObject[] center = GameObject.FindGameObjectsWithTag("KeyCenter");
+						for (int i = 0; i < center.Length; i++) {
+							Destroy(center[i]);
+						}
+						GameObject[] remKey = GameObject.FindGameObjectsWithTag("Key");
+						for (int i = 0; i < remKey.Length; i++) {
+							Destroy(remKey[i]);
+						}
+						Quaternion temp1 = new Quaternion(0f, 0f, 0f, 0f);
+						float[] kx = data.keysX.ToArray();
+						float[] ky = data.keysY.ToArray();
+						float[] kz = data.keysZ.ToArray();
+						for(int i = 0; i < kx.Length; i++){
+							Vector3 temp0 = new Vector3(kx[i], ky[i], kz[i]);
+							Instantiate(aKey, temp0, temp1);
+						}
+						
+						GameObject[] destHeart = GameObject.FindGameObjectsWithTag("Heart");
+						for (int i = 0; i < destHeart.Length; i++) {
+							Destroy(destHeart[i]);
+						}
+						float[] hx = data.heartX.ToArray();
+						float[] hy = data.heartY.ToArray();
+						float[] hz = data.heartZ.ToArray();
+						for(int i = 0; i < hx.Length; i++){
+							Vector3 temp0 = new Vector3(hx[i], hy[i], hz[i]);
+							Instantiate(aHeart, temp0, temp1);
+						}
 					}
 					
 				}
