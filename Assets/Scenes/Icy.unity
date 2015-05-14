@@ -1218,6 +1218,10 @@ Prefab:
       propertyPath: m_Name
       value: NewEnemyEasyWithHealth 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
+      propertyPath: movement.maxTimer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
   m_IsPrefabParent: 0
@@ -5062,6 +5066,26 @@ Prefab:
       propertyPath: movement.forward
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
+      propertyPath: movement.maxTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
+      propertyPath: movement.speed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 433174, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.70000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 433174, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2.9000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 433174, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 35.0999985
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
   m_IsPrefabParent: 0
@@ -5416,6 +5440,10 @@ Prefab:
     - target: {fileID: 11465028, guid: 3ea2309e63545449cb78998735423946, type: 2}
       propertyPath: movement.forward
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465028, guid: 3ea2309e63545449cb78998735423946, type: 2}
+      propertyPath: movement.maxTimer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ea2309e63545449cb78998735423946, type: 2}
@@ -13098,6 +13126,10 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: 1.28999996
       objectReference: {fileID: 0}
+    - target: {fileID: 11465028, guid: 3ea2309e63545449cb78998735423946, type: 2}
+      propertyPath: movement.maxTimer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ea2309e63545449cb78998735423946, type: 2}
   m_IsPrefabParent: 0
@@ -16126,6 +16158,10 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: -.280000001
       objectReference: {fileID: 0}
+    - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
+      propertyPath: movement.maxTimer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
   m_IsPrefabParent: 0
@@ -17836,6 +17872,14 @@ Prefab:
       propertyPath: movement.leftToRight
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
+      propertyPath: movement.maxTimer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
+      propertyPath: movement.wait
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
   m_IsPrefabParent: 0
@@ -18057,6 +18101,22 @@ Prefab:
     - target: {fileID: 130576, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: m_Name
       value: NewEnemyEasyWithHealth 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
+      propertyPath: movement.maxTimer
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 433174, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.70000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 433174, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -4.80000019
+      objectReference: {fileID: 0}
+    - target: {fileID: 433174, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 35.0999985
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
@@ -18951,7 +19011,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 413510, guid: bf828e22595804c29b092806d4926cde, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 764
+      value: 947.099976
       objectReference: {fileID: 0}
     - target: {fileID: 413510, guid: bf828e22595804c29b092806d4926cde, type: 2}
       propertyPath: m_RootOrder
@@ -18959,7 +19019,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 413510, guid: bf828e22595804c29b092806d4926cde, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 741
+      value: -10.8999996
       objectReference: {fileID: 0}
     - target: {fileID: 11471164, guid: bf828e22595804c29b092806d4926cde, type: 2}
       propertyPath: maxSpeed

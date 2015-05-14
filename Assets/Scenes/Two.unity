@@ -2130,6 +2130,10 @@ Prefab:
       propertyPath: m_TagString
       value: MoveWindCloud
       objectReference: {fileID: 0}
+    - target: {fileID: 11451718, guid: 75bc9d6f7670145d5832a9975ead285b, type: 2}
+      propertyPath: maxTimer
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 75bc9d6f7670145d5832a9975ead285b, type: 2}
   m_IsPrefabParent: 0
@@ -2883,11 +2887,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: c29e765e7bd9d4334a9581ffbfcadbaa, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 70
+      value: -4.5
       objectReference: {fileID: 0}
     - target: {fileID: 400022, guid: c29e765e7bd9d4334a9581ffbfcadbaa, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 360
+      value: -36.7999992
       objectReference: {fileID: 0}
     - target: {fileID: 100022, guid: c29e765e7bd9d4334a9581ffbfcadbaa, type: 2}
       propertyPath: m_TagString
@@ -4036,6 +4040,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11465028, guid: 3ea2309e63545449cb78998735423946, type: 2}
+      propertyPath: movement.maxTimer
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ea2309e63545449cb78998735423946, type: 2}
   m_IsPrefabParent: 0
@@ -4671,7 +4679,7 @@ AudioSource:
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
-  Mute: 0
+  Mute: 1
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
@@ -5341,7 +5349,7 @@ MonoBehaviour:
     forward: 1
     speed: 10
     leftToRight: 0
-    maxTimer: 15
+    maxTimer: 1
     wait: 0
     waitTime: 2
   bounceAmount: 15
@@ -5945,6 +5953,10 @@ Prefab:
     - target: {fileID: 470082, guid: 3ea2309e63545449cb78998735423946, type: 2}
       propertyPath: m_LocalScale.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11465028, guid: 3ea2309e63545449cb78998735423946, type: 2}
+      propertyPath: movement.maxTimer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ea2309e63545449cb78998735423946, type: 2}
@@ -6650,7 +6662,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: movement.maxTimer
-      value: 30
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 470264, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: m_LocalScale.z
@@ -7928,11 +7940,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: movement.speed
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: movement.maxTimer
-      value: 120
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: movement.wait
@@ -8847,7 +8859,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: movement.maxTimer
-      value: 60
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 470264, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: m_LocalScale.z
@@ -11492,7 +11504,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 470264, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.9000001
+      value: -3.42000008
       objectReference: {fileID: 0}
     - target: {fileID: 470264, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: m_LocalPosition.z
@@ -11533,6 +11545,10 @@ Prefab:
     - target: {fileID: 470264, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: m_LocalScale.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
+      propertyPath: movement.maxTimer
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
@@ -12629,15 +12645,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: movement.speed
-      value: 15
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: movement.maxTimer
-      value: 20
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 470264, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: m_LocalScale.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 433174, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 1.70000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 433174, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -5.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 433174, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 35
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
