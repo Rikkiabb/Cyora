@@ -7,6 +7,8 @@ using System.IO;
 
 public class PlayerScript : MonoBehaviour {
 
+	public AudioClip attackSound;
+	public AudioClip keyCollect;
 	private AudioSource source;
 	public int maxHealth = 3;
 	CircleCollider2D collide;
@@ -84,7 +86,9 @@ public class PlayerScript : MonoBehaviour {
 
 		if (isMoving) {
 			if (Input.GetButtonDown ("Fire1") && allowAttack) {
-
+				// play attack sound
+				source.clip = attackSound;
+				source.Play ();
 				anim.SetBool("isKnight3Attacking", true);
 				allowAttack = false;
 				StartCoroutine (waitAttack ());
@@ -250,6 +254,7 @@ public class PlayerScript : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D coll){
 		if(coll.tag == "Key"){
+			source.clip = keyCollect;
 			source.Play();	
 		}
 	}

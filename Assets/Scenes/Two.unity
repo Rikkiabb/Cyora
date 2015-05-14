@@ -1973,7 +1973,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ad03aba1a1583422b87a3966c8f741d3, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -2057,6 +2057,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ba97089061614c6699a882907aa550b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSound: {fileID: 8300000, guid: 3ca121c001790493aac9f6aec90cfc06, type: 3}
+  keyCollect: {fileID: 8300000, guid: ad03aba1a1583422b87a3966c8f741d3, type: 3}
   maxHealth: 3
   hasDoubleJump: 0
   isHurt: 0
