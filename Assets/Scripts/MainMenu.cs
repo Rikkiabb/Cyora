@@ -24,4 +24,26 @@ public class MainMenu : MonoBehaviour {
 	public void Tutor(){
 		Application.LoadLevel("TutorLevel");
 	}
+
+	public void Level(){
+		Application.LoadLevel("SelectLevel");
+	}
+
+	public void Sun(){
+		Application.LoadLevel("One");
+	}
+	
+	public void Wind(){
+		Application.LoadLevel("Two");
+	}
+	
+	public void Ice(){
+		Application.LoadLevel("Icy");
+	}
+	
+	public void Rain(){
+		Application.LoadLevel("Rainy");
+	}
+	
+
 }
