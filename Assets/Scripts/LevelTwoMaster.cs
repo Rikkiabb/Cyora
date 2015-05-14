@@ -149,9 +149,13 @@ public class LevelTwoMaster : MonoBehaviour {
 			rb1.mass = 0;
 			rb1.gravityScale = 15;
 		}
-		yield return new WaitForSeconds (5);
+		GameObject windL = GameObject.FindGameObjectWithTag("CheckLeft");
+		BoxCollider2D bc = windL.GetComponent<BoxCollider2D> ();
+		bc.enabled = false;
 		windLeft = true;
+		yield return new WaitForSeconds (5);
 
+		
 		
 	}
 
@@ -164,8 +168,11 @@ public class LevelTwoMaster : MonoBehaviour {
 		rb.gravityScale = 25;
 		GameObject fly1 = GameObject.FindGameObjectWithTag("SecondWind");
 		fly1.AddComponent<Rigidbody2D> ();
-		yield return new WaitForSeconds (5);
+		GameObject windR = GameObject.FindGameObjectWithTag("CheckRight");
+		BoxCollider2D bc = windR.GetComponent<BoxCollider2D> ();
+		bc.enabled = false;
 		windRight = true;
+		yield return new WaitForSeconds (5);
 
 //		Rigidbody2D rb = fly1.GetComponent<Rigidbody2D> ();
 //		rb.mass = 3;

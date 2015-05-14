@@ -2151,7 +2151,7 @@ GameObject:
   - 95: {fileID: 291766486}
   m_Layer: 0
   m_Name: CheckPoint 1
-  m_TagString: Untagged
+  m_TagString: CheckRight
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3447,7 +3447,7 @@ GameObject:
   - 95: {fileID: 431884433}
   m_Layer: 0
   m_Name: CheckPoint
-  m_TagString: Untagged
+  m_TagString: CheckLeft
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
