@@ -50400,6 +50400,47 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 275
       objectReference: {fileID: 0}
+    - target: {fileID: 11438134, guid: 0b4974ce7036d415ba86da907cbb106f, type: 2}
+      propertyPath: m_Text
+      value: 'Less than 2 keys....
+
+
+        That is really, really unimpressive...
+
+
+        Enjoy Betty!
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445872, guid: 0b4974ce7036d415ba86da907cbb106f, type: 2}
+      propertyPath: m_Text
+      value: "2 keys! \n\nokok for that you get extra jump power so you can jump a
+        little bit longer from betty!\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471050, guid: 0b4974ce7036d415ba86da907cbb106f, type: 2}
+      propertyPath: m_Text
+      value: '3 keys
+
+
+        That''s an a-ok jobbety for this you can double jump in the next level!
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11464776, guid: 0b4974ce7036d415ba86da907cbb106f, type: 2}
+      propertyPath: m_Text
+      value: '4 keys
+
+
+        Now you have extra run speed against betty, with this you can at least survive
+        a little bit longer against betty!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11484240, guid: 0b4974ce7036d415ba86da907cbb106f, type: 2}
+      propertyPath: m_Text
+      value: '5 keys!
+
+
+        Okok.... Now you stand a chance against betty because you have an extra life!'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b4974ce7036d415ba86da907cbb106f, type: 2}
   m_IsPrefabParent: 0
