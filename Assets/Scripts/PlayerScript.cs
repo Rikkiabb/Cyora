@@ -9,6 +9,7 @@ public class PlayerScript : MonoBehaviour {
 
 	public AudioClip attackSound;
 	public AudioClip keyCollect;
+	public AudioClip jumpSound;
 	private AudioSource source;
 	public int maxHealth = 3;
 	CircleCollider2D collide;
@@ -97,10 +98,14 @@ public class PlayerScript : MonoBehaviour {
 		
 			// If player is on ground and space(jump) is pushed then we can jump
 			if (grounded && Input.GetButtonDown ("Vertical")) {
+				source.clip = jumpSound;
+				source.Play ();
 				anim.SetBool ("Ground", false);
 				GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, jumpForce));
 			} else if(!doubleJump && Input.GetButtonDown ("Vertical")){
 				if(hasDoubleJump){
+					source.clip = jumpSound;
+					source.Play ();
 					doubleJump = true;
 					GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, jumpForce));
 				}
