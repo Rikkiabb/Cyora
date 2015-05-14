@@ -245,7 +245,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: movement.maxTimer
-      value: 70
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 433174, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: m_LocalPosition.x
@@ -829,7 +829,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: movement.maxTimer
-      value: 40
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 433174, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1507,6 +1507,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ba97089061614c6699a882907aa550b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSound: {fileID: 0}
+  keyCollect: {fileID: 0}
+  jumpSound: {fileID: 0}
+  deathSound: {fileID: 0}
+  hurtSound: {fileID: 0}
   maxHealth: 3
   hasDoubleJump: 0
   isHurt: 0
@@ -1723,7 +1728,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: movement.maxTimer
-      value: 40
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 433174, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1805,7 +1810,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: movement.maxTimer
-      value: 70
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 433174, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2705,7 +2710,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: movement.maxTimer
-      value: 40
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 433174, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: m_LocalPosition.x
@@ -2937,7 +2942,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: movement.maxTimer
-      value: 40
+      value: .5
       objectReference: {fileID: 0}
     - target: {fileID: 433174, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: m_LocalPosition.x
@@ -3280,7 +3285,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 44
 --- !u!114 &1191284305
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4908,7 +4913,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11488916, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: movement.maxTimer
-      value: 70
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 433174, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
       propertyPath: m_LocalPosition.x
