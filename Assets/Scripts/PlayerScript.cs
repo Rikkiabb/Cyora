@@ -81,7 +81,7 @@ public class PlayerScript : MonoBehaviour {
 		anim = GetComponent<Animator> ();
 		collide = GetComponent<CircleCollider2D> ();
 		freefall = GetComponent<Rigidbody2D> ();
-//		source = GetComponent<AudioSource>();
+		source = GetComponent<AudioSource>();
 	}
 
 	private float lastHitTime;
@@ -92,8 +92,8 @@ public class PlayerScript : MonoBehaviour {
 		if (isMoving) {
 			if (Input.GetButtonDown ("Fire1") && allowAttack) {
 				// play attack sound
-//				source.clip = attackSound;
-//				source.Play ();
+				source.clip = attackSound;
+				source.Play ();
 				anim.SetBool("isKnight3Attacking", true);
 				allowAttack = false;
 				StartCoroutine (waitAttack ());
@@ -102,14 +102,14 @@ public class PlayerScript : MonoBehaviour {
 		
 			// If player is on ground and space(jump) is pushed then we can jump
 			if (grounded && Input.GetButtonDown ("Vertical")) {
-//				source.clip = jumpSound;
-//				source.Play ();
+				source.clip = jumpSound;
+				source.Play ();
 				anim.SetBool ("Ground", false);
 				GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, jumpForce));
 			} else if(!doubleJump && Input.GetButtonDown ("Vertical")){
 				if(hasDoubleJump){
-//					source.clip = jumpSound;
-//					source.Play ();
+					source.clip = jumpSound;
+					source.Play ();
 					doubleJump = true;
 					GetComponent<Rigidbody2D> ().AddForce (new Vector2 (0, jumpForce));
 				}
@@ -169,14 +169,14 @@ public class PlayerScript : MonoBehaviour {
 		}
 		// Remove his lives
 		// play hurtsound
-//		source.clip = hurtSound;
-//		source.Play();
+		source.clip = hurtSound;
+		source.Play();
 		playerStats.Health -= damage;
 	
 
 		// Remove damage many hearts from the canvas
 		// for loop that runs through the hearts and removes them until damage is done
-		for(int i = damage; i > 0;i--){
+		for(int i = damage; i > 0 && playerStats.Health >= 0; i--){
 			Animator animHeart;
 			Debug.Log ("Damage:" + damage);
 			string number = (playerStats.Health).ToString();
@@ -195,8 +195,8 @@ public class PlayerScript : MonoBehaviour {
 		// So if our player empties his health he dies
 		if(playerStats.Health <= 0){
 			Debug.Log("Kill Player!!");
-//			source.clip = deathSound;
-//			source.Play();
+			source.clip = deathSound;
+			source.Play();
 			return;
 //			freefall.mass = 2000;
 //			Destroy (collide);
@@ -268,8 +268,8 @@ public class PlayerScript : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D coll){
 		if(coll.tag == "Key"){
-//			source.clip = keyCollect;
-//			source.Play();	
+			source.clip = keyCollect;
+			source.Play();	
 		}
 	}
 
