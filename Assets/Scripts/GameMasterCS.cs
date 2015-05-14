@@ -64,6 +64,13 @@ public class GameMasterCS : MonoBehaviour {
 		if (stage == "stage2") {
 			boss [0].Stage2 ();
 			GameObject.Find ("WIND").GetComponent<Animator> ().SetBool ("Wind", true);
+			GameObject[] winds = GameObject.FindGameObjectsWithTag("Wind");
+
+			for(int i = 0; i < winds.Length; i++){
+
+				winds[i].GetComponent<Animator>().SetBool("Wind", true);
+			}
+
 			StartCoroutine (WaitText ());
 		} else if (stage == "stage3") {
 			boss [0].Stage3 ();
@@ -88,6 +95,14 @@ public class GameMasterCS : MonoBehaviour {
 
 		yield return new WaitForSeconds (4);
 		GameObject.Find ("WIND").GetComponent<Animator>().SetBool("Wind", false);
+
+		GameObject[] winds = GameObject.FindGameObjectsWithTag("Wind");
+		
+		for(int i = 0; i < winds.Length; i++){
+			
+			winds[i].GetComponent<Animator>().SetBool("Wind", false);
+		}
+
 		GameObject.Find ("ICE").GetComponent<Animator>().SetBool("Ice", false);
 		GameObject.Find ("ENEMIES").GetComponent<Animator>().SetBool("Enemies", false);
 	}

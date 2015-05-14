@@ -14,6 +14,8 @@ public class KillBoxRainy : MonoBehaviour {
 		//Move the killbox up
 		if (PlayerScript.finished) {
 			StopEnemiesAndCamera();
+			StartCoroutine(WaitUpgrade());
+
 		} else {
 			Vector3 temp = transform.position;
 			temp.y += 0.05f;
@@ -52,5 +54,12 @@ public class KillBoxRainy : MonoBehaviour {
 			cr = arr[i].gameObject.GetComponent<CameraRainy>();
 			cr.enabled = false;
 		}
+	}
+
+	IEnumerator WaitUpgrade(){
+
+		yield return new WaitForSeconds (10);
+		//TODO:Upgrade
+		Application.LoadLevel("RainyOutro");
 	}
 }

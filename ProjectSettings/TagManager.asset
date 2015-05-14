@@ -26,6 +26,10 @@ TagManager:
   - WaterEnemy
   - Heart
   - Life3
+  - Boss
+  - Ball
+  - Cloud
+  - Wind
   layers:
   - Default
   - TransparentFX

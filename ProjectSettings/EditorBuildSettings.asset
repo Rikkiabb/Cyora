@@ -43,3 +43,23 @@ EditorBuildSettings:
     path: Assets/Scenes/IcyIntro.unity
   - enabled: 1
     path: Assets/Scenes/IcyOutro.unity
+  - enabled: 1
+    path: Assets/Scenes/RainyIntro.unity
+  - enabled: 1
+    path: Assets/Scenes/RainyOutro.unity
+  - enabled: 1
+    path: Assets/Scenes/Final.unity
+  - enabled: 1
+    path: Assets/Scenes/FinalIntro.unity
+  - enabled: 1
+    path: Assets/Scenes/FinalIntro1.unity
+  - enabled: 1
+    path: Assets/Scenes/FinalIntro3.unity
+  - enabled: 1
+    path: Assets/Scenes/FinalIntro2.unity
+  - enabled: 1
+    path: Assets/Scenes/FinalIntro4.unity
+  - enabled: 1
+    path: Assets/Scenes/FinalFirstIntro.unity
+  - enabled: 1
+    path: Assets/Scenes/Intro4.unity
