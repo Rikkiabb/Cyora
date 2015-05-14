@@ -118,7 +118,7 @@ public class PlayerScript : MonoBehaviour {
 
 		if (transform.position.y <= fallBoundary){
 			Debug.Log ("Player fell to his death");
-			GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, 0) ;
+
 			DamagePlayer(maxHealth);
 		}
 

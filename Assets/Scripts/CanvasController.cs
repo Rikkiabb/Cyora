@@ -46,6 +46,7 @@ public class CanvasController : MonoBehaviour {
 				anim.SetTrigger ("Restart");
 				PlayerScript.isMoving = true;
 				hasExited = false;
+				GameObject.Find ("Player").GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, 0) ;
 				if(Application.loadedLevel == 31){
 					Physics2D.gravity = new Vector2(0, -30);
 					GameMasterCS.setIce (false);
