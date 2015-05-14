@@ -34,9 +34,11 @@ public class Key : MonoBehaviour {
 
 			if(dissapear){
 				GameObject explode = GameObject.FindGameObjectWithTag("Explode");	
-				GameObject enemy = GameObject.FindGameObjectWithTag("Still");
+				GameObject enemy = GameObject.Find("NewEnemyMedWithHealth 1");
+				enemy.transform.Find ("Monster44").gameObject.SetActive(true);
 				Destroy(explode);
 				enemy.tag = "Enemy";
+				enemy.transform.Find ("Monster44").tag = "Enemy";
 				Enemy enemyScript = enemy.gameObject.GetComponent<Enemy>();
 				enemyScript.enabled = true;
 
