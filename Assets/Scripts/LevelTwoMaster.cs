@@ -10,6 +10,7 @@ public class LevelTwoMaster : MonoBehaviour {
 	public Transform target;
 	PlayerScript player;
 	public Transform aKey;
+	AudioSource source;
 	public Transform aHeart;
 
 	void Start(){
@@ -17,6 +18,7 @@ public class LevelTwoMaster : MonoBehaviour {
 		windLeft = false;
 		windRight = false;
 		windOff = false;
+		source = GetComponent<AudioSource>();
 		BinaryFormatter bf = new BinaryFormatter();
 		FileStream file = File.Create(Application.persistentDataPath + "/checkpoint.dat");
 		CheckpointReached data = new CheckpointReached();
@@ -91,6 +93,7 @@ public class LevelTwoMaster : MonoBehaviour {
 				GameObject button = GameObject.FindGameObjectWithTag("Button");
 				Animator shrink = button.GetComponent<Animator>();
 				shrink.SetTrigger ("Pushed");
+				source.Play();
 				Physics2D.gravity = new Vector2(0, -30);
 
 				GameObject[] arr = GameObject.FindGameObjectsWithTag("Door");
@@ -269,7 +272,7 @@ public class LevelTwoMaster : MonoBehaviour {
 	}
 
 	IEnumerator waitToSpawn(){
-		yield return new WaitForSeconds (1);
+		yield return new WaitForSeconds (6);
 		if (File.Exists (Application.persistentDataPath + "/playerInfo.dat")) {
 			BinaryFormatter bf = new BinaryFormatter ();
 			FileStream file = File.Open (Application.persistentDataPath + "/checkpoint.dat", FileMode.Open);
