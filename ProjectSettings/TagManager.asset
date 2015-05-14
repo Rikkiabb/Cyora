@@ -30,6 +30,8 @@ TagManager:
   - Ball
   - Cloud
   - Wind
+  - CheckLeft
+  - CheckRight
   layers:
   - Default
   - TransparentFX

@@ -10,6 +10,7 @@ public class LevelTwoMaster : MonoBehaviour {
 	public Transform target;
 	PlayerScript player;
 	public Transform aKey;
+	AudioSource source;
 	public Transform aHeart;
 
 	void Start(){
@@ -17,6 +18,7 @@ public class LevelTwoMaster : MonoBehaviour {
 		windLeft = false;
 		windRight = false;
 		windOff = false;
+		source = GetComponent<AudioSource>();
 		BinaryFormatter bf = new BinaryFormatter();
 		FileStream file = File.Create(Application.persistentDataPath + "/checkpoint.dat");
 		CheckpointReached data = new CheckpointReached();
@@ -91,6 +93,7 @@ public class LevelTwoMaster : MonoBehaviour {
 				GameObject button = GameObject.FindGameObjectWithTag("Button");
 				Animator shrink = button.GetComponent<Animator>();
 				shrink.SetTrigger ("Pushed");
+				source.Play();
 				Physics2D.gravity = new Vector2(0, -30);
 
 				GameObject[] arr = GameObject.FindGameObjectsWithTag("Door");
@@ -149,9 +152,13 @@ public class LevelTwoMaster : MonoBehaviour {
 			rb1.mass = 0;
 			rb1.gravityScale = 15;
 		}
-		yield return new WaitForSeconds (5);
+		GameObject windL = GameObject.FindGameObjectWithTag("CheckLeft");
+		BoxCollider2D bc = windL.GetComponent<BoxCollider2D> ();
+		bc.enabled = false;
 		windLeft = true;
+		yield return new WaitForSeconds (5);
 
+		
 		
 	}
 
@@ -164,8 +171,11 @@ public class LevelTwoMaster : MonoBehaviour {
 		rb.gravityScale = 25;
 		GameObject fly1 = GameObject.FindGameObjectWithTag("SecondWind");
 		fly1.AddComponent<Rigidbody2D> ();
-		yield return new WaitForSeconds (5);
+		GameObject windR = GameObject.FindGameObjectWithTag("CheckRight");
+		BoxCollider2D bc = windR.GetComponent<BoxCollider2D> ();
+		bc.enabled = false;
 		windRight = true;
+		yield return new WaitForSeconds (5);
 
 //		Rigidbody2D rb = fly1.GetComponent<Rigidbody2D> ();
 //		rb.mass = 3;
@@ -174,10 +184,6 @@ public class LevelTwoMaster : MonoBehaviour {
 	}
 
 	void Update(){
-		if (player.playerStats.Health < 1) {	
-			StartCoroutine(waitToSpawn());
-		}
-
 		if (CanvasController.clearedLevel) {
 			BinaryFormatter bf = new BinaryFormatter();
 			FileStream file = File.Create(Application.persistentDataPath + "/playerInfo.dat");
@@ -260,52 +266,7 @@ public class LevelTwoMaster : MonoBehaviour {
 		yield return new WaitForSeconds (14);
 		Application.LoadLevel("WindyOutro");
 	}
-
-	IEnumerator waitToSpawn(){
-		yield return new WaitForSeconds (1);
-		if (File.Exists (Application.persistentDataPath + "/playerInfo.dat")) {
-			BinaryFormatter bf = new BinaryFormatter ();
-			FileStream file = File.Open (Application.persistentDataPath + "/checkpoint.dat", FileMode.Open);
-			CheckpointReached data = ((CheckpointReached)bf.Deserialize (file));
-			file.Close ();
-			Vector3 temp = new Vector3(data.playPosX, data.playPosY, data.playPosZ);
-			player.transform.position = temp;
-			player.playerStats.Health = data.health;
-			Heart.DrawHeart (data.health);
-			ScoreManager.numbKeys = data.currKeys;
-			
-			GameObject[] center = GameObject.FindGameObjectsWithTag("KeyCenter");
-			for (int i = 0; i < center.Length; i++) {
-				Destroy(center[i]);
-			}
-			GameObject[] remKey = GameObject.FindGameObjectsWithTag("Key");
-			for (int i = 0; i < remKey.Length; i++) {
-				Destroy(remKey[i]);
-			}
-			Quaternion temp1 = new Quaternion(0f, 0f, 0f, 0f);
-			float[] kx = data.keysX.ToArray();
-			float[] ky = data.keysY.ToArray();
-			float[] kz = data.keysZ.ToArray();
-			for(int i = 0; i < kx.Length; i++){
-				Vector3 temp0 = new Vector3(kx[i], ky[i], kz[i]);
-				Instantiate(aKey, temp0, temp1);
-			}
-			
-			GameObject[] destHeart = GameObject.FindGameObjectsWithTag("Heart");
-			for (int i = 0; i < destHeart.Length; i++) {
-				Destroy(destHeart[i]);
-			}
-			float[] hx = data.heartX.ToArray();
-			float[] hy = data.heartY.ToArray();
-			float[] hz = data.heartZ.ToArray();
-			for(int i = 0; i < kx.Length; i++){
-				Vector3 temp0 = new Vector3(hx[i], hy[i], hz[i]);
-				Instantiate(aHeart, temp0, temp1);
-			}
-			
-		}
-		
-	}
+	
 
 
 }
