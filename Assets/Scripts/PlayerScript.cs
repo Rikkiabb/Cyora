@@ -170,8 +170,11 @@ public class PlayerScript : MonoBehaviour {
 		}
 		// Remove his lives
 		// play hurtsound
-		source.clip = hurtSound;
-		source.Play();
+		if(playerStats.Health > 0){
+			source.clip = hurtSound;
+			source.Play();
+		}
+
 		playerStats.Health -= damage;
 	
 
@@ -194,7 +197,7 @@ public class PlayerScript : MonoBehaviour {
 			StartCoroutine(WaitAnimationHurt());
 		}
 		// So if our player empties his health he dies
-		if(playerStats.Health <= 0){
+		if(playerStats.Health == 0){
 			Debug.Log("Kill Player!!");
 			source.clip = deathSound;
 			source.Play();
