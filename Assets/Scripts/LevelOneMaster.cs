@@ -11,8 +11,10 @@ public class LevelOneMaster : MonoBehaviour {
 	PlayerScript player;
 	public Transform aKey;
 	public Transform aHeart;
+	bool skip;
 	
 	void Start(){
+		skip = false;
 
 		// save player stats and level stats
 		player = target.gameObject.GetComponent<PlayerScript> ();
@@ -114,7 +116,13 @@ public class LevelOneMaster : MonoBehaviour {
 			bf.Serialize(file, data);
 			file.Close ();
 			CanvasController.clearedLevel = false;
+			skip = true;
 			StartCoroutine(waitToShowUpgrade());
+		}
+		if (skip) {
+			if (Input.GetButtonDown ("Fire1")) {
+				Application.LoadLevel("SunnyOutro");
+			}
 		}
 	
 	}
