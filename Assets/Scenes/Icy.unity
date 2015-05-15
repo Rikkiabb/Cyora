@@ -9208,7 +9208,7 @@ GameObject:
   - 95: {fileID: 851181908}
   m_Layer: 0
   m_Name: CheckPoint
-  m_TagString: Untagged
+  m_TagString: CheckLeft
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23298,7 +23298,7 @@ GameObject:
   - 95: {fileID: 2092054435}
   m_Layer: 0
   m_Name: CheckPoint 1
-  m_TagString: Untagged
+  m_TagString: CheckRight
   m_Icon: {fileID: 5721338939258241955, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23374,9 +23374,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: .201500788, y: .213833958}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 2.32416415, y: 1.42767119}
 --- !u!4 &2092054439
 Transform:
   m_ObjectHideFlags: 0

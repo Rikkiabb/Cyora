@@ -11,11 +11,13 @@ public class IcyLevelManager : MonoBehaviour {
 	PlayerScript player;
 	public Transform aKey;
 	public Transform aHeart;
+	bool first, second;
 
 
 	// Use this for initialization
 
 	void Start(){
+		first = second = false;
 		GameMasterCS.setIce(true);
 		// save player stats and level stats
 		player = target.gameObject.GetComponent<PlayerScript> ();
@@ -141,6 +143,20 @@ public class IcyLevelManager : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D obj){
 		
 		if (obj.name == "Player" && PlayerScript.isMoving) {
+
+			if(!first){
+				first = true;
+				GameObject firstCheck = GameObject.FindGameObjectWithTag("CheckLeft");
+				BoxCollider2D bc = firstCheck.GetComponent<BoxCollider2D> ();
+				bc.enabled = false;
+
+			} else if (first && !second){
+				second = true;
+				GameObject secondCheck = GameObject.FindGameObjectWithTag("CheckRight");
+				BoxCollider2D bc = secondCheck.GetComponent<BoxCollider2D> ();
+				bc.enabled = false;
+			}
+
 			
 			BinaryFormatter bf = new BinaryFormatter();
 			FileStream file = File.Open(Application.persistentDataPath + "/checkpoint.dat", FileMode.Open);

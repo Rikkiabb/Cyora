@@ -1807,6 +1807,14 @@ Prefab:
       propertyPath: aHeart
       value: 
       objectReference: {fileID: 489004, guid: fea6dc4b23d3942b589b87d765cf2119, type: 2}
+    - target: {fileID: 6158190, guid: 7a636ec9e3fe843c89826045f1b5473d, type: 2}
+      propertyPath: m_Offset.x
+      value: -.0223709587
+      objectReference: {fileID: 0}
+    - target: {fileID: 6158190, guid: 7a636ec9e3fe843c89826045f1b5473d, type: 2}
+      propertyPath: m_Size.x
+      value: .489946246
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a636ec9e3fe843c89826045f1b5473d, type: 2}
   m_IsPrefabParent: 0
