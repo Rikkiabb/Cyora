@@ -20383,12 +20383,12 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 4b7a1ef98ae9a4849b1cffe376dde702, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 697c88de0a8d1e3448583b331194f70c, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
-  Mute: 1
+  Mute: 0
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1

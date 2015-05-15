@@ -454,11 +454,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 49c4a2344d150a44fae62db7530801d9, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 07427539874cfa14dbe3540f044a7a91, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Priority: 128
   DopplerLevel: 1

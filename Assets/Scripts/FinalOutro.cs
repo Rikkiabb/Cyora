@@ -14,7 +14,7 @@ public class FinalOutro : MonoBehaviour {
 	
 	IEnumerator WaitScene(){
 		
-		yield return new WaitForSeconds (10);
+		yield return new WaitForSeconds (5.8f);
 		Application.LoadLevel("FinalOutro1");
 	}
 }
