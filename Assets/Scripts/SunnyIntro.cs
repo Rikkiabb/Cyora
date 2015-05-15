@@ -22,14 +22,14 @@ public class SunnyIntro : MonoBehaviour {
 	
 	IEnumerator WaitCloud(){
 		
-		yield return new WaitForSeconds (7);
+		yield return new WaitForSeconds (5);
 		Destroy (GameObject.Find ("CloudFull").gameObject);
 		StartCoroutine (WaitScene ());
 	}
 
 	IEnumerator WaitScene(){
 		
-		yield return new WaitForSeconds (2);
+		yield return new WaitForSeconds (1.47f);
 		Application.LoadLevel("One");
 	}
 }

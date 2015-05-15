@@ -26,8 +26,7 @@ public class Intro1 : MonoBehaviour {
 	}
 
 	IEnumerator WaitScene(){
-		Debug.Log("WAITWHAT!");
-		yield return new WaitForSeconds (10);
+		yield return new WaitForSeconds (6.47f);
 		playScene = false;
 	}
 }

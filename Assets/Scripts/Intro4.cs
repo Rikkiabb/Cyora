@@ -27,7 +27,7 @@ public class Intro4 : MonoBehaviour {
 	
 	IEnumerator WaitScene(){
 		
-		yield return new WaitForSeconds (10);
+		yield return new WaitForSeconds (6.47f);
 		playScene = false;
 	}
 }
