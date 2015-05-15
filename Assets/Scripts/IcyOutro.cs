@@ -23,7 +23,7 @@ public class IcyOutro : MonoBehaviour {
 	
 	IEnumerator WaitScene(){
 		
-		yield return new WaitForSeconds (10);
+		yield return new WaitForSeconds (11.7f);
 		Application.LoadLevel("RainyIntro");
 	}
 

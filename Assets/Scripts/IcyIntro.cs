@@ -31,7 +31,7 @@ public class IcyIntro : MonoBehaviour {
 
 	IEnumerator WaitSecondText(){
 		
-		yield return new WaitForSeconds (5);
+		yield return new WaitForSeconds (7);
 		Application.LoadLevel("Icy");
 	}
 }

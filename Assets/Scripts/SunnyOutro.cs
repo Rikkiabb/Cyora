@@ -27,7 +27,7 @@ public class SunnyOutro : MonoBehaviour {
 	
 	IEnumerator WaitScene(){
 		
-		yield return new WaitForSeconds (10);
+		yield return new WaitForSeconds (5.9f);
 		playScene = false;
 	}
 }

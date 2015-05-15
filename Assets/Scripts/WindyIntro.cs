@@ -27,7 +27,7 @@ public class WindyIntro : MonoBehaviour {
 	
 	IEnumerator WaitScene(){
 		
-		yield return new WaitForSeconds (10);
+		yield return new WaitForSeconds (5.8f);
 		playScene = false;
 	}
 }

@@ -27,7 +27,7 @@ public class WindyOutro : MonoBehaviour {
 	
 	IEnumerator WaitScene(){
 		
-		yield return new WaitForSeconds (10);
+		yield return new WaitForSeconds (11.7f);
 		playScene = false;
 	}
 }
