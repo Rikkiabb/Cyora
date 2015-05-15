@@ -3,7 +3,8 @@ using System.Collections;
 
 
 public class BossAI : MonoBehaviour {
-
+	private AudioSource source;
+	public AudioClip bettyHurt;
 	// Create a new player stat class which handles his health and weapons
 	[System.Serializable]
 	public class BossStats {
@@ -39,6 +40,7 @@ public class BossAI : MonoBehaviour {
 		eh = gameObject.GetComponentInChildren<EnemyHealth>();
 		startHealth = stats.Health;
 		anim = GetComponent<Animator> ();
+		source = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -112,7 +114,8 @@ public class BossAI : MonoBehaviour {
 		isHurt = true;
 		StartCoroutine (WaitHurt ());
 		stats.Health -= damage;
-		
+		source.clip = bettyHurt;
+		source.Play();
 
 		if (stats.Health == 9) {
 			GameMasterCS game = GameObject.Find("_GM").GetComponent<GameMasterCS>();

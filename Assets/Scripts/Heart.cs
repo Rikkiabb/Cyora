@@ -2,8 +2,13 @@
 using System.Collections;
 
 public class Heart : MonoBehaviour {
-
+	private AudioSource	source;
+	public AudioClip extraLife;
 	public Transform heartEffect;
+
+	void Start(){
+		source = transform.parent.GetComponent<AudioSource>();
+	}
 
 	void OnTriggerEnter2D (Collider2D obj){
 		
@@ -20,11 +25,16 @@ public class Heart : MonoBehaviour {
 
 				Instantiate(heartEffect, transform.position, transform.rotation);
 				player.setHealth(player.playerStats.Health + 1);
-				Destroy(gameObject);
+				// Instead of destroying, we disable it. 
+				source.clip = extraLife;
+				source.Play();
+				transform.gameObject.SetActive(false);
+				//Destroy(gameObject);
 				
 			}
 		}
 	}
+
 
 	public static void DrawHeart(int hearts){
 		Animator animHeart;
