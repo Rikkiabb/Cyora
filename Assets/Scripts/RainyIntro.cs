@@ -23,7 +23,7 @@ public class RainyIntro : MonoBehaviour {
 	
 	IEnumerator WaitScene(){
 		
-		yield return new WaitForSeconds (10);
+		yield return new WaitForSeconds (6f);
 		Application.LoadLevel("Rainy");
 	}
 	

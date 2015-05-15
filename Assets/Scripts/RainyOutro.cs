@@ -23,7 +23,7 @@ public class RainyOutro : MonoBehaviour {
 	
 	IEnumerator WaitScene(){
 		
-		yield return new WaitForSeconds (10);
+		yield return new WaitForSeconds (4f);
 		Application.LoadLevel("FinalFirstIntro");
 	}
 	
