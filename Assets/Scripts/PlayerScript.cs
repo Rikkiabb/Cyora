@@ -12,6 +12,7 @@ public class PlayerScript : MonoBehaviour {
 	public AudioClip jumpSound;
 	public AudioClip deathSound;
 	public AudioClip hurtSound;
+	public AudioClip healthGain;
 	
 	private AudioSource source;
 	
@@ -266,6 +267,13 @@ public class PlayerScript : MonoBehaviour {
 			source.volume = 0.7f;
 			source.clip = keyCollect;
 			source.Play();	
+		}
+		if(coll.tag == "Heart"){
+			Debug.Log ("healtsound played");
+			source.volume = 1f;
+			source.clip = healthGain;
+			source.Play();
+
 		}
 	}
 	
