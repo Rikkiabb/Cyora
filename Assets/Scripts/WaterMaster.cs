@@ -125,8 +125,7 @@ public class WaterMaster : MonoBehaviour {
 
 		if (skip) {
 			if (Input.GetButtonDown ("Fire1")) {
-				Debug.Log("INNAN");
-				Application.LoadLevel("Two");
+				Application.LoadLevel("RainyOutro");
 			}
 		}
 
@@ -134,7 +133,7 @@ public class WaterMaster : MonoBehaviour {
 
 	IEnumerator waitToShowUpgrade(){
 		yield return new WaitForSeconds (14);
-		//Application.LoadLevel("Rainy");
+		Application.LoadLevel("RainyOutro");
 	}
 
 

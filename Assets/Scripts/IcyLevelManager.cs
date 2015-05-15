@@ -132,8 +132,7 @@ public class IcyLevelManager : MonoBehaviour {
 
 		if (skip) {
 			if (Input.GetButtonDown ("Fire1")) {
-				Debug.Log("INNAN");
-				Application.LoadLevel("Two");
+				Application.LoadLevel("IcyOutro");
 			}
 		}
 		
