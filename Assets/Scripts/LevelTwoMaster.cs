@@ -12,9 +12,11 @@ public class LevelTwoMaster : MonoBehaviour {
 	public Transform aKey;
 	AudioSource source;
 	public Transform aHeart;
+	bool skip;
 
 	void Start(){
 		player = target.gameObject.GetComponent<PlayerScript> ();
+		skip = false;
 		windLeft = false;
 		windRight = false;
 		windOff = false;
@@ -257,8 +259,16 @@ public class LevelTwoMaster : MonoBehaviour {
 			CanvasController.clearedLevel = false;
 			windLeft = false;
 			windRight = false;
+			skip = true;
 
 			StartCoroutine(waitToShowUpgrade());
+		}
+
+		if (skip) {
+			if (Input.GetButtonDown ("Fire1")) {
+				Debug.Log("INNAN");
+				Application.LoadLevel("Two");
+			}
 		}
 	}
 
