@@ -23,7 +23,7 @@ public class FinalIntro2 : MonoBehaviour {
 	
 	IEnumerator WaitScene(){
 		
-		yield return new WaitForSeconds (5);
+		yield return new WaitForSeconds (3f);
 		Application.LoadLevel("FinalIntro3");
 	}
 	

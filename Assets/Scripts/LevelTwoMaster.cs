@@ -207,7 +207,7 @@ public class LevelTwoMaster : MonoBehaviour {
 
 				data.heal = 3;
 				data.jf = 1800;
-				data.hdj = true;
+				data.hdj = false;
 //				data.swordSizeX = 1.3f;
 //				data.swordSizeY = 1.3f;
 				data.ms = 16f;
