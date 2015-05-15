@@ -106,7 +106,7 @@ public class Enemy : MonoBehaviour {
 		
 		// So if our player empties his health he dies
 		if(stats.Health <= 0){
-			Debug.Log("Kill Enemy!!");
+//			Debug.Log("Kill Enemy!!");
 			transform.gameObject.SetActive(false);
 			source.clip = enemyDeath;
 			source.Play();

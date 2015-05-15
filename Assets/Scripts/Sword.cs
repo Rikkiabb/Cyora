@@ -14,14 +14,14 @@ public class Sword : MonoBehaviour {
 //		anim.SetTrigger("Swing");
 
 		if (obj.gameObject.tag == "Enemy" && !player.allowAttack) {
-			Debug.Log("WE HIT!");
+//			Debug.Log("WE HIT!");
 			Enemy enemy = obj.gameObject.GetComponent<Enemy>();
 			enemy.DamageEnemy(1);
 			//Destroy(obj.transform.parent.gameObject);
 //			Destroy(obj.gameObject.pa);
 		}
 		if (obj.gameObject.tag == "Boss" && !player.allowAttack) {
-			Debug.Log("WE HIT!");
+//			Debug.Log("WE HIT!");
 			BossAI enemy = obj.gameObject.GetComponent<BossAI>();
 			enemy.DamageBoss(1);
 			//Destroy(obj.transform.parent.gameObject);
@@ -35,14 +35,14 @@ public class Sword : MonoBehaviour {
 		
 		
 		if (obj.gameObject.tag == "Enemy" && !player.allowAttack) {
-			Debug.Log("WE HIT!");
+		//	Debug.Log("WE HIT!");
 			Enemy enemy = obj.gameObject.GetComponent<Enemy>();
 			enemy.DamageEnemy(1);
 			//Destroy(obj.transform.parent.gameObject);
 			//			Destroy(obj.gameObject.pa);
 		}
 		if (obj.gameObject.tag == "Boss" && !player.allowAttack) {
-			Debug.Log("WE HIT!");
+			///			Debug.Log("WE HIT!");
 			BossAI enemy = obj.gameObject.GetComponent<BossAI>();
 			enemy.DamageBoss(1);
 			//Destroy(obj.transform.parent.gameObject);

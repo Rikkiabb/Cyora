@@ -13,7 +13,7 @@ public class ScoreManager : MonoBehaviour {
 	void Start(){
 		GameObject[] arr = GameObject.FindGameObjectsWithTag("Key");	
 		totalKeys = arr.Length.ToString();
-		Debug.Log(totalKeys);
+		//Debug.Log(totalKeys);
 	}
 
 

@@ -31,8 +31,8 @@ public class HurtCollBoss : MonoBehaviour {
 				// We need to get the incoming collider that was involved in the collision
 				//TODO: Remove these stupid logs when we build the project
 				// We want to check the vector perpendicular to the surface of the incoming Collider2D at the contact point.
-				Vector2 pointOfContact = coll.contacts [0].normal; //Grab the normal of the contact point we touched
-				Debug.Log (pointOfContact);
+//				Vector2 pointOfContact = coll.contacts [0].normal; //Grab the normal of the contact point we touched
+//				Debug.Log (pointOfContact);
 				// Store an instance of the player thad collided with the enemy
 				
 				
@@ -53,13 +53,13 @@ public class HurtCollBoss : MonoBehaviour {
 				// A vector(-1,0) means we are coming from the right side when we impact
 				if (player.facingRight) {
 					// Bounce to the left
-					Debug.Log ("We touched the left side of the enemy!");
+//					Debug.Log ("We touched the left side of the enemy!");
 					v.y = bounceAmount;
 					rb.velocity = v;
 					rb.AddForce (Vector2.right * bounceAmount, ForceMode2D.Impulse);
 				} else {
 					// Bounce to the right
-					Debug.Log ("We touched the right side of the enemy!");
+//					Debug.Log ("We touched the right side of the enemy!");
 					v.y = bounceAmount;
 					rb.velocity = v;
 					rb.AddForce (Vector2.right * -bounceAmount, ForceMode2D.Impulse);
@@ -72,7 +72,7 @@ public class HurtCollBoss : MonoBehaviour {
 			
 		} 
 		
-		Debug.Log (coll.gameObject.name);
+//		Debug.Log (coll.gameObject.name);
 	}
 
 	IEnumerator WaitHurt(PlayerScript player){

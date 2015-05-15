@@ -749,7 +749,7 @@ GameObject:
   - 212: {fileID: 205757650}
   - 61: {fileID: 205757649}
   - 50: {fileID: 205757648}
-  - 68: {fileID: 205757652}
+  - 114: {fileID: 205757652}
   m_Layer: 0
   m_Name: Box
   m_TagString: Untagged
@@ -763,7 +763,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 205757647}
-  m_Mass: 6
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: .0500000007
   m_GravityScale: 1
@@ -823,20 +823,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 92
---- !u!68 &205757652
-EdgeCollider2D:
+--- !u!114 &205757652
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 205757647}
   m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
-  m_Points:
-  - {x: -.159999996, y: -.189403936}
-  - {x: -.405503839, y: -.193433851}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4778cc0d6acc44f27adbb53f2409e74a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forward: 1
 --- !u!1001 &216949958
 Prefab:
   m_ObjectHideFlags: 0
@@ -1809,6 +1807,14 @@ Prefab:
       propertyPath: aHeart
       value: 
       objectReference: {fileID: 489004, guid: fea6dc4b23d3942b589b87d765cf2119, type: 2}
+    - target: {fileID: 6158190, guid: 7a636ec9e3fe843c89826045f1b5473d, type: 2}
+      propertyPath: m_Offset.x
+      value: -.0223709587
+      objectReference: {fileID: 0}
+    - target: {fileID: 6158190, guid: 7a636ec9e3fe843c89826045f1b5473d, type: 2}
+      propertyPath: m_Size.x
+      value: .489946246
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a636ec9e3fe843c89826045f1b5473d, type: 2}
   m_IsPrefabParent: 0

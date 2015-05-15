@@ -17,8 +17,8 @@ public class PlayerScript : MonoBehaviour {
 	private AudioSource source;
 	
 	public int maxHealth = 3;
-	CircleCollider2D collide;
-	Rigidbody2D freefall;
+//	CircleCollider2D collide;
+//	Rigidbody2D freefall;
 	public bool hasDoubleJump = false;
 	bool doubleJump = false;
 	
@@ -78,10 +78,10 @@ public class PlayerScript : MonoBehaviour {
 	}
 	
 	void Start () {
-		Debug.Log ("Borð" + Application.loadedLevel);
+//		Debug.Log ("Borð" + Application.loadedLevel);
 		anim = GetComponent<Animator> ();
-		collide = GetComponent<CircleCollider2D> ();
-		freefall = GetComponent<Rigidbody2D> ();
+//		collide = GetComponent<CircleCollider2D> ();
+//		freefall = GetComponent<Rigidbody2D> ();
 		source = GetComponent<AudioSource>();
 	}
 	
@@ -122,7 +122,7 @@ public class PlayerScript : MonoBehaviour {
 		}
 		
 		if (transform.position.y <= fallBoundary){
-			Debug.Log ("Player fell to his death");
+//			Debug.Log ("Player fell to his death");
 			DamagePlayer(maxHealth);
 		}
 		
@@ -159,7 +159,7 @@ public class PlayerScript : MonoBehaviour {
 		
 		if (damage >= maxHealth) {
 			
-			Debug.Log("Kill Player!!");
+//			Debug.Log("Kill Player!!");
 			playerStats.Health = 0;
 			//GameMasterCS.KillPlayer(this);
 			return;
@@ -179,10 +179,8 @@ public class PlayerScript : MonoBehaviour {
 		// for loop that runs through the hearts and removes them until damage is done
 		for(int i = damage; i > 0 && playerStats.Health >= 0; i--){
 			Animator animHeart;
-			Debug.Log ("Damage:" + damage);
 			string number = (playerStats.Health).ToString();
 			string image = "Life" + number;
-			Debug.Log (image);
 			GameObject heart = GameObject.FindGameObjectWithTag(image);
 			animHeart = heart.GetComponent<Animator> ();
 			animHeart.SetTrigger("MissLife");
@@ -195,7 +193,7 @@ public class PlayerScript : MonoBehaviour {
 		}
 		// So if our player empties his health he dies
 		if(playerStats.Health == 0){
-			Debug.Log("Kill Player!!");
+//			Debug.Log("Kill Player!!");
 			source.clip = deathSound;
 			source.Play();
 			return;
@@ -269,7 +267,7 @@ public class PlayerScript : MonoBehaviour {
 			source.Play();	
 		}
 		if(coll.tag == "Heart"){
-			Debug.Log ("healtsound played");
+//			Debug.Log ("healtsound played");
 			source.volume = 1f;
 			source.clip = healthGain;
 			source.Play();
