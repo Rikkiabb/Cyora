@@ -266,7 +266,7 @@ public class PlayerScript : MonoBehaviour {
 			source.clip = keyCollect;
 			source.Play();	
 		}
-		if(coll.tag == "Heart"){
+		if(coll.tag == "Heart" && playerStats.Health != maxHealth){
 //			Debug.Log ("healtsound played");
 			source.volume = 1f;
 			source.clip = healthGain;
