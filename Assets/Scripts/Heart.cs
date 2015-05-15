@@ -37,12 +37,16 @@ public class Heart : MonoBehaviour {
 
 
 	public static void DrawHeart(int hearts){
-		Animator animHeart;
-		for (int i = 0; i < hearts; i++) {
-			string image = "Life" + i;
-			GameObject heart = GameObject.FindGameObjectWithTag(image);
-			animHeart = heart.GetComponent<Animator> ();
-			animHeart.SetTrigger("GainLife");
+		Debug.Log(Application.loadedLevel);
+		if(Application.loadedLevel != 14 || Application.loadedLevel != 15 || Application.loadedLevel != 16 || Application.loadedLevel != 17
+		   || Application.loadedLevel != 18 || Application.loadedLevel != 19){
+			Animator animHeart;
+			for (int i = 0; i < hearts; i++) {
+				string image = "Life" + i;
+				GameObject heart = GameObject.FindGameObjectWithTag(image);
+				animHeart = heart.GetComponent<Animator> ();
+				animHeart.SetTrigger("GainLife");
+			}
 		}
 	}
 }
