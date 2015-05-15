@@ -11,13 +11,13 @@ public class IcyLevelManager : MonoBehaviour {
 	PlayerScript player;
 	public Transform aKey;
 	public Transform aHeart;
-	bool first, second;
+	bool first, second, skip;
 
 
 	// Use this for initialization
 
 	void Start(){
-		first = second = false;
+		first = second = skip = false;
 		GameMasterCS.setIce(true);
 		// save player stats and level stats
 		player = target.gameObject.GetComponent<PlayerScript> ();
@@ -124,10 +124,17 @@ public class IcyLevelManager : MonoBehaviour {
 			file.Close ();
 			CanvasController.clearedLevel = false;
 			PlayerScript.finished = false;
-
+			skip = true;
 
 			StartCoroutine(waitToShowUpgrade());
 
+		}
+
+		if (skip) {
+			if (Input.GetButtonDown ("Fire1")) {
+				Debug.Log("INNAN");
+				Application.LoadLevel("Two");
+			}
 		}
 		
 	}

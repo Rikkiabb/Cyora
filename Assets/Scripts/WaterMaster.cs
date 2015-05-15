@@ -11,8 +11,10 @@ public class WaterMaster : MonoBehaviour {
 	PlayerScript player;
 	public Transform aKey;
 	public Transform aHeart;
+	bool skip;
 
 	void Start () {
+		skip = false;
 		GameMasterCS.setIce(false);
 		player = target.gameObject.GetComponent<PlayerScript> ();
 		BinaryFormatter bf = new BinaryFormatter();
@@ -117,7 +119,15 @@ public class WaterMaster : MonoBehaviour {
 			bf.Serialize(file, data);
 			file.Close ();
 			CanvasController.clearedLevel = false;
+			skip = true;
 			StartCoroutine(waitToShowUpgrade());
+		}
+
+		if (skip) {
+			if (Input.GetButtonDown ("Fire1")) {
+				Debug.Log("INNAN");
+				Application.LoadLevel("Two");
+			}
 		}
 
 	}
