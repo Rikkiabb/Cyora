@@ -78,7 +78,7 @@ public class PlayerScript : MonoBehaviour {
 	}
 	
 	void Start () {
-		Debug.Log ("Borð" + Application.loadedLevel);
+//		Debug.Log ("Borð" + Application.loadedLevel);
 		anim = GetComponent<Animator> ();
 		collide = GetComponent<CircleCollider2D> ();
 		freefall = GetComponent<Rigidbody2D> ();
@@ -122,7 +122,7 @@ public class PlayerScript : MonoBehaviour {
 		}
 		
 		if (transform.position.y <= fallBoundary){
-			Debug.Log ("Player fell to his death");
+//			Debug.Log ("Player fell to his death");
 			DamagePlayer(maxHealth);
 		}
 		
@@ -179,10 +179,8 @@ public class PlayerScript : MonoBehaviour {
 		// for loop that runs through the hearts and removes them until damage is done
 		for(int i = damage; i > 0 && playerStats.Health >= 0; i--){
 			Animator animHeart;
-			Debug.Log ("Damage:" + damage);
 			string number = (playerStats.Health).ToString();
 			string image = "Life" + number;
-			Debug.Log (image);
 			GameObject heart = GameObject.FindGameObjectWithTag(image);
 			animHeart = heart.GetComponent<Animator> ();
 			animHeart.SetTrigger("MissLife");

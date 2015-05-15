@@ -6,15 +6,9 @@ public class Key : MonoBehaviour {
 	public Transform keyEffect;
 
 	//the source file for the audio effect
-//	public AudioClip keyCollect;
-//	private AudioSource source;
-
 	//To trigger dissapearing
 	public bool dissapear = false;
-//	void Start(){
-//		//source = GetComponent<AudioSource>();
-//	}
-//
+
 	void OnTriggerEnter2D (Collider2D obj){
 		
 		if(obj.name == "Player"){
@@ -41,7 +35,6 @@ public class Key : MonoBehaviour {
 				enemy.transform.Find ("Monster44").tag = "Enemy";
 				Enemy enemyScript = enemy.gameObject.GetComponent<Enemy>();
 				enemyScript.enabled = true;
-
 			}
 		}
 	}

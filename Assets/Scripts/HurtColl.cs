@@ -26,16 +26,11 @@ public class HurtColl : MonoBehaviour {
 		PlayerScript player = coll.gameObject.GetComponent<PlayerScript> ();
 
 		if (coll.gameObject.tag == "Player" && (coll.collider.tag != "Sword" || (coll.collider.tag == "Sword" && !player.isAttacking())) && !enemy.isHurt) {
-			Debug.Log ("HURT HIM!");
+//			Debug.Log ("HURT HIM!");
 			if (Time.time > lastHitTime + repeatDamagePeriod) {
-				// We need to get the incoming collider that was involved in the collision
 				//TODO: Remove these stupid logs when we build the project
-				// We want to check the vector perpendicular to the surface of the incoming Collider2D at the contact point.
-				Vector2 pointOfContact = coll.contacts [0].normal; //Grab the normal of the contact point we touched
-				Debug.Log (pointOfContact);
+
 				// Store an instance of the player thad collided with the enemy
-
-
 				// Deal appropriate damage to him 
 				player.DamagePlayer (transform.parent.gameObject.GetComponent<Enemy>().stats.attackHit);
 				lastHitTime = Time.time;
@@ -53,13 +48,13 @@ public class HurtColl : MonoBehaviour {
 				// A vector(-1,0) means we are coming from the right side when we impact
 				if (player.facingRight) {
 					// Bounce to the left
-					Debug.Log ("We touched the left side of the enemy!");
+				//	Debug.Log ("We touched the left side of the enemy!");
 					v.y = bounceAmount;
 					rb.velocity = v;
 					rb.AddForce (Vector2.right * bounceAmount, ForceMode2D.Impulse);
 				} else {
 					// Bounce to the right
-					Debug.Log ("We touched the right side of the enemy!");
+				//	Debug.Log ("We touched the right side of the enemy!");
 					v.y = bounceAmount;
 					rb.velocity = v;
 					rb.AddForce (Vector2.right * -bounceAmount, ForceMode2D.Impulse);
@@ -71,6 +66,5 @@ public class HurtColl : MonoBehaviour {
 		
 		} 
 
-		Debug.Log (coll.gameObject.name);
 	}
 }
