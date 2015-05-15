@@ -266,8 +266,7 @@ public class LevelTwoMaster : MonoBehaviour {
 
 		if (skip) {
 			if (Input.GetButtonDown ("Fire1")) {
-				Debug.Log("INNAN");
-				Application.LoadLevel("Two");
+				Application.LoadLevel("WindyOutro");
 			}
 		}
 	}
