@@ -13,7 +13,7 @@ public class CameraRainy : MonoBehaviour {
 
 		if (RainyStart.started) {
 			Vector3 temp = transform.position;
-			temp.y += 0.05f;
+			temp.y += 0.07f;
 			transform.position = temp;
 		}
 
