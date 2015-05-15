@@ -9652,6 +9652,58 @@ Prefab:
       propertyPath: m_SizeDelta.y
       value: 275
       objectReference: {fileID: 0}
+    - target: {fileID: 11438134, guid: 0b4974ce7036d415ba86da907cbb106f, type: 2}
+      propertyPath: m_Text
+      value: 'Less than 2 keys....
+
+
+        I expected more of you!
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11484240, guid: 0b4974ce7036d415ba86da907cbb106f, type: 2}
+      propertyPath: m_Text
+      value: 'Hmm.... 2-3 whole keys!
+
+
+        That''s an ok job.....
+
+
+        And you get an ok reward for that which is an ok extra life for on ok level.
+
+
+        ok?
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11445872, guid: 0b4974ce7036d415ba86da907cbb106f, type: 2}
+      propertyPath: m_Text
+      value: '4 keys!
+
+
+        That''s a high number! Almost as high as you can jump on the next level with
+        this extra jump ability!
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11471050, guid: 0b4974ce7036d415ba86da907cbb106f, type: 2}
+      propertyPath: m_Text
+      value: '6 keys!
+
+
+        WOW!
+
+
+        I would guess than I would guess that you make a living collecting keys!
+
+
+        It''s double jump time! Enjoy!'
+      objectReference: {fileID: 0}
+    - target: {fileID: 11464776, guid: 0b4974ce7036d415ba86da907cbb106f, type: 2}
+      propertyPath: m_Text
+      value: "5 keys!\n\nVery nice!\n\nYou my friend, are a true king! \n\nFor this
+        we give you extra speed for one level, king!\n"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b4974ce7036d415ba86da907cbb106f, type: 2}
   m_IsPrefabParent: 0
