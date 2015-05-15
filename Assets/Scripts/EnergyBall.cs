@@ -32,7 +32,7 @@ public class EnergyBall : MonoBehaviour {
 				canHurt = false;
 				StartCoroutine(WaitHurt());
 			}
-			Debug.Log (player.isHurt);
+//			Debug.Log (player.isHurt);
 			anim.SetTrigger("Explode");
 
 			Destroy (gameObject, 0.15f);

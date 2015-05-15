@@ -17,8 +17,8 @@ public class PlayerScript : MonoBehaviour {
 	private AudioSource source;
 	
 	public int maxHealth = 3;
-	CircleCollider2D collide;
-	Rigidbody2D freefall;
+//	CircleCollider2D collide;
+//	Rigidbody2D freefall;
 	public bool hasDoubleJump = false;
 	bool doubleJump = false;
 	
@@ -80,8 +80,8 @@ public class PlayerScript : MonoBehaviour {
 	void Start () {
 //		Debug.Log ("Borð" + Application.loadedLevel);
 		anim = GetComponent<Animator> ();
-		collide = GetComponent<CircleCollider2D> ();
-		freefall = GetComponent<Rigidbody2D> ();
+//		collide = GetComponent<CircleCollider2D> ();
+//		freefall = GetComponent<Rigidbody2D> ();
 		source = GetComponent<AudioSource>();
 	}
 	
@@ -159,7 +159,7 @@ public class PlayerScript : MonoBehaviour {
 		
 		if (damage >= maxHealth) {
 			
-			Debug.Log("Kill Player!!");
+//			Debug.Log("Kill Player!!");
 			playerStats.Health = 0;
 			//GameMasterCS.KillPlayer(this);
 			return;
@@ -193,7 +193,7 @@ public class PlayerScript : MonoBehaviour {
 		}
 		// So if our player empties his health he dies
 		if(playerStats.Health == 0){
-			Debug.Log("Kill Player!!");
+//			Debug.Log("Kill Player!!");
 			source.clip = deathSound;
 			source.Play();
 			return;
@@ -267,7 +267,7 @@ public class PlayerScript : MonoBehaviour {
 			source.Play();	
 		}
 		if(coll.tag == "Heart"){
-			Debug.Log ("healtsound played");
+//			Debug.Log ("healtsound played");
 			source.volume = 1f;
 			source.clip = healthGain;
 			source.Play();

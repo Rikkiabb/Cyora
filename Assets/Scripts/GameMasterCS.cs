@@ -42,7 +42,7 @@ public class GameMasterCS : MonoBehaviour {
 		PlayerScript player = GameObject.Find ("Player").GetComponent<PlayerScript> ();
 		BossAI[] boss = b.GetComponentsInChildren<BossAI>();
 		Animator anim = b.GetComponent<Animator> ();
-		Debug.Log (boss.Length);
+//		Debug.Log (boss.Length);
 
 		for (int i = 0; i < eBalls.Length; i++) {
 			Destroy (eBalls[i].gameObject);
