@@ -159,7 +159,7 @@ public class PlayerScript : MonoBehaviour {
 		
 		if (damage >= maxHealth) {
 			
-			Debug.Log("Kill Player!!");
+//			Debug.Log("Kill Player!!");
 			playerStats.Health = 0;
 			//GameMasterCS.KillPlayer(this);
 			return;
@@ -267,7 +267,7 @@ public class PlayerScript : MonoBehaviour {
 			source.Play();	
 		}
 		if(coll.tag == "Heart"){
-			Debug.Log ("healtsound played");
+//			Debug.Log ("healtsound played");
 			source.volume = 1f;
 			source.clip = healthGain;
 			source.Play();
