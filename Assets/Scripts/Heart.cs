@@ -44,8 +44,10 @@ public class Heart : MonoBehaviour {
 				string image = "Life" + i;
 				GameObject heart = GameObject.FindGameObjectWithTag(image);
 			Debug.Log (image);
-				animHeart = heart.GetComponent<Animator> ();
-				animHeart.SetTrigger("GainLife");
+				if(heart != null){
+					animHeart = heart.GetComponent<Animator> ();
+					animHeart.SetTrigger("GainLife");
+			}
 			}
 
 	}
