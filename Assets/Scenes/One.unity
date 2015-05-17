@@ -2158,7 +2158,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11456452, guid: d14a6336e2f814bc1b289f6db0af7dbf, type: 2}
       propertyPath: dissapear
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 169994, guid: d14a6336e2f814bc1b289f6db0af7dbf, type: 2}
       propertyPath: m_TagString
@@ -4056,6 +4056,36 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34d64d8ed4deb4101951931bb2d3d207, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &913297218 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 135446, guid: 924f53cdb7d0c41fd897d0d95fa60a43, type: 2}
+  m_PrefabInternal: {fileID: 696465113}
+--- !u!114 &913297220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 913297218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81c93a811dd5b483893e31912bd9aeae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyEffect: {fileID: 478134, guid: b6baff40b1b134d47a3932762b2e2741, type: 2}
+  dissapear: 1
+--- !u!61 &913297221
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 913297218}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: -42.5200005, y: -3.0999999}
+  serializedVersion: 2
+  m_Size: {x: 1.13, y: .50999999}
 --- !u!1001 &913430167
 Prefab:
   m_ObjectHideFlags: 0
@@ -9069,6 +9099,14 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 453122, guid: 59a88bab0dc774d178c969e67f8b38f3, type: 2}
       propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151356, guid: 59a88bab0dc774d178c969e67f8b38f3, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5849854, guid: 59a88bab0dc774d178c969e67f8b38f3, type: 2}
+      propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

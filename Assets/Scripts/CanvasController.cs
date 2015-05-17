@@ -14,24 +14,27 @@ public class CanvasController : MonoBehaviour {
 	static public bool clearedLevel;
 	public Transform aKey;
 	public Transform aHeart;
-	
-	void Awake(){
-		clearedLevel = false;
-	}
+	static public bool theEnd;
+
 	void Start () {
 		anim = GetComponent<Animator> ();
 		clearedLevel = false;
+		theEnd = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		PlayerScript player = target.gameObject.GetComponent<PlayerScript> ();
-		if((player.playerStats.Health < 1) && !hasExited){
-			// target.position is the position of the player, we add 0 to the x-axis, nothing to the y-axis and the z-axis is a constant
-			anim.SetTrigger("GameOver");
-			hasExited = true;
-			PlayerScript.isMoving = false;
-//			Physics2D.gravity = new Vector2(0, -30);
+		if((player.playerStats.Health < 1) && !hasExited && !theEnd){
+			if(Application.loadedLevel == 4){
+				Application.LoadLevel("TutorLevel");
+			} else {
+				// target.position is the position of the player, we add 0 to the x-axis, nothing to the y-axis and the z-axis is a constant
+				anim.SetTrigger("GameOver");
+				hasExited = true;
+				PlayerScript.isMoving = false;
+//				Physics2D.gravity = new Vector2(0, -30);
+			}
 
 		}
 
@@ -55,7 +58,6 @@ public class CanvasController : MonoBehaviour {
 					RainyStart.started = false;
 					Application.LoadLevel("Rainy");
 				} else {
-
 					if(LevelTwoMaster.windRight){
 						Physics2D.gravity = new Vector2(115, -30);
 					} else if (LevelTwoMaster.windLeft){
