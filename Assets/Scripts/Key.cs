@@ -12,20 +12,6 @@ public class Key : MonoBehaviour {
 	void OnTriggerEnter2D (Collider2D obj){
 		
 		if(obj.name == "Player"){
-
-
-			Instantiate(keyEffect, transform.position, transform.rotation);
-			ScoreManager.numbKeys++;
-
-			//source.PlayOneShot(keyCollect, 1f);
-
-
-			GameObject effect2 = GameObject.FindGameObjectWithTag("KeyEffect");
-			Destroy(effect2, 2);
-//			Destroy(gameObject);
-			gameObject.SetActive(false);
-		
-
 			if(dissapear){
 				GameObject explode = GameObject.FindGameObjectWithTag("Explode");	
 				GameObject enemy = GameObject.Find("NewEnemyMedWithHealth 1");
@@ -37,8 +23,23 @@ public class Key : MonoBehaviour {
 				if(enemyScript != null){
 					enemyScript.enabled = true;
 				}
+				
+			}else {
 
+				Instantiate(keyEffect, transform.position, transform.rotation);
+				ScoreManager.numbKeys++;
+
+				//source.PlayOneShot(keyCollect, 1f);
+
+
+				GameObject effect2 = GameObject.FindGameObjectWithTag("KeyEffect");
+				Destroy(effect2, 2);
+	//			Destroy(gameObject);
+				gameObject.SetActive(false);
 			}
+		
+
+
 		}
 	}
 }
