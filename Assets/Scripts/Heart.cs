@@ -37,13 +37,13 @@ public class Heart : MonoBehaviour {
 
 
 	public static void DrawHeart(int hearts){
-		Debug.Log(hearts);
+
 	
 			Animator animHeart;
 			for (int i = 0; i < hearts; i++) {
 				string image = "Life" + i;
 				GameObject heart = GameObject.FindGameObjectWithTag(image);
-			Debug.Log (image);
+
 				if(heart != null){
 					animHeart = heart.GetComponent<Animator> ();
 					animHeart.SetTrigger("GainLife");
