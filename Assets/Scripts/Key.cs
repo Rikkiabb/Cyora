@@ -34,7 +34,10 @@ public class Key : MonoBehaviour {
 				enemy.tag = "Enemy";
 				enemy.transform.Find ("Monster44").tag = "Enemy";
 				Enemy enemyScript = enemy.gameObject.GetComponent<Enemy>();
-				enemyScript.enabled = true;
+				if(enemyScript != null){
+					enemyScript.enabled = true;
+				}
+
 			}
 		}
 	}
