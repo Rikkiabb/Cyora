@@ -22,6 +22,7 @@ public class Finish : MonoBehaviour {
 			CameraPosition.target = transform;
 			PlayerScript.finished = true;
 			PlayerScript.isMoving = false;
+			CanvasController.theEnd = true;
 			CanvasController.clearedLevel = true;
 			anim.SetTrigger("Finished");
 			
