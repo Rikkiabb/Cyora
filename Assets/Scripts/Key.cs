@@ -11,7 +11,7 @@ public class Key : MonoBehaviour {
 
 	void OnTriggerEnter2D (Collider2D obj){
 		
-		if(obj.name == "Player"){
+		if(obj.name == "Player" || obj.tag == "Sword"){
 			if(dissapear){
 				GameObject explode = GameObject.FindGameObjectWithTag("Explode");	
 				GameObject enemy = GameObject.Find("NewEnemyMedWithHealth 1");
