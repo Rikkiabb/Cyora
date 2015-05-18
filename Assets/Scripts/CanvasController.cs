@@ -111,6 +111,8 @@ public class CanvasController : MonoBehaviour {
 //				Application.LoadLevel(Application.loadedLevel);
 			}
 			if(Input.GetButtonDown ("Fire2")){ // M
+				Physics2D.gravity = new Vector2(0, -30);
+				GameMasterCS.setIce (false);
 				PlayerScript.isMoving = true;
 				ScoreManager.numbKeys = 0;
 				Application.LoadLevel("MainMenu");

@@ -57,7 +57,7 @@ public class LevelTwoMaster : MonoBehaviour {
 			FileStream file = File.Open(Application.persistentDataPath + "/checkpoint.dat", FileMode.Open);
 			CheckpointReached data = new CheckpointReached();
 
-			data.playPosX = (target.position.x + 18f);
+			data.playPosX = (target.position.x + 15f);
 			data.playPosY = (target.position.y);
 			data.playPosZ = target.position.z;
 			data.health = player.playerStats.Health;
